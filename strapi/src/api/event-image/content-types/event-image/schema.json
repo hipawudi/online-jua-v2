@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_images",
+  "info": {
+    "singularName": "event-image",
+    "pluralName": "event-images",
+    "displayName": "jua_image",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    }
+  }
+}
