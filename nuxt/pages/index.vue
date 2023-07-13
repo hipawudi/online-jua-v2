@@ -155,7 +155,7 @@ console.log(event_images);
       <section v-motion-fade-visible>
         <div class="flex flex-col sm:flex-row p-4 bg-blue-400">
           <div class="text-red-500 font-bold text-5xl mb-4">Meet Our Partners</div>
-          <div class=""></div>
+          <div class="">aaa</div>
         </div>
       </section>
     </div>
