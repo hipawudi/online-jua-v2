@@ -58,7 +58,7 @@ export default {
       <div class="container mx-auto">
         <div class="flex flex-col md:flex-row justify-between my-4 gap-6">
           <div class="flex items-center">
-            <img src="logo/logo.png" />
+            <img src="/logo/logo.png" />
           </div>
           <template v-for="m in menu" :key="m.title">
             <div class="flex flex-col mt-2 gap-3 mx-4">

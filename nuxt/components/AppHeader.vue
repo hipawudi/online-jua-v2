@@ -56,7 +56,7 @@ export default {
   <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="container mx-auto p-4">
       <div class="flex gap-3">
-        <NuxtLink to="/"><img src="logo/logo.png" /></NuxtLink>
+        <NuxtLink to="/"><img src="/logo/logo.png" /></NuxtLink>
         <button
           data-collapse-toggle="navbar-default"
           type="button"

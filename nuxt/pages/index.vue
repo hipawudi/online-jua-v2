@@ -160,23 +160,23 @@ console.log(event_images);
         </div>
         <div class="sm:w-4/5 flex flex-wrap text-white">
           <div class="flex flex-col items-center w-1/3 mb-4">
-            <img class="w-24 h-24" src="partners/s2.jpg" />
+            <img class="w-24 h-24" src="/partners/s2.jpg" />
             <div class="text-center">International Judo Federation</div>
           </div>
           <div class="flex flex-col items-center w-1/3">
-            <img class="w-24 h-24" src="partners/s1.jpg" />
+            <img class="w-24 h-24" src="/partners/s1.jpg" />
             <div class="text-center">International Olympic Committee</div>
           </div>
           <div class="flex flex-col items-center w-1/3">
-            <img class="w-24 h-24" src="partners/s2.jpg" />
+            <img class="w-24 h-24" src="/partners/s2.jpg" />
             <div class="text-center">IJF World Ranking</div>
           </div>
           <div class="flex flex-col items-center w-1/3">
-            <img class="w-24 h-24" src="partners/s3.jpg" />
+            <img class="w-24 h-24" src="/partners/s3.jpg" />
             <div class="text-center">IJF Back Number</div>
           </div>
           <div class="flex flex-col items-center w-1/3">
-            <img class="w-24 h-24" src="partners/s7.jpg" />
+            <img class="w-24 h-24" src="/partners/s7.jpg" />
             <div class="text-center">JUA Calendar</div>
           </div>
         </div>
