@@ -13,12 +13,6 @@ export default defineNuxtConfig({
       open(`http://${host}:${port}`)
     }
   },
-  dayjs: {
-    locales: ['zh', 'fr'],
-    plugins: ['relativeTime', 'utc', 'timezone'],
-    defaultLocale: 'zh',
-    defaultTimezone: 'Asia/Hong_Kong',
-  },
   runtimeConfig: {
     public: {
       strapi: {
