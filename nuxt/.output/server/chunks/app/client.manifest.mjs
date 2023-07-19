@@ -1,33 +1,33 @@
 const client_manifest = {
-  "_nuxt-link.8274fb6b.js": {
+  "_nuxt-link.d421c553.js": {
     "resourceType": "script",
     "module": true,
-    "file": "nuxt-link.8274fb6b.js",
+    "file": "nuxt-link.d421c553.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_useList.9e25da98.js": {
+  "_useList.8ebe6e2a.js": {
     "resourceType": "script",
     "module": true,
-    "file": "useList.9e25da98.js",
+    "file": "useList.8ebe6e2a.js",
     "imports": [
-      "_useStrapi.c14347dc.js",
+      "_useStrapi.f1b93c62.js",
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_useStrapi.c14347dc.js": {
+  "_useStrapi.f1b93c62.js": {
     "resourceType": "script",
     "module": true,
-    "file": "useStrapi.c14347dc.js",
+    "file": "useStrapi.f1b93c62.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_useStrapiMedia.ca16e6c0.js": {
+  "_useStrapiMedia.cd9a280b.js": {
     "resourceType": "script",
     "module": true,
-    "file": "useStrapiMedia.ca16e6c0.js",
+    "file": "useStrapiMedia.cd9a280b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -35,10 +35,10 @@ const client_manifest = {
   "layouts/default.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "default.aece7114.js",
+    "file": "default.003424d6.js",
     "imports": [
-      "_nuxt-link.8274fb6b.js",
-      "_useStrapiMedia.ca16e6c0.js",
+      "_nuxt-link.d421c553.js",
+      "_useStrapiMedia.cd9a280b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -53,9 +53,9 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.44bb2418.js",
+    "file": "error-404.a4876602.js",
     "imports": [
-      "_nuxt-link.8274fb6b.js",
+      "_nuxt-link.d421c553.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -74,7 +74,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.dca9ec73.js",
+    "file": "error-500.f1a0f1ca.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -93,14 +93,14 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.38819e61.js",
+    "file": "entry.740078ad.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js"
   },
   "pages/contact.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "contact.fad0f79d.js",
+    "file": "contact.3d7056bc.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -110,12 +110,12 @@ const client_manifest = {
   "pages/index.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "index.304bfef4.js",
+    "file": "index.c555a437.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_useStrapi.c14347dc.js",
-      "_useStrapiMedia.ca16e6c0.js",
-      "_useList.9e25da98.js"
+      "_useStrapi.f1b93c62.js",
+      "_useStrapiMedia.cd9a280b.js",
+      "_useList.8ebe6e2a.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/index.vue"
@@ -123,12 +123,12 @@ const client_manifest = {
   "pages/news/index.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "index.edf16776.js",
+    "file": "index.d58424bf.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_useStrapi.c14347dc.js",
-      "_useStrapiMedia.ca16e6c0.js",
-      "_useList.9e25da98.js"
+      "_useStrapi.f1b93c62.js",
+      "_useStrapiMedia.cd9a280b.js",
+      "_useList.8ebe6e2a.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/news/index.vue"
@@ -136,11 +136,11 @@ const client_manifest = {
   "pages/posts/[id].vue": {
     "resourceType": "script",
     "module": true,
-    "file": "_id_.8a862f1d.js",
+    "file": "_id_.9ac4bc2e.js",
     "imports": [
-      "_nuxt-link.8274fb6b.js",
-      "_useStrapi.c14347dc.js",
-      "_useStrapiMedia.ca16e6c0.js",
+      "_nuxt-link.d421c553.js",
+      "_useStrapi.f1b93c62.js",
+      "_useStrapiMedia.cd9a280b.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,

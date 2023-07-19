@@ -4,7 +4,7 @@ import { a as useRoute, u as useHead } from '../server.mjs';
 import { u as useStrapi, a as useDayjs } from './useStrapi-8a5d6780.mjs';
 import { u as useStrapiMedia } from './useStrapiMedia-605edd67.mjs';
 import { u as useList } from './useList-e4e3ff2c.mjs';
-import { ssrRenderComponent, ssrInterpolate, ssrRenderAttrs, ssrGetDirectiveProps, ssrRenderAttr, ssrRenderList, ssrRenderClass } from 'vue/server-renderer';
+import { ssrRenderComponent, ssrRenderAttrs, ssrGetDirectiveProps, ssrRenderList, ssrRenderAttr, ssrInterpolate, ssrRenderClass } from 'vue/server-renderer';
 import 'vue-bundle-renderer/runtime';
 import 'h3';
 import 'devalue';
@@ -106,10 +106,10 @@ const _sfc_main = {
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Head = Head;
       const _component_Title = Title;
-      const _directive_motion_fade_visible = resolveDirective("motion-fade-visible");
       const _directive_motion_roll_visible_left = resolveDirective("motion-roll-visible-left");
       const _directive_motion_roll_visible_top = resolveDirective("motion-roll-visible-top");
       const _directive_motion_roll_visible_right = resolveDirective("motion-roll-visible-right");
+      const _directive_motion_fade_visible = resolveDirective("motion-fade-visible");
       _push(`<!--[--><div class="container mx-auto p-4 md:pl-10 flex flex-col gap-12">`);
       _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -139,25 +139,7 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`<section>${ssrInterpolate(unref(news).data != [])} <div class="text-red-500 font-bold text-2xl mb-4">Latest News</div>`);
-      if (unref(news).data != []) {
-        _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col md:flex-row gap-12" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible)))}><div class="md:w-2/5"><div class="flex flex-col gap-3"><img class="h-80 object-cover rounded-[4rem] shadow-lg"${ssrRenderAttr("src", unref(media) + unref(news).data[0].attributes.banner.data.attributes.url)}><div class="text-4xl font-bold">${ssrInterpolate(unref(news).data[0].attributes.title)}</div><div class="text-lg line-clamp-4">${ssrInterpolate(unref(news).data[0].attributes.description)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(unref(news).data[0].attributes.publish_date).format("YYYY-MM-DD HH:mm:ss"))}</div></div></div><div class="md:w-3/5"><div class="flex flex-col gap-6"><!--[-->`);
-        ssrRenderList(unref(news).data, (data, idx) => {
-          _push(`<div>`);
-          if (idx != 0) {
-            _push(`<div class="flex flex-col md:flex-row items-center"><img class="w-80 object-cover rounded-[4rem]"${ssrRenderAttr("src", unref(media) + data.attributes.banner.data.attributes.url)}><div class="flex flex-col"><div class="text-3xl font-bold">${ssrInterpolate(data.attributes.title)}</div><div class="text-lg line-clamp-2">${ssrInterpolate(data.attributes.description)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(unref(news).data[0].attributes.publish_date).format(
-              "YYYY-MM-DD HH:mm:ss"
-            ))}</div></div></div>`);
-          } else {
-            _push(`<!---->`);
-          }
-          _push(`</div>`);
-        });
-        _push(`<!--]--></div></div></div>`);
-      } else {
-        _push(`<!---->`);
-      }
-      _push(`</section><section><div class="flex flex-col md:flex-row">`);
+      _push(`<section><div class="flex flex-col md:flex-row">`);
       if (unref(results).data != []) {
         _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col md:w-1/3 gap-3" }, ssrGetDirectiveProps(_ctx, _directive_motion_roll_visible_left)))}><div class="text-red-500 font-bold text-2xl mb-4">JUA Results</div><!--[-->`);
         ssrRenderList(unref(results).data, (result, idx) => {
@@ -191,4 +173,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=index-7c29d65e.mjs.map
+//# sourceMappingURL=index-a583e0ad.mjs.map

@@ -33,8 +33,7 @@ await events.load();
     <Head>
       <Title>Index</Title>
     </Head>
-    <section>
-      {{ news.data != [] }}
+    <!-- <section>
       <div class="text-red-500 font-bold text-2xl mb-4">Latest News</div>
       <div
         class="flex flex-col md:flex-row gap-12"
@@ -84,7 +83,7 @@ await events.load();
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section>
       <div class="flex flex-col md:flex-row">
         <div
