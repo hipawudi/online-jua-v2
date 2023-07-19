@@ -26,7 +26,6 @@ await news.load();
 await event_images.load();
 await results.load();
 await events.load();
-
 </script>
 
 <template>
@@ -35,11 +34,12 @@ await events.load();
       <Title>Index</Title>
     </Head>
     <section>
+      {{ news.data != [] }}
       <div class="text-red-500 font-bold text-2xl mb-4">Latest News</div>
       <div
         class="flex flex-col md:flex-row gap-12"
         v-motion-fade-visible
-        v-if="news.data"
+        v-if="news.data != []"
       >
         <div class="md:w-2/5">
           <div class="flex flex-col gap-3">
@@ -90,7 +90,7 @@ await events.load();
         <div
           class="flex flex-col md:w-1/3 gap-3"
           v-motion-roll-visible-left
-          v-if="results.data"
+          v-if="results.data != []"
         >
           <div class="text-red-500 font-bold text-2xl mb-4">JUA Results</div>
           <div v-for="(result, idx) in results.data" :key="idx">
@@ -126,7 +126,7 @@ await events.load();
             </div>
           </div>
         </div>
-        <!-- <div class="flex flex-col sm:w-1/3 gap-3" v-motion-roll-visible-right>
+        <div class="flex flex-col sm:w-1/3 gap-3" v-motion-roll-visible-right>
           <div class="text-red-500 font-bold text-2xl mb-4">Video</div>
           <div>
             <iframe
@@ -135,7 +135,7 @@ await events.load();
             >
             </iframe>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
     <section v-motion-fade-visible class="mb-4">
