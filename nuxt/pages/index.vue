@@ -26,17 +26,21 @@ await news.load();
 await event_images.load();
 await results.load();
 await events.load();
-console.log(event_images);
+
 </script>
 
 <template>
-  <Head>
-    <Title>Index</Title>
-  </Head>
   <div class="container mx-auto p-4 md:pl-10 flex flex-col gap-12">
+    <Head>
+      <Title>Index</Title>
+    </Head>
     <section>
       <div class="text-red-500 font-bold text-2xl mb-4">Latest News</div>
-      <div class="flex flex-col md:flex-row gap-12" v-motion-fade-visible>
+      <div
+        class="flex flex-col md:flex-row gap-12"
+        v-motion-fade-visible
+        v-if="news.data"
+      >
         <div class="md:w-2/5">
           <div class="flex flex-col gap-3">
             <img
@@ -83,7 +87,11 @@ console.log(event_images);
     </section>
     <section>
       <div class="flex flex-col md:flex-row">
-        <div class="flex flex-col md:w-1/3 gap-3" v-motion-roll-visible-left>
+        <div
+          class="flex flex-col md:w-1/3 gap-3"
+          v-motion-roll-visible-left
+          v-if="results.data"
+        >
           <div class="text-red-500 font-bold text-2xl mb-4">JUA Results</div>
           <div v-for="(result, idx) in results.data" :key="idx">
             <div class="flex items-center">
@@ -118,7 +126,7 @@ console.log(event_images);
             </div>
           </div>
         </div>
-        <div class="flex flex-col sm:w-1/3 gap-3" v-motion-roll-visible-right>
+        <!-- <div class="flex flex-col sm:w-1/3 gap-3" v-motion-roll-visible-right>
           <div class="text-red-500 font-bold text-2xl mb-4">Video</div>
           <div>
             <iframe
@@ -127,7 +135,7 @@ console.log(event_images);
             >
             </iframe>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <section v-motion-fade-visible class="mb-4">

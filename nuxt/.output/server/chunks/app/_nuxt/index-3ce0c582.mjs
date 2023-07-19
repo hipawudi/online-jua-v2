@@ -1,5 +1,5 @@
 import { p as publicAssetsURL } from '../../handlers/renderer.mjs';
-import { withAsyncContext, resolveDirective, withCtx, createTextVNode, createVNode, mergeProps, unref, useSSRContext, defineComponent } from 'vue';
+import { withAsyncContext, resolveDirective, withCtx, createTextVNode, createVNode, unref, mergeProps, useSSRContext, defineComponent } from 'vue';
 import { a as useRoute, u as useHead } from '../server.mjs';
 import { u as useStrapi, a as useDayjs } from './useStrapi-8a5d6780.mjs';
 import { u as useStrapiMedia } from './useStrapiMedia-605edd67.mjs';
@@ -103,15 +103,13 @@ const _sfc_main = {
     [__temp, __restore] = withAsyncContext(() => event_images.load()), await __temp, __restore();
     [__temp, __restore] = withAsyncContext(() => results.load()), await __temp, __restore();
     [__temp, __restore] = withAsyncContext(() => events.load()), await __temp, __restore();
-    console.log(event_images);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Head = Head;
       const _component_Title = Title;
       const _directive_motion_fade_visible = resolveDirective("motion-fade-visible");
       const _directive_motion_roll_visible_left = resolveDirective("motion-roll-visible-left");
       const _directive_motion_roll_visible_top = resolveDirective("motion-roll-visible-top");
-      const _directive_motion_roll_visible_right = resolveDirective("motion-roll-visible-right");
-      _push(`<!--[-->`);
+      _push(`<!--[--><div class="container mx-auto p-4 md:pl-10 flex flex-col gap-12">`);
       _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -140,28 +138,39 @@ const _sfc_main = {
         }),
         _: 1
       }, _parent));
-      _push(`<div class="container mx-auto p-4 md:pl-10 flex flex-col gap-12"><section><div class="text-red-500 font-bold text-2xl mb-4">Latest News</div><div${ssrRenderAttrs(mergeProps({ class: "flex flex-col md:flex-row gap-12" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible)))}><div class="md:w-2/5"><div class="flex flex-col gap-3"><img class="h-80 object-cover rounded-[4rem] shadow-lg"${ssrRenderAttr("src", unref(media) + unref(news).data[0].attributes.banner.data.attributes.url)}><div class="text-4xl font-bold">${ssrInterpolate(unref(news).data[0].attributes.title)}</div><div class="text-lg line-clamp-4">${ssrInterpolate(unref(news).data[0].attributes.description)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(unref(news).data[0].attributes.publish_date).format("YYYY-MM-DD HH:mm:ss"))}</div></div></div><div class="md:w-3/5"><div class="flex flex-col gap-6"><!--[-->`);
-      ssrRenderList(unref(news).data, (data, idx) => {
-        _push(`<div>`);
-        if (idx != 0) {
-          _push(`<div class="flex flex-col md:flex-row items-center"><img class="w-80 object-cover rounded-[4rem]"${ssrRenderAttr("src", unref(media) + data.attributes.banner.data.attributes.url)}><div class="flex flex-col"><div class="text-3xl font-bold">${ssrInterpolate(data.attributes.title)}</div><div class="text-lg line-clamp-2">${ssrInterpolate(data.attributes.description)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(unref(news).data[0].attributes.publish_date).format(
-            "YYYY-MM-DD HH:mm:ss"
-          ))}</div></div></div>`);
-        } else {
-          _push(`<!---->`);
-        }
-        _push(`</div>`);
-      });
-      _push(`<!--]--></div></div></div></section><section><div class="flex flex-col md:flex-row"><div${ssrRenderAttrs(mergeProps({ class: "flex flex-col md:w-1/3 gap-3" }, ssrGetDirectiveProps(_ctx, _directive_motion_roll_visible_left)))}><div class="text-red-500 font-bold text-2xl mb-4">JUA Results</div><!--[-->`);
-      ssrRenderList(unref(results).data, (result, idx) => {
-        _push(`<div><div class="flex items-center"><img class="h-16 object-cover"${ssrRenderAttr("src", unref(media) + result.attributes.banner.data.attributes.url)}><div class="flex flex-col"><div class="text-lg font-bold">${ssrInterpolate(result.attributes.title)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(result.attributes.publish_date).format("YYYY-MM-DD"))}</div></div></div></div>`);
-      });
-      _push(`<!--]--></div><div${ssrRenderAttrs(mergeProps({ class: "flex flex-col md:w-1/3 gap-3" }, ssrGetDirectiveProps(_ctx, _directive_motion_roll_visible_top)))}><div class="text-red-500 font-bold text-2xl mb-4">JUA Events</div><!--[-->`);
+      _push(`<section><div class="text-red-500 font-bold text-2xl mb-4">Latest News</div>`);
+      if (unref(news).data) {
+        _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col md:flex-row gap-12" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible)))}><div class="md:w-2/5"><div class="flex flex-col gap-3"><img class="h-80 object-cover rounded-[4rem] shadow-lg"${ssrRenderAttr("src", unref(media) + unref(news).data[0].attributes.banner.data.attributes.url)}><div class="text-4xl font-bold">${ssrInterpolate(unref(news).data[0].attributes.title)}</div><div class="text-lg line-clamp-4">${ssrInterpolate(unref(news).data[0].attributes.description)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(unref(news).data[0].attributes.publish_date).format("YYYY-MM-DD HH:mm:ss"))}</div></div></div><div class="md:w-3/5"><div class="flex flex-col gap-6"><!--[-->`);
+        ssrRenderList(unref(news).data, (data, idx) => {
+          _push(`<div>`);
+          if (idx != 0) {
+            _push(`<div class="flex flex-col md:flex-row items-center"><img class="w-80 object-cover rounded-[4rem]"${ssrRenderAttr("src", unref(media) + data.attributes.banner.data.attributes.url)}><div class="flex flex-col"><div class="text-3xl font-bold">${ssrInterpolate(data.attributes.title)}</div><div class="text-lg line-clamp-2">${ssrInterpolate(data.attributes.description)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(unref(news).data[0].attributes.publish_date).format(
+              "YYYY-MM-DD HH:mm:ss"
+            ))}</div></div></div>`);
+          } else {
+            _push(`<!---->`);
+          }
+          _push(`</div>`);
+        });
+        _push(`<!--]--></div></div></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</section><section><div class="flex flex-col md:flex-row">`);
+      if (unref(results).data) {
+        _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col md:w-1/3 gap-3" }, ssrGetDirectiveProps(_ctx, _directive_motion_roll_visible_left)))}><div class="text-red-500 font-bold text-2xl mb-4">JUA Results</div><!--[-->`);
+        ssrRenderList(unref(results).data, (result, idx) => {
+          _push(`<div><div class="flex items-center"><img class="h-16 object-cover"${ssrRenderAttr("src", unref(media) + result.attributes.banner.data.attributes.url)}><div class="flex flex-col"><div class="text-lg font-bold">${ssrInterpolate(result.attributes.title)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(result.attributes.publish_date).format("YYYY-MM-DD"))}</div></div></div></div>`);
+        });
+        _push(`<!--]--></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex flex-col md:w-1/3 gap-3" }, ssrGetDirectiveProps(_ctx, _directive_motion_roll_visible_top)))}><div class="text-red-500 font-bold text-2xl mb-4">JUA Events</div><!--[-->`);
       ssrRenderList(unref(events).data, (event, idx) => {
         _push(`<div><div class="flex items-center"><img class="h-16 object-cover"${ssrRenderAttr("src", unref(media) + event.attributes.banner.data.attributes.url)}><div class="flex flex-col"><div class="text-lg font-bold">${ssrInterpolate(event.attributes.title)}</div><div class="text-sm font-bold">${ssrInterpolate(event.attributes.type)}</div><div class="text-sm text-gray-500">${ssrInterpolate(unref(dayjs)(event.attributes.publish_date).format("YYYY-MM-DD"))}</div></div></div></div>`);
       });
-      _push(`<!--]--></div><div${ssrRenderAttrs(mergeProps({ class: "flex flex-col sm:w-1/3 gap-3" }, ssrGetDirectiveProps(_ctx, _directive_motion_roll_visible_right)))}><div class="text-red-500 font-bold text-2xl mb-4">Video</div><div><iframe class="sm:w-96 w-80 h-80" src="https://www.youtube.com/embed/26IzsMUXn3s?&amp;autoplay=1&amp;loop=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;playlist=26IzsMUXn3s">
-            </iframe></div></div></div></section><section${ssrRenderAttrs(mergeProps({ class: "mb-4" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible)))}><div class="text-red-500 font-bold text-2xl mb-4">JUA Gallery</div><div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-1"><!--[-->`);
+      _push(`<!--]--></div></div></section><section${ssrRenderAttrs(mergeProps({ class: "mb-4" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible)))}><div class="text-red-500 font-bold text-2xl mb-4">JUA Gallery</div><div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-1"><!--[-->`);
       ssrRenderList(unref(event_images).data, (event_image, idx) => {
         _push(`<div><div class="w-full"><img class="${ssrRenderClass([
           (idx == 0 ? "md:rounded-tl-[4rem] " : "") + (idx == 2 ? "md:rounded-tr-[4rem] " : "") + (idx == 6 ? "md:rounded-bl-[4rem] " : "") + (idx == 8 ? "md:rounded-br-[4rem] " : ""),
@@ -180,4 +189,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=index-7a42a15e.mjs.map
+//# sourceMappingURL=index-3ce0c582.mjs.map
