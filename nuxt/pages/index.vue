@@ -29,12 +29,11 @@ await events.load();
 </script>
 
 <template>
-  <!-- <div class="container mx-auto p-4 md:pl-10 flex flex-col gap-12"> -->
-  <!-- <Head>
+  <Head>
     <Title>Index</Title>
-  </Head> -->
-  <div>HEllo</div>
-  <!-- <section>
+  </Head>
+  <div class="container mx-auto p-4 md:pl-10 flex flex-col gap-12">
+    <section>
       <div class="text-red-500 font-bold text-2xl mb-4">Latest News</div>
       <div
         class="flex flex-col md:flex-row gap-12"
@@ -84,8 +83,8 @@ await events.load();
           </div>
         </div>
       </div>
-    </section> -->
-  <!-- <section>
+    </section>
+    <section>
       <div class="flex flex-col md:flex-row">
         <div
           class="flex flex-col md:w-1/3 gap-3"
@@ -190,5 +189,5 @@ await events.load();
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 </template>
