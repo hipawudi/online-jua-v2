@@ -9,7 +9,7 @@ export default {
       openedMenu: false,
       menu: [
         { title: "HOME", link: "/" },
-        { title: "ORGANISATION", link: "/" },
+        { title: "ORGANISATION", link: "/organisation" },
         { title: "NEWS", link: "/news" },
         { title: "PHOTO GALLERY", link: "/" },
         { title: "EVENTS", link: "/" },
@@ -53,7 +53,7 @@ export default {
       </div>
     </div>
   </div> -->
-  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <nav class="bg-white border-gray-200">
     <div class="container mx-auto p-4">
       <div class="flex gap-3">
         <NuxtLink to="/"><img src="/logo/logo.png" /></NuxtLink>
@@ -87,21 +87,23 @@ export default {
         <div class="flex mt-2 gap-3 text-gray-800 font-bold text-lg pl-6">
           <div v-for="(m, index) in menu" :key="index">
             <NuxtLink :to="m.link">
-              <div class="hover:text-red-600">{{ m.title }}</div>
+              <button class="hover:text-red-600" @click="!openedMenu">
+                {{ m.title }}
+              </button>
             </NuxtLink>
           </div>
         </div>
       </div>
       <div class="w-full md:w-auto md:hidden" :class="openedMenu ? 'block' : 'hidden'">
         <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white"
         >
           <template v-for="(m, index) in menu" :key="index">
             <li>
               <NuxtLink
                 :to="m.link"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:text-red-500"
-                >{{ m.title }}
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:text-red-500"
+                ><button @click="openMeun">{{ m.title }}</button>
               </NuxtLink>
             </li>
           </template>

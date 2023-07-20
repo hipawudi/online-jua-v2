@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Title>JUA Union of Asia</Title>
+  </Head>
   <div class="flex flex-col">
     <div class="bg-red-500">
       <div
