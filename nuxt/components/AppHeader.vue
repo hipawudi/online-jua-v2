@@ -65,7 +65,7 @@ export default {
     </div>
     <div
       class="navbar-menu z-50 fixed top-0 flex-col justify-between bg-white border-r border-gray-100 w-24 h-full overflow-y-auto"
-      :class="openedMenu ? 'flex' : 'hidden'"
+      :class="openedMenu ? 'flex' : 'hidden xl:flex'"
     >
       <div
         class="navbar-backdrop fixed xl:hidden inset-0 bg-gray-900 opacity-60"
