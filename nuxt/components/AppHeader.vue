@@ -32,6 +32,9 @@ export default {
 
 <template>
   <div>
+    <Head>
+      <title>JUDO UNION OF ASIA</title>
+    </Head>
     <section class="overflow-hidden min-h-full">
       <div
         class="relative z-50 flex items-center justify-between xl:hidden bg-red-500 border-b border-gray-100 px-8 py-5 -mx-3"
