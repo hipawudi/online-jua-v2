@@ -7,7 +7,9 @@
         "web": " www.fdk.kz",
         "email": " kazakhstan.judo.fed@gmail.com",
         "president": "YESSEKEYEV Kuanyshbek",
-        "zone": "Central Zone"
+        "zone": "Central Zone",
+        "president_image": "/images/jua_member/Kazakhstan_president.jpg",
+        "name_image": "/images/jua_member/thumb6.jpg"
     },
     {
         "name": "Kyrgyzstan",
@@ -17,7 +19,9 @@
         "web": " judo.kg",
         "email": " judo-fkgz@mail.ru",
         "president": "KOLBAEV Zholdoshbek",
-        "zone": "Central Zone"
+        "zone": "Central Zone",
+        "president_image": "/images/jua_member/Kyrgyzstan_president.jpg",
+        "name_image": "/images/jua_member/thumb9.jpg"
     },
     {
         "name": "Tajikistan",
@@ -27,7 +31,9 @@
         "web": " www.judo.tj",
         "email": " info@judo.tj",
         "president": "MAHMADZOIR Ismoil",
-        "zone": "Central Zone"
+        "zone": "Central Zone",
+        "president_image": "/images/jua_member/Tajikistan_president.jpg",
+        "name_image": "/images/jua_member/thumb29.jpg"
     },
     {
         "name": "Turkmenistan",
@@ -37,7 +43,9 @@
         "web": null,
         "email": " tjf.president@gmail.com",
         "president": "GURBANMYRADOV Velmyrat",
-        "zone": "Central Zone"
+        "zone": "Central Zone",
+        "president_image": "/images/jua_member/turkmenistan_president.jpg",
+        "name_image": "/images/jua_member/thumb31.jpg"
     },
     {
         "name": "Uzbekistan",
@@ -47,7 +55,9 @@
         "web": " judo.uz",
         "email": " uzbjudofed@gmail.com",
         "president": "KAMILOV Azizjon",
-        "zone": "Central Zone"
+        "zone": "Central Zone",
+        "president_image": "/images/jua_member/uzbekistan_president.jpg",
+        "name_image": "/images/jua_member/thumb33.jpg"
     },
     {
         "name": "Afganistan",
@@ -57,7 +67,9 @@
         "web": null,
         "email": " president@afghanjudofederation.af",
         "president": "NAZARI Zabiullah",
-        "zone": "Central Zone"
+        "zone": "Central Zone",
+        "president_image": "/images/jua_member/afganistan_president.jpg",
+        "name_image": "/images/jua_member/thumb40.jpg"
     },
     {
         "name": "Cambodian",
@@ -67,7 +79,9 @@
         "web": null,
         "email": " cambodiajudofederation@gmail.com",
         "president": "Heng Ly",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "",
+        "name_image": "/images/jua_member/thumb13.jpg"
     },
     {
         "name": "Indonesia",
@@ -77,17 +91,21 @@
         "web": " www.pbpjsi.org",
         "email": " pbpjsi88@gmail.com",
         "president": "SIMANJUNTAK MARULI",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "/images/jua_member/Indonesia_president.jpg",
+        "name_image": "/images/jua_member/thumb18.jpg"
     },
     {
-        "name": "Lao",
-        "title": " Lao Judo Federation",
+        "name": "Laos",
+        "title": "Lao Judo Federation",
         "address": " 04 Khounboulom Road LAO PDR Vientiane Capital",
         "phone": "Phone : +856 21 265290",
         "web": null,
         "email": " laojudo@yahoo.com",
         "president": "PHILAPHANDETH Khemsath",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "/images/jua_member/lao_president.jpg",
+        "name_image": "/images/jua_member/thumb11.jpg"
     },
     {
         "name": "Malaysia",
@@ -97,7 +115,9 @@
         "web": null,
         "email": " Malaysiajudofederation@gmail.com",
         "president": "LIM TATT KEONG Andrew Datuk",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "/images/jua_member/malaysia_president.jpg",
+        "name_image": "/images/jua_member/thumb5.jpg"
     },
     {
         "name": "Myanmar",
@@ -107,7 +127,9 @@
         "web": null,
         "email": " myanmarjudo@myanmar.com.mm",
         "president": "Tun Tun U",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "/images/jua_member/myanmar_president.jpg",
+        "name_image": "/images/jua_member/thumb4.jpg"
     },
     {
         "name": "Philippine",
@@ -117,7 +139,9 @@
         "web": " https:\/\/www.philippinejudofederation.org\/",
         "email": " dcarter4171@yahoo.com, luleo.panganiban@gmail.com",
         "president": "CARTER David",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "/images/jua_member/philippines_president.jpg",
+        "name_image": "/images/jua_member/thumb24.jpg"
     },
     {
         "name": "Singapore",
@@ -127,7 +151,9 @@
         "web": " www.sjf.sg",
         "email": " singaporejudofederation@gmail.com",
         "president": "CHIN SENG Yeo",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "/images/jua_member/singapore_president.jpg",
+        "name_image": "/images/jua_member/singapore.png"
     },
     {
         "name": "Thailand",
@@ -137,7 +163,9 @@
         "web": " http:\/\/www.judothailand.com\/",
         "email": " judo.thailand@yahoo.com",
         "president": "ROJANACHIVA Hassabodin",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "/images/jua_member/Thailand_president.jpg",
+        "name_image": "/images/jua_member/thumb30.jpg"
     },
     {
         "name": "Vietnam",
@@ -147,7 +175,9 @@
         "web": null,
         "email": " huuantkd@gmail.com",
         "president": "NGUYEN Manh Hung",
-        "zone": "South East Zone"
+        "zone": "South East Zone",
+        "president_image": "/images/jua_member/vietnam_president.jpg",
+        "name_image": "/images/jua_member/thumb34.jpg"
     },
     {
         "name": "People's Republic Of China",
@@ -157,7 +187,9 @@
         "web": null,
         "email": " chinajudo@sports.cn",
         "president": "ZHOU Jinqiang",
-        "zone": "East Zone"
+        "zone": "East Zone",
+        "president_image": "/images/jua_member/china_president.jpg",
+        "name_image": "/images/jua_member/thumb14.bmp"
     },
     {
         "name": "Chinese Taipei",
@@ -167,7 +199,9 @@
         "web": null,
         "email": " tpejudo.ctja@msa.hinet.net",
         "president": "LU Wei-Chen",
-        "zone": "East Zone"
+        "zone": "East Zone",
+        "president_image": "/images/jua_member/Taipei_president.jpg",
+        "name_image": "/images/jua_member/thumb15.jpg"
     },
     {
         "name": "Democratic People's Republic of Korea",
@@ -177,7 +211,9 @@
         "web": null,
         "email": " prk@star-co.net.kp; prksport@star-co.net.kp",
         "president": "KIM Ik Son",
-        "zone": "East Zone"
+        "zone": "East Zone",
+        "president_image": "",
+        "name_image": "/images/jua_member/dprkorea.png"
     },
     {
         "name": "Hong Kong, China",
@@ -187,7 +223,9 @@
         "web": " hkjudo.org",
         "email": " hkjudo_mail@yahoo.com.hk",
         "president": "PUI Kwan Kay",
-        "zone": "East Zone"
+        "zone": "East Zone",
+        "president_image": "/images/jua_member/HongKong_president.jpg",
+        "name_image": "/images/jua_member/thumb17.jpg"
     },
     {
         "name": "Japan",
@@ -197,7 +235,9 @@
         "web": " www.judo.or.jp",
         "email": " ajjf@judo.or.jp",
         "president": "YAMASHITA Yasuhiro",
-        "zone": "East Zone"
+        "zone": "East Zone",
+        "president_image": "/images/jua_member/japan_president.jpg",
+        "name_image": "/images/jua_member/thumb21.jpg"
     },
     {
         "name": "Republic of Korea",
@@ -207,7 +247,9 @@
         "web": " judo.sports.or.kr",
         "email": " judo@sports.or.kr",
         "president": "CHO Yong-Chul",
-        "zone": "East Zone"
+        "zone": "East Zone",
+        "president_image": "/images/jua_member/koreajudo_president.jpg",
+        "name_image": "/images/jua_member/thumb7.jpg"
     },
     {
         "name": "Macau, China",
@@ -217,7 +259,9 @@
         "web": " https:\/\/macaujudo.org.mo\/",
         "email": " judomac@macau.ctm.net",
         "president": "CHE Kuong Hon",
-        "zone": "East Zone"
+        "zone": "East Zone",
+        "president_image": "/images/jua_member/macau_president.jpg",
+        "name_image": "/images/jua_member/thumb12.jpg"
     },
     {
         "name": "Mongolia",
@@ -227,7 +271,9 @@
         "web": " www.mongoljudo.mn",
         "email": " judodata01@gmail.com",
         "president": "KHALTMAA Battulga",
-        "zone": "East Zone"
+        "zone": "East Zone",
+        "president_image": "/images/jua_member/Mongolian_president.jpg",
+        "name_image": "/images/jua_member/thumb3.jpg"
     },
     {
         "name": "Islamic Republic of Iran (SUSPENDED)",
@@ -237,7 +283,9 @@
         "web": null,
         "email": " iiranjudof@yahoo.com,arash.miresmaeili@yahoo.com",
         "president": "MIRESMAEILI Arash",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/iran_president.jpg",
+        "name_image": "/images/jua_member/thumb19.jpg"
     },
     {
         "name": "Iraq",
@@ -246,7 +294,9 @@
         "phone": "Phone : 009647901305894",
         "web": null,
         "email": " iraqjudofed999@yahoo.com",
-        "president": "AL-MOUSAWAI Samir Sadig"
+        "president": "AL-MOUSAWAI Samir Sadig",
+        "president_image": "/images/jua_member/iraq_president.jpg",
+        "name_image": "/images/jua_member/thumb20.jpg"
     },
     {
         "name": "Jordan",
@@ -256,7 +306,9 @@
         "web": null,
         "email": " jjf@jjfjo.com",
         "president": "MALHAS Ali S",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/jordan_president.jpg",
+        "name_image": "/images/jua_member/thumb22.jpg"
     },
     {
         "name": "Kuwait",
@@ -266,7 +318,9 @@
         "web": null,
         "email": " judokuwait1@gmail.com",
         "president": "ALENEZI Yousef",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/Kuwait_president.jpg",
+        "name_image": "/images/jua_member/thumb8.jpg"
     },
     {
         "name": "Lebanon",
@@ -276,7 +330,9 @@
         "web": null,
         "email": " judolebanon@hotmail.com",
         "president": "SAADE Francois",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/lebanon_president.jpg",
+        "name_image": "/images/jua_member/thumb10.jpg"
     },
     {
         "name": "Palestine",
@@ -286,7 +342,9 @@
         "web": null,
         "email": " palestinejudofederation@gmail.com",
         "president": "OWAIDA Jehad",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/palestine_president.jpg",
+        "name_image": "/images/jua_member/thumb23.jpg"
     },
     {
         "name": "Qatar",
@@ -296,7 +354,9 @@
         "web": null,
         "email": " qtjk@olympic.qa ; riyaz25@gmail.com",
         "president": "ALATIYA Khalid",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/qatar_president.jpg",
+        "name_image": "/images/jua_member/thumb25.jpg"
     },
     {
         "name": "Saudi Arabia",
@@ -306,7 +366,9 @@
         "web": " www.judoksa.org",
         "email": " Info@sajf.org.sa, info@judoksa.org",
         "president": "ALBASSAM Abdulaziz",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/saudi_president.jpg",
+        "name_image": "/images/jua_member/thumb26.jpg"
     },
     {
         "name": "Syrian Arab Republic",
@@ -316,7 +378,9 @@
         "web": null,
         "email": " syr.judo@membergsf.com",
         "president": "HAG KADOUR Imad",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/Syrian_president.jpg",
+        "name_image": "/images/jua_member/thumb28.jpg"
     },
     {
         "name": "United Arab Emirates(UAE)",
@@ -326,7 +390,9 @@
         "web": null,
         "email": " info@uaewjjf.com",
         "president": "Thaaloob Alderei HE Mohammed",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "",
+        "name_image": "/images/jua_member/thumb32.jpg"
     },
     {
         "name": "Yemen",
@@ -336,7 +402,9 @@
         "web": null,
         "email": " YEMENJF@YAHOO.COM",
         "president": "HASAN Noman",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/Yemen_president.jpg",
+        "name_image": "/images/jua_member/thumb35.jpg"
     },
     {
         "name": "Bahrain",
@@ -346,7 +414,9 @@
         "web": " https:\/\/www.olympic.org\/bahrain",
         "email": " bahrainjudo.federation@gmail.com",
         "president": "KANOO Faisal",
-        "zone": "West Zone"
+        "zone": "West Zone",
+        "president_image": "/images/jua_member/bahrain_president.jpg",
+        "name_image": "/images/jua_member/bahrain.png"
     },
     {
         "name": "Bangladesh",
@@ -356,7 +426,9 @@
         "web": null,
         "email": " bdjudo71@gmail.com",
         "president": "Rahman Fayzur",
-        "zone": "South Zone"
+        "zone": "South Zone",
+        "president_image": "",
+        "name_image": "/images/jua_member/thumb36.jpg"
     },
     {
         "name": "India",
@@ -366,7 +438,9 @@
         "web": " onlinejfi.org",
         "email": " jfiindia@gmail.com; jfirajan@gmail.com",
         "president": "Partap Singh BAJWA, MP (Erstwhile President)",
-        "zone": "South Zone"
+        "zone": "South Zone",
+        "president_image": "/images/jua_member/india_president.jpg",
+        "name_image": "/images/jua_member/thumb37.jpg"
     },
     {
         "name": "Nepal",
@@ -376,7 +450,9 @@
         "web": null,
         "email": " horizon@mos.com.np",
         "president": "BAJRACHARYA Deepak",
-        "zone": "South Zone"
+        "zone": "South Zone",
+        "president_image": "/images/jua_member/nepal_president.jpg",
+        "name_image": "/images/jua_member/thumb38.jpg"
     },
     {
         "name": "Sri Lanka",
@@ -386,7 +462,9 @@
         "web": null,
         "email": " presidentSLjudo1@gmail.com",
         "president": "WEERASINGHE Manjula",
-        "zone": "South Zone"
+        "zone": "South Zone",
+        "president_image": "/images/jua_member/SriLanka_president.jpg",
+        "name_image": "/images/jua_member/thumb39.jpg"
     },
     {
         "name": "Pakistan",
@@ -396,7 +474,9 @@
         "web": " pjfpakistan.com",
         "email": "Email",
         "president": "ALAM Junaid",
-        "zone": "South Zone"
+        "zone": "South Zone",
+        "president_image": "/images/jua_member/pakistan_president.jpg",
+        "name_image": "/images/jua_member/thumb42.jpg"
     },
     {
         "name": "Bhutan",
@@ -406,6 +486,8 @@
         "web": null,
         "email": " bhutanjudo@gmail.com",
         "president": "DORJI Karma",
-        "zone": "South Zone"
+        "zone": "South Zone",
+        "president_image": "/images/jua_member/bhutan_president.jpg",
+        "name_image": "/images/jua_member/1550309224bhu.png"
     }
 ]

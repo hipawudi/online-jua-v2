@@ -13,20 +13,20 @@ export default {
 
 <template>
   <section
-    class="py-24 bg-white"
+    class="py-6 bg-white"
     style="
       background-image: url('flex-ui-assets/elements/pattern-white.svg');
       background-position: center;
     "
   >
-    <div class="container px-4 mx-auto xl:pl-12">
+    <div class="container mx-auto pl-2 xl:pl-16 2xl:pl-20">
       <span
-        class="inline-block py-px px-2 mb-4 text-xs leading-5 text-red-500 bg-red-100 font-medium uppercase rounded-9xl"
+        class="inline-block py-2 px-2 mb-4 rounded-lg text-xl leading-5 text-red-500 bg-red-100 font-medium uppercase rounded-9xl"
         >ORGANIZATIONS</span
       >
       <div class="mb-12" v-for="(z, idx) in zones" :key="idx">
         <h3
-          class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter"
+          class="ml-2 mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter"
         >
           {{ z }}
         </h3>
@@ -37,11 +37,14 @@ export default {
             :key="idx"
           >
             <div class="max-w-xs mx-auto md:ml-0">
-              <img
-                class="w-24 h-24 mb-6 rounded-full"
-                src="flex-ui-assets/images/teams/avatar1.png"
-                alt=""
-              />
+              <div class="flex justify-between items-center">
+                <img
+                  class="w-24 h-32 mb-6 object-cover"
+                  :src="m.president_image"
+                  alt=""
+                />
+                <img :src="m.name_image" class="w-40 h-24 mb-6" />
+              </div>
               <h3 class="mb-1 text-lg text-coolGray-800 font-semibold">
                 {{ m.name }}
               </h3>

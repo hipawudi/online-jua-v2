@@ -109,8 +109,8 @@ export default {
             <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
               <a
                 class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="#"
-                >ORGANISATION</a
+                href="/organization"
+                >ORGANIZATION</a
               >
             </div>
             <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
@@ -123,7 +123,7 @@ export default {
             <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
               <a
                 class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="#"
+                href="/gallery"
                 >PHOTO GALLERY</a
               >
             </div>

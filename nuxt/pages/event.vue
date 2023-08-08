@@ -7,9 +7,9 @@
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto pl-2 xl:pl-16 2xl:pl-20">
         <span
-          class="inline-block py-px px-2 mb-4 text-xs leading-5 font-medium uppercase rounded-9xl text-red-500 bg-red-100"
+          class="inline-block py-2 px-2 mb-4 rounded-lg text-xl leading-5 text-red-500 bg-red-100 font-medium uppercase rounded-9xl"
           >Pricing</span
         >
         <h3 class="mb-4 text-gray-900 font-bold tracking-tighter text-2xl">
@@ -23,7 +23,7 @@
     </section>
 
     <section class="bg-gray-50 py-4">
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:pl-16 2xl:pl-20">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
@@ -98,7 +98,7 @@
     </section>
 
     <section class="bg-gray-50 py-4">
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:pl-16 2xl:pl-20">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
@@ -173,7 +173,7 @@
     </section>
 
     <section class="bg-gray-50 py-4">
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:pl-16 2xl:pl-20">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
@@ -248,7 +248,7 @@
     </section>
 
     <section class="bg-gray-50 py-4">
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:pl-16 2xl:pl-20">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
@@ -323,7 +323,7 @@
     </section>
 
     <section class="bg-gray-50 py-4">
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:pl-16 2xl:pl-20">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
@@ -398,7 +398,7 @@
     </section>
 
     <section class="bg-gray-50 py-4">
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:pl-16 2xl:pl-20">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div

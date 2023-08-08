@@ -40,7 +40,7 @@ export default {
         class="relative z-50 flex items-center justify-between xl:hidden bg-red-500 border-b border-gray-100 px-8 py-5 -mx-3"
       >
         <div class="w-auto px-3">
-          <a class="block max-w-max" href="#"> <img src="images/logo4.png" alt="" /></a>
+          <a class="block max-w-max" href="#"> <img src="logo/logo.png" alt="" /></a>
         </div>
         <div class="w-auto px-3">
           <button
@@ -176,28 +176,30 @@ export default {
                 <div class="text-white text-xs">EVENT</div>
               </div>
             </a>
-            <div
-              class="h-20 flex flex-col justify-center items-center p-4"
-              :class="route.matched[0].path.slice(1) == 'gallery' ? 'bg-sky-600' : ''"
-            >
-              <svg
-                t="1691054822757"
-                class="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="5659"
-                width="200"
-                height="200"
+            <a href="/gallery">
+              <div
+                class="h-20 flex flex-col justify-center items-center p-4"
+                :class="route.matched[0].path.slice(1) == 'gallery' ? 'bg-sky-600' : ''"
               >
-                <path
-                  d="M783.058824 602.352941V0H0v783.058824h783.058824v-180.705883zM60.235294 60.235294h662.588235v481.882353h-45.477647L522.902588 342.196706 453.089882 415.322353 317.680941 181.549176 102.279529 542.117647H60.235294V60.235294z m541.033412 481.882353H172.453647l144.444235-241.784471L441.223529 515.011765 518.023529 434.477176 601.268706 542.117647zM60.235294 722.823529v-120.470588h662.588235v120.470588H60.235294z m963.764706-542.117647v783.058824H240.941176v-119.506824h60.235295V903.529412h662.588235V240.941176h-120.470588V180.705882h180.705882z"
-                  p-id="5660"
-                  fill="#ffffff"
-                ></path>
-              </svg>
-              <div class="text-white text-xs">GALLERY</div>
-            </div>
+                <svg
+                  t="1691054822757"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="5659"
+                  width="200"
+                  height="200"
+                >
+                  <path
+                    d="M783.058824 602.352941V0H0v783.058824h783.058824v-180.705883zM60.235294 60.235294h662.588235v481.882353h-45.477647L522.902588 342.196706 453.089882 415.322353 317.680941 181.549176 102.279529 542.117647H60.235294V60.235294z m541.033412 481.882353H172.453647l144.444235-241.784471L441.223529 515.011765 518.023529 434.477176 601.268706 542.117647zM60.235294 722.823529v-120.470588h662.588235v120.470588H60.235294z m963.764706-542.117647v783.058824H240.941176v-119.506824h60.235295V903.529412h662.588235V240.941176h-120.470588V180.705882h180.705882z"
+                    p-id="5660"
+                    fill="#ffffff"
+                  ></path>
+                </svg>
+                <div class="text-white text-xs">GALLERY</div>
+              </div>
+            </a>
             <div
               class="h-20 flex flex-col justify-center items-center p-4"
               :class="route.matched[0].path.slice(1) == 'regulation' ? 'bg-sky-600' : ''"

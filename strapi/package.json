@@ -15,7 +15,8 @@
     "@strapi/plugin-users-permissions": "4.11.3",
     "@strapi/strapi": "4.11.3",
     "@vueuse/motion": "^2.0.0",
-    "better-sqlite3": "8.0.1"
+    "better-sqlite3": "8.0.1",
+    "strapi-plugin-import-export-entries": "^1.21.0"
   },
   "author": {
     "name": "A Strapi developer"

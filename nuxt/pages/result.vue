@@ -7,9 +7,9 @@
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto pl-2 xl:pl-16 2xl:pl-20">
         <span
-          class="inline-block py-px px-2 mb-4 text-xs leading-5 font-medium uppercase rounded-9xl bg-red-100 text-red-500"
+          class="inline-block py-2 px-2 mb-4 rounded-lg text-xl leading-5 text-red-500 bg-red-100 font-medium uppercase rounded-9xl"
           >Pricing</span
         >
         <h3 class="mb-4 text-3xl md:text-5xl text-gray-900 font-bold tracking-tighter">
@@ -23,7 +23,7 @@
     </section>
 
     <section class="bg-gray-50 py-4">
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:pl-16 2xl:pl-20">
         <div
           class="pt-6 bg-white overflow-hidden border border-gray-100 rounded-md shadow-dashboard"
         >

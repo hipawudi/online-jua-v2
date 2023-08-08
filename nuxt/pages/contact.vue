@@ -1,17 +1,17 @@
 <template>
   <div class="">
     <section
-      class="py-20 bg-white"
+      class="py-6 bg-white"
       style="
         background-image: url('flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:pl-16 2xl:pl-20">
         <div class="flex flex-wrap mb-24 lg:mb-16 justify-between items-center">
           <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
             <span
-              class="inline-block py-px px-2 mb-4 text-xs leading-5 font-medium uppercase rounded-9xl text-red-500 bg-red-100"
+              class="inline-block py-2 px-2 mb-4 rounded-lg text-xl leading-5 text-red-500 bg-red-100 font-medium uppercase rounded-9xl"
               >Contact</span
             >
             <h3
