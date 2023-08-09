@@ -1,13 +1,13 @@
 <template>
   <div class="">
     <section
-      class="bg-white py-12"
+      class="bg-white py-12 xl:pl-16"
       style="
         background-image: url('flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
-      <div class="container mx-auto pl-2 xl:pl-16 2xl:pl-20">
+      <div class="container mx-auto xl:px-16 px-2">
         <span
           class="inline-block py-2 px-2 mb-4 rounded-lg text-xl leading-5 text-red-500 bg-red-100 font-medium uppercase rounded-9xl"
           >Pricing</span
@@ -22,8 +22,8 @@
       </div>
     </section>
 
-    <section class="bg-gray-50 py-4">
-      <div class="container mx-auto xl:pl-16 2xl:pl-20">
+    <section class="bg-gray-50 py-4 xl:pl-16">
+      <div class="container mx-auto xl:px-16 px-2">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
@@ -93,13 +93,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-gray-50 py-4">
-      <div class="container mx-auto xl:pl-16 2xl:pl-20">
-        <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
@@ -168,13 +161,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-gray-50 py-4">
-      <div class="container mx-auto xl:pl-16 2xl:pl-20">
-        <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
@@ -243,13 +229,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-gray-50 py-4">
-      <div class="container mx-auto xl:pl-16 2xl:pl-20">
-        <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
@@ -318,88 +297,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-gray-50 py-4">
-      <div class="container mx-auto xl:pl-16 2xl:pl-20">
-        <div class="flex flex-wrap -m-3">
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-gray-50 py-4">
-      <div class="container mx-auto xl:pl-16 2xl:pl-20">
-        <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"

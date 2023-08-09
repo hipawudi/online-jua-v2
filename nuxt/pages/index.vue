@@ -2,13 +2,13 @@
 <template>
   <div class="">
     <section
-      class="py-24 bg-white overflow-hidden"
+      class="py-24 bg-white overflow-hidden 2xl:pl-24 xl:px-8"
       style="
         background-image: url('flex-ui-assets/elements/pattern-light1.svg');
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full md:w-1/2 px-4 mb-20 lg:mb-0">
             <div class="max-w-md mx-auto">
@@ -70,13 +70,13 @@
     </section>
 
     <section
-      class="py-24 bg-white"
+      class="py-24 2xl:pl-24 xl:pl-20 pl-0 bg-white"
       style="
         background-image: url('flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:px-16 px-0">
         <div class="max-w-4xl mx-auto text-center">
           <h2
             class="mb-4 text-4xl md:text-5xl leading-tight text-gray-900 font-bold tracking-tighter"
@@ -263,13 +263,13 @@
     </section>
 
     <section
-      class="py-24 md:pb-28 bg-white"
+      class="2xl:pl-24 xl:pl-16 pl-0 py-16 bg-white"
       style="
         background-image: url('flex-ui-assets/elements/pattern-light1.svg');
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:px-16">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full lg:w-1/2 px-4 mb-10 lg:mb-0">
             <div class="relative h-full overflow-hidden max-w-max mx-auto rounded-md">
@@ -340,13 +340,13 @@
     </section>
 
     <section
-      class="bg-gray-50 py-4"
+      class="bg-gray-50 2xl:pl-24 xl:pl-16 pl-0 py-4"
       style="
         background-image: url('flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:px-16">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
@@ -420,8 +420,8 @@
       </div>
     </section>
 
-    <section class="bg-gray-50 py-4">
-      <div class="container px-4 mx-auto">
+    <section class="bg-gray-50 2xl:pl-24 xl:pl-16 pl-0">
+      <div class="container mx-auto xl:px-16">
         <div class="flex flex-wrap -m-3">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
@@ -496,13 +496,13 @@
     </section>
 
     <section
-      class="py-20 xl:py-24 bg-white"
+      class="2xl:pl-24 xl:pl-16 pl-0 py-12 bg-white"
       style="
         background-image: url('flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:px-16">
         <div class="flex flex-wrap justify-center text-center -mx-4">
           <div class="w-full md:w-1/3 lg:w-1/4 px-4 mb-8 lg:mb-0">
             <h2
@@ -541,13 +541,13 @@
     </section>
 
     <section
-      class="py-20 bg-white"
+      class="bg-white 2xl:pl-24 xl:pl-16 pl-0"
       style="
         background-image: url('flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
-      <div class="container px-4 mx-auto">
+      <div class="container mx-auto xl:px-16">
         <div class="flex flex-wrap mb-24 lg:mb-18 justify-between items-center">
           <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
             <span

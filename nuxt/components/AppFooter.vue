@@ -54,13 +54,13 @@ export default {
 </script>
 <template>
   <section
-    class="bg-white overflow-hidden"
+    class="bg-white overflow-hidden pl-0 2xl:pl-20 xl:pl-20"
     style="
       background-image: url('flex-ui-assets/elements/pattern-white.svg');
       background-position: center;
     "
   >
-    <div class="container px-4 mx-auto">
+    <div class="container mx-auto px-4">
       <div class="container px-4 mx-auto">
         <h3 class="mb-8 text-center leading-6 text-red-500 font-bold text-2xl mt-8">
           Meet Our Partners
@@ -98,7 +98,7 @@ export default {
           /></a>
         </div>
         <div class="w-full md:w-3/4 lg:flex-1 px-4">
-          <div class="flex flex-wrap justify-end -mx-3 lg:-mx-6">
+          <div class="flex flex-wrap -mx-3 lg:-mx-6 gap-3">
             <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
               <a
                 class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
