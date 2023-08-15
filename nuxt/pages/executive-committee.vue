@@ -51,7 +51,7 @@ export default {
               <div class="flex">
                 <div class="mr-2">
                   <div
-                    class="inline-flex mr-2 items-center justify-center w-6 h-6 rounded-full bg-red-500"
+                    class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-red-500"
                     data-v-inspector="pages/contact.vue:43:15"
                   >
                     <svg

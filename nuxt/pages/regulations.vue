@@ -28,25 +28,31 @@ export default {
       <div class="container mx-auto xl:pl-16 px-4 flex flex-col gap-6">
         <h3 class="font-bold text-xl">Which one would you like to see?</h3>
         <div>
-          <button
-            class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
-          >
-            JUA Statues
-          </button>
+          <a href="/jua-statues">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              JUA Statues
+            </button>
+          </a>
         </div>
         <div>
-          <button
-            class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
-          >
-            JUA F&#38;A Procedure
-          </button>
+          <a href="/jua-procedure">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              JUA F&#38;A Procedure
+            </button>
+          </a>
         </div>
         <div>
-          <button
-            class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
-          >
-            JUA Technical Code
-          </button>
+          <a href="/jua-technical-code">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              JUA Technical Code
+            </button>
+          </a>
         </div>
       </div>
     </section>

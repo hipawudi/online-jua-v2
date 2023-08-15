@@ -254,7 +254,7 @@ export default {
               <div
                 class="h-20 flex flex-col justify-center items-center p-4"
                 :class="
-                  route.matched[0].path.slice(1) == 'regulation' ? 'bg-[#2e99b0]' : ''
+                  route.matched[0].path.slice(1) == 'regulations' ? 'bg-[#2e99b0]' : ''
                 "
               >
                 <svg
