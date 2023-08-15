@@ -1,6 +1,23 @@
-<script setup></script>
+<script setup>
+const image_number = ref("1");
+
+function nextPage() {
+  if (image_number.value >= 4) {
+    image_number.value = "1";
+  } else {
+    image_number.value++;
+  }
+}
+function lastPage() {
+  if (image_number.value <= 1) {
+    image_number.value = "4";
+  } else {
+    image_number.value--;
+  }
+}
+</script>
 <template>
-  <div class="">
+  <div class="-z-50">
     <section
       class="py-24 bg-white overflow-hidden 2xl:pl-24 xl:px-8"
       style="
@@ -9,7 +26,7 @@
       "
     >
       <div class="container mx-auto">
-        <div class="flex flex-wrap -mx-4">
+        <div class="flex flex-wrap items-center">
           <div class="w-full md:w-1/2 px-4 mb-20 lg:mb-0">
             <div class="max-w-md mx-auto">
               <h2
@@ -20,25 +37,25 @@
               <ul class="mb-8">
                 <li class="flex items-center mb-4">
                   <img class="mr-3 w-6" src="images/red-number-1.png" alt="" /><span
-                    class="text-lg font-heading text-gray-500"
+                    class="text-lg font-heading text-gray-500 object-cover"
                     >Yasuhiro Yamashita Re-Elected as NOC President</span
                   >
                 </li>
                 <li class="flex items-center mb-4">
                   <img class="mr-3 w-6" src="images/red-number-2-svg.png" alt="" /><span
-                    class="text-lg font-heading text-gray-500"
+                    class="text-lg font-heading text-gray-500 object-cover"
                     >Tashkent Asian Cadet Cup and Tashkent Asian Junior Cup</span
                   >
                 </li>
                 <li class="flex items-center mb-4">
                   <img class="mr-3 w-6" src="images/red-number-3.png" alt="" /><span
-                    class="text-lg font-heading text-gray-500"
+                    class="text-lg font-heading text-gray-500 object-cover"
                     >Macau and Hong Kong Asian Cups Cadets and Junior</span
                   >
                 </li>
                 <li class="flex items-center">
                   <img class="mr-3 w-6" src="images/red-number-4-svg.png" alt="" /><span
-                    class="text-lg font-heading text-gray-500"
+                    class="text-lg font-heading text-gray-500 object-cover"
                     >Macau and Hong Kong Asian Cups Cadets and Junior</span
                   >
                 </li>
@@ -54,15 +71,102 @@
           </div>
           <div class="w-full md:w-1/2 px-4">
             <div class="relative max-w-max mx-auto">
-              <img
-                class="absolute top-0 right-0 -mt-6 lg:-mt-12 -mr-6 lg:-mr-12 w-20 lg:w-auto z-10"
-                src="flex-ui-assets/elements/circle3-yellow.svg"
-                alt=""
-              /><img
-                class="absolute bottom-0 left-0 -mb-6 lg:-mb-10-ml-6 lg:-ml-12 w-20 lg:w-auto"
-                src="flex-ui-assets/elements/dots3-blue.svg"
-                alt=""
-              /><img class="relative" src="images/yamashita.jpg" alt="" />
+              <div
+                class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex gap-3 list-none justify-center after:content-['']"
+              >
+                <button class="h-1 w-8 bg-gray-400/50"></button>
+                <button class="h-1 w-8 bg-gray-400/50"></button>
+                <button class="h-1 w-8 bg-gray-400/50"></button>
+                <button class="h-1 w-8 bg-gray-400/50"></button>
+              </div>
+              <div class="relative w-full overflow-hidden after:clear-both after:block">
+                <div
+                  class="relative float-left -mr-[100%] 2xl:w-[570px] xl:w-[500px] lg:w-[450px] md:w-[360px] sm:w-[450px] w-[360px] 2xl:h-[400px] xl:h-[350px] md:h-[300px] h-[250px] xl:transition-transform duration-[600ms] ease-in-out"
+                  :class="image_number == '1' ? 'block' : 'hidden'"
+                  style="backface-visibility: hidden"
+                >
+                  <img
+                    src="/images/yamashita.jpg"
+                    alt=""
+                    class="block w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="relative float-left -mr-[100%] 2xl:w-[570px] xl:w-[500px] lg:w-[450px] md:w-[360px] sm:w-[450px] w-[360px] 2xl:h-[400px] xl:h-[350px] md:h-[300px] h-[250px] transition-transform ease-in-out"
+                  :class="image_number == '2' ? 'block' : 'hidden'"
+                  style="backface-visibility: hidden"
+                >
+                  <img
+                    src="/images/Macau-9.jpg"
+                    alt=""
+                    class="block w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="relative float-left -mr-[100%] 2xl:w-[570px] xl:w-[500px] lg:w-[450px] md:w-[360px] sm:w-[450px] w-[360px] 2xl:h-[400px] xl:h-[350px] md:h-[300px] h-[250px] transition-transform ease-in-out"
+                  :class="image_number == '3' ? 'block' : 'hidden'"
+                  style="backface-visibility: hidden"
+                >
+                  <img
+                    src="/images/juameeting62019.jpg"
+                    alt=""
+                    class="block w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="relative float-left -mr-[100%] 2xl:w-[570px] xl:w-[500px] lg:w-[450px] md:w-[360px] sm:w-[450px] w-[360px] 2xl:h-[400px] xl:h-[350px] md:h-[300px] h-[250px] transition-transform ease-in-out"
+                  :class="image_number == '4' ? 'block' : 'hidden'"
+                  style="backface-visibility: hidden"
+                >
+                  <img
+                    src="/images/Congress22019.jpg"
+                    alt=""
+                    class="block w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <button
+                class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center text-white opacity-60 hover:opacity-80"
+                @click="lastPage"
+              >
+                <span class="inline-block h-8 w-8">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 19.5L8.25 12l7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button
+                class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center text-white opacity-60 hover:opacity-80"
+                @click="nextPage"
+              >
+                <span class="inline-block h-8 w-8">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -76,7 +180,7 @@
         background-position: center;
       "
     >
-      <div class="container mx-auto xl:px-16 px-0">
+      <div class="container mx-auto xl:px-16 px-2">
         <div class="max-w-4xl mx-auto text-center">
           <h2
             class="mb-4 text-4xl md:text-5xl leading-tight text-gray-900 font-bold tracking-tighter"
@@ -101,7 +205,7 @@
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
               >
                 <div class="flex">
-                  <div class="bg-red-500 text-white">Jun 05 - Aug 27</div>
+                  <div class="bg-red-500 text-white px-2">Jun 05 - Aug 27</div>
                 </div>
                 <h3 class="text-xl text-gray-900 font-bold">
                   How long does it take to ship my order?
@@ -270,7 +374,7 @@
       "
     >
       <div class="container mx-auto xl:px-16">
-        <div class="flex flex-wrap -mx-4">
+        <div class="flex flex-wrap">
           <div class="w-full lg:w-1/2 px-4 mb-10 lg:mb-0">
             <div class="relative h-full overflow-hidden max-w-max mx-auto rounded-md">
               <button
@@ -347,7 +451,7 @@
       "
     >
       <div class="container mx-auto xl:px-16">
-        <div class="flex flex-wrap -m-3">
+        <div class="flex flex-wrap">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
@@ -422,7 +526,7 @@
 
     <section class="bg-gray-50 2xl:pl-24 xl:pl-16 pl-0">
       <div class="container mx-auto xl:px-16">
-        <div class="flex flex-wrap -m-3">
+        <div class="flex flex-wrap">
           <div class="w-full md:w-1/2 xl:w-1/4 p-3">
             <div
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
@@ -503,7 +607,7 @@
       "
     >
       <div class="container mx-auto xl:px-16">
-        <div class="flex flex-wrap justify-center text-center -mx-4">
+        <div class="flex flex-wrap justify-center text-center">
           <div class="w-full md:w-1/3 lg:w-1/4 px-4 mb-8 lg:mb-0">
             <h2
               class="mb-2 text-4xl md:text-5xl font-bold text-gray-900 tracking-tighter"
@@ -547,7 +651,7 @@
         background-position: center;
       "
     >
-      <div class="container mx-auto xl:px-16">
+      <div class="container mx-auto xl:px-16 px-2">
         <div class="flex flex-wrap mb-24 lg:mb-18 justify-between items-center">
           <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
             <span
@@ -580,9 +684,9 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-wrap -mx-4">
+        <div class="flex flex-wrap">
           <div class="w-full lg:w-1/2 px-4 mb-14 lg:mb-0">
-            <div class="flex flex-wrap -mx-4">
+            <div class="flex flex-wrap">
               <div class="w-full md:w-1/2 px-4 mb-10">
                 <div class="max-w-xs mx-auto">
                   <div

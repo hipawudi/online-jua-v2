@@ -53,122 +53,126 @@ export default {
 };
 </script>
 <template>
-  <section
-    class="bg-white overflow-hidden pl-0 2xl:pl-20 xl:pl-20"
-    style="
-      background-image: url('flex-ui-assets/elements/pattern-white.svg');
-      background-position: center;
-    "
-  >
-    <div class="container mx-auto px-4">
-      <div class="container px-4 mx-auto">
-        <h3 class="mb-8 text-center leading-6 text-red-500 font-bold text-2xl mt-8">
-          Meet Our Partners
-        </h3>
-        <div class="flex flex-wrap justify-center -mx-4">
-          <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
-            <img class="mx-auto" src="images/s2-min.jpg" alt="" />
-            <div class="font-bold text-center">International Judo Federation</div>
-          </div>
-          <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
-            <img class="mx-auto" src="images/s1-min.jpg" alt="" />
-            <div class="font-bold text-center">International Olympic Committee</div>
-          </div>
+  <div>
+    <section
+      class="bg-white overflow-hidden pl-0 2xl:pl-0 xl:pl-20"
+      style="
+        background-image: url('flex-ui-assets/elements/pattern-white.svg');
+        background-position: center;
+      "
+    >
+      <div class="container mx-auto px-4">
+        <div class="container px-4 mx-auto">
+          <h3 class="mb-8 text-center leading-6 text-red-500 font-bold text-2xl mt-8">
+            Meet Our Partners
+          </h3>
+          <div class="flex flex-wrap justify-center -mx-4">
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
+              <img class="mx-auto" src="images/s2-min.jpg" alt="" />
+              <div class="font-bold text-center">International Judo Federation</div>
+            </div>
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
+              <img class="mx-auto" src="images/s1-min.jpg" alt="" />
+              <div class="font-bold text-center">International Olympic Committee</div>
+            </div>
 
-          <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
-            <img class="mx-auto" src="images/s2-min.jpg" alt="" />
-            <div class="font-bold text-center">IJF World Ranking</div>
-          </div>
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
+              <img class="mx-auto" src="images/s2-min.jpg" alt="" />
+              <div class="font-bold text-center">IJF World Ranking</div>
+            </div>
 
-          <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 md:mb-0">
-            <img class="mx-auto" src="images/s3-min.jpg" alt="" />
-            <div class="font-bold text-center">IJF Back Number</div>
-          </div>
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 md:mb-0">
+              <img class="mx-auto" src="images/s3-min.jpg" alt="" />
+              <div class="font-bold text-center">IJF Back Number</div>
+            </div>
 
-          <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4">
-            <img class="mx-auto" src="images/s7-min.jpg" alt="" />
-            <div class="font-bold text-center">JUA Calendar</div>
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4">
+              <img class="mx-auto" src="images/s7-min.jpg" alt="" />
+              <div class="font-bold text-center">JUA Calendar</div>
+            </div>
           </div>
         </div>
+        <div class="flex flex-wrap lg:items-center pt-24 pb-12 -mx-4">
+          <div class="w-full md:w-1/4 lg:w-auto px-4">
+            <a class="block mb-5 md:mb-0 max-w-max" href="/">
+              <img class="h-8" src="images/logo4.png" alt=""
+            /></a>
+          </div>
+          <div class="w-full md:w-3/4 lg:flex-1 px-4">
+            <div class="flex flex-wrap -mx-3 lg:-mx-6 gap-3">
+              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+                <a
+                  class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
+                  href="/"
+                  >HOME</a
+                >
+              </div>
+              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+                <a
+                  class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
+                  href="/organization"
+                  >ORGANIZATION</a
+                >
+              </div>
+              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+                <a
+                  class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
+                  href="#"
+                  >NEWS</a
+                >
+              </div>
+              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+                <a
+                  class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
+                  href="/gallery"
+                  >PHOTO GALLERY</a
+                >
+              </div>
+              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+                <a
+                  class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
+                  href="/event"
+                >
+                  EVENTS</a
+                >
+              </div>
+              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+                <a
+                  class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
+                  href="#"
+                  >REGULATION</a
+                >
+              </div>
+              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+                <a
+                  class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
+                  href="/result"
+                  >RESULT</a
+                >
+              </div>
+              <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
+                <a
+                  class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
+                  href="/contact"
+                  >CONTACT US</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-b border-gray-100"></div>
       </div>
-      <div class="flex flex-wrap lg:items-center pt-24 pb-12 -mx-4">
-        <div class="w-full md:w-1/4 lg:w-auto px-4">
-          <a class="block mb-5 md:mb-0 max-w-max" href="/">
-            <img class="h-8" src="images/logo4.png" alt=""
-          /></a>
-        </div>
-        <div class="w-full md:w-3/4 lg:flex-1 px-4">
-          <div class="flex flex-wrap -mx-3 lg:-mx-6 gap-3">
-            <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-              <a
-                class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="/"
-                >HOME</a
-              >
-            </div>
-            <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-              <a
-                class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="/organization"
-                >ORGANIZATION</a
-              >
-            </div>
-            <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-              <a
-                class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="#"
-                >NEWS</a
-              >
-            </div>
-            <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-              <a
-                class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="/gallery"
-                >PHOTO GALLERY</a
-              >
-            </div>
-            <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-              <a
-                class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="/event"
-              >
-                EVENTS</a
-              >
-            </div>
-            <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-              <a
-                class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="#"
-                >REGULATION</a
-              >
-            </div>
-            <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-              <a
-                class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="/result"
-                >RESULT</a
-              >
-            </div>
-            <div class="w-full md:w-auto p-3 md:py-0 md:px-6">
-              <a
-                class="inline-block text-lg md:text-xl text-gray-500 hover:text-gray-600 font-medium"
-                href="/contact"
-                >CONTACT US</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="border-b border-gray-100"></div>
+    </section>
+    <section class="bg-red-500 xl:pl-24 2xl:pl-0">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap items-center py-12">
           <div class="w-full md:w-1/2 mb-6 md:mb-0">
-            <p class="text-gray-400 font-medium">© 2023 Hubis. All Rights Reserved.</p>
+            <p class="text-white font-medium">© 2023 Hubis. All Rights Reserved.</p>
           </div>
           <div class="w-full md:w-1/2">
             <div class="flex flex-wrap md:justify-end -mx-5">
               <div class="px-5">
-                <a class="inline-block text-gray-300 hover:text-gray-400" href="#">
+                <a class="inline-block text-white" href="#">
                   <svg
                     width="10"
                     height="18"
@@ -185,7 +189,7 @@ export default {
                 ></a>
               </div>
               <div class="px-5">
-                <a class="inline-block text-gray-300 hover:text-gray-400" href="#">
+                <a class="inline-block text-white" href="#">
                   <svg
                     width="19"
                     height="16"
@@ -202,7 +206,7 @@ export default {
                 ></a>
               </div>
               <div class="px-5">
-                <a class="inline-block text-gray-300 hover:text-gray-400" href="#">
+                <a class="inline-block text-white" href="#">
                   <svg
                     width="20"
                     height="20"
@@ -219,22 +223,7 @@ export default {
                 ></a>
               </div>
               <div class="px-5">
-                <a class="inline-block text-gray-300 hover:text-gray-400" href="#">
-                  <svg
-                    width="18"
-                    height="18"
-                    viewbox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9 0C4.0275 0 0 4.13211 0 9.22838C0 13.3065 2.5785 16.7648 6.15375 17.9841C6.60375 18.0709 6.76875 17.7853 6.76875 17.5403C6.76875 17.3212 6.76125 16.7405 6.7575 15.9712C4.254 16.5277 3.726 14.7332 3.726 14.7332C3.3165 13.6681 2.72475 13.3832 2.72475 13.3832C1.9095 12.8111 2.78775 12.8229 2.78775 12.8229C3.6915 12.887 4.16625 13.7737 4.16625 13.7737C4.96875 15.1847 6.273 14.777 6.7875 14.5414C6.8685 13.9443 7.10025 13.5381 7.3575 13.3073C5.35875 13.0764 3.258 12.2829 3.258 8.74709C3.258 7.73988 3.60675 6.91659 4.18425 6.27095C4.083 6.03774 3.77925 5.0994 4.263 3.82846C4.263 3.82846 5.01675 3.58116 6.738 4.77462C7.458 4.56958 8.223 4.46785 8.988 4.46315C9.753 4.46785 10.518 4.56958 11.238 4.77462C12.948 3.58116 13.7017 3.82846 13.7017 3.82846C14.1855 5.0994 13.8818 6.03774 13.7917 6.27095C14.3655 6.91659 14.7142 7.73988 14.7142 8.74709C14.7142 12.2923 12.6105 13.0725 10.608 13.2995C10.923 13.5765 11.2155 14.1423 11.2155 15.0071C11.2155 16.242 11.2043 17.2344 11.2043 17.5341C11.2043 17.7759 11.3617 18.0647 11.823 17.9723C15.4237 16.7609 18 13.3002 18 9.22838C18 4.13211 13.9703 0 9 0Z"
-                      fill="currentColor"
-                    ></path></svg
-                ></a>
-              </div>
-              <div class="px-5">
-                <a class="inline-block text-gray-300 hover:text-gray-400" href="#">
+                <a class="inline-block text-white" href="#">
                   <svg
                     width="18"
                     height="18"
@@ -252,6 +241,6 @@ export default {
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>

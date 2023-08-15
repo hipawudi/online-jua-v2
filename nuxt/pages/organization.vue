@@ -1,63 +1,87 @@
 <script>
-import membersData from "public/members.json";
-
 export default {
   data() {
-    return {
-      members: membersData,
-      zones: ["Central Zone", "South East Zone", "East Zone", "West Zone", "South Zone"],
-    };
+    return { classes: [{ text: "Organization", to: "/organization" }] };
   },
 };
 </script>
 
 <template>
-  <section
-    class="py-6 bg-white 2xl:pl-24 lg:pl-16 pl-0"
-    style="
-      background-image: url('flex-ui-assets/elements/pattern-white.svg');
-      background-position: center;
-    "
-  >
-    <div class="container mx-auto lg:px-16 px-2">
-      <span
-        class="inline-block py-2 px-2 mb-4 rounded-lg text-xl leading-5 text-red-500 bg-red-100 font-medium uppercase rounded-9xl"
-        >ORGANIZATIONS</span
-      >
-      <div class="mb-12" v-for="(z, idx) in zones" :key="idx">
-        <h3
-          class="ml-2 mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter"
-        >
-          {{ z }}
-        </h3>
-        <div class="flex flex-wrap -mx-4">
-          <div
-            class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4 px-4 mb-10"
-            v-for="(m, idx) in members.filter((x) => x.zone == z)"
-            :key="idx"
-          >
-            <div class="max-w-xs mx-auto md:ml-0">
-              <div class="flex justify-between items-center">
-                <div class="w-24 h-32 mb-6" v-if="m.president_image == ''"></div>
-                <img
-                  v-else
-                  class="w-24 h-32 mb-6 object-cover"
-                  :src="m.president_image"
-                  alt=""
-                />
-                <img :src="m.name_image" class="w-40 h-24 mb-6" />
-              </div>
-              <h3 class="mb-1 text-lg text-coolGray-800 font-semibold">
-                {{ m.name }}
-              </h3>
-              <span class="inline-block mb-4 text-lg font-medium text-red-500">{{
-                m.title
-              }}</span>
-              <p class="mb-4 text-coolGray-500 font-medium">{{}}</p>
-            </div>
-          </div>
+  <div>
+    <page-header :classes="classes" title="Organization"></page-header>
+    <section
+      class="bg-white 2xl:pl-24 lg:pl-16 pl-0"
+      style="
+        background-image: url('flex-ui-assets/elements/pattern-white.svg');
+        background-position: center;
+      "
+    >
+      <div class="container mx-auto px-4 xl:pl-16">
+        <!-- <p class="py-8 text-lg md:text-xl text-gray-500 font-medium">
+          Judo regulations govern the conduct and techniques used in the martial art of
+          Judo, ensuring fair and safe competition.
+        </p> -->
+        <div class="flex flex-wrap justify-center -mx-4"></div>
+      </div>
+    </section>
+    <section class="py-6 bg-white 2xl:pl-24 lg:pl-16 pl-0">
+      <div class="container mx-auto xl:pl-16 px-4 flex flex-col gap-6">
+        <h3 class="font-bold text-xl">Which one would you like to see?</h3>
+        <div>
+          <a href="">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              History of JUA
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              Origin of JUDO
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="/executive-committee">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              JUA EC
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="/jua-members">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              JUA Members
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              JUA Bank A/C Details
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <button
+              class="block w-full py-4 px-6 text-lg leading-6 text-white font-medium text-center bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md shadow-sm"
+            >
+              JUA Minutes
+            </button>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>

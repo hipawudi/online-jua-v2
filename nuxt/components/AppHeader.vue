@@ -36,38 +36,62 @@ export default {
       <title>JUDO UNION OF ASIA</title>
     </Head>
     <section class="overflow-hidden min-h-full">
+      <div class="h-2 bg-red-500"></div>
       <div
-        class="relative z-50 flex items-center justify-between xl:hidden bg-red-500 border-b border-gray-100 px-8 py-5 -mx-3"
+        class="relative z-50 flex flex-col gap-3 items-center justify-between xl:hidden mb-1 shadow shadow-gray-500 py-5 px-2"
       >
-        <div class="w-auto px-3">
-          <a class="block max-w-max" href="#"> <img src="logo/logo.png" alt="" /></a>
+        <div class="flex items-center">
+          <div class="w-auto px-3">
+            <a class="block max-w-max" href="#"> <img src="logo/logo.png" alt="" /></a>
+          </div>
+          <div class="w-auto px-3">
+            <button
+              class="navbar-burger self-center ml-auto block xl:hidden"
+              @click="openMeun"
+            >
+              <svg
+                width="35"
+                height="35"
+                viewbox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  class="text-gray-100"
+                  width="32"
+                  height="32"
+                  rx="6"
+                  fill="currentColor"
+                ></rect>
+                <path
+                  class="text-gray-400"
+                  d="M7 12H25C25.2652 12 25.5196 11.8946 25.7071 11.7071C25.8946 11.5196 26 11.2652 26 11C26 10.7348 25.8946 10.4804 25.7071 10.2929C25.5196 10.1054 25.2652 10 25 10H7C6.73478 10 6.48043 10.1054 6.29289 10.2929C6.10536 10.4804 6 10.7348 6 11C6 11.2652 6.10536 11.5196 6.29289 11.7071C6.48043 11.8946 6.73478 12 7 12ZM25 15H7C6.73478 15 6.48043 15.1054 6.29289 15.2929C6.10536 15.4804 6 15.7348 6 16C6 16.2652 6.10536 16.5196 6.29289 16.7071C6.48043 16.8946 6.73478 17 7 17H25C25.2652 17 25.5196 16.8946 25.7071 16.7071C25.8946 16.5196 26 16.2652 26 16C26 15.7348 25.8946 15.4804 25.7071 15.2929C25.5196 15.1054 25.2652 15 25 15ZM25 20H7C6.73478 20 6.48043 20.1054 6.29289 20.2929C6.10536 20.4804 6 20.7348 6 21C6 21.2652 6.10536 21.5196 6.29289 21.7071C6.48043 21.8946 6.73478 22 7 22H25C25.2652 22 25.5196 21.8946 25.7071 21.7071C25.8946 21.5196 26 21.2652 26 21C26 20.7348 25.8946 20.4804 25.7071 20.2929C25.5196 20.1054 25.2652 20 25 20Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="w-auto px-3">
-          <button
-            class="navbar-burger self-center ml-auto block xl:hidden"
-            @click="openMeun"
-          >
+        <div class="flex justify-center w-1/2 md:w-1/3">
+          <div class="relative">
             <svg
-              width="35"
-              height="35"
-              viewbox="0 0 32 32"
+              class="absolute top-1/2 left-4 transform -translate-y-1/2"
+              width="16"
+              height="16"
+              viewbox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect
-                class="text-gray-100"
-                width="32"
-                height="32"
-                rx="6"
-                fill="currentColor"
-              ></rect>
               <path
-                class="text-gray-400"
-                d="M7 12H25C25.2652 12 25.5196 11.8946 25.7071 11.7071C25.8946 11.5196 26 11.2652 26 11C26 10.7348 25.8946 10.4804 25.7071 10.2929C25.5196 10.1054 25.2652 10 25 10H7C6.73478 10 6.48043 10.1054 6.29289 10.2929C6.10536 10.4804 6 10.7348 6 11C6 11.2652 6.10536 11.5196 6.29289 11.7071C6.48043 11.8946 6.73478 12 7 12ZM25 15H7C6.73478 15 6.48043 15.1054 6.29289 15.2929C6.10536 15.4804 6 15.7348 6 16C6 16.2652 6.10536 16.5196 6.29289 16.7071C6.48043 16.8946 6.73478 17 7 17H25C25.2652 17 25.5196 16.8946 25.7071 16.7071C25.8946 16.5196 26 16.2652 26 16C26 15.7348 25.8946 15.4804 25.7071 15.2929C25.5196 15.1054 25.2652 15 25 15ZM25 20H7C6.73478 20 6.48043 20.1054 6.29289 20.2929C6.10536 20.4804 6 20.7348 6 21C6 21.2652 6.10536 21.5196 6.29289 21.7071C6.48043 21.8946 6.73478 22 7 22H25C25.2652 22 25.5196 21.8946 25.7071 21.7071C25.8946 21.5196 26 21.2652 26 21C26 20.7348 25.8946 20.4804 25.7071 20.2929C25.5196 20.1054 25.2652 20 25 20Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </button>
+                d="M14.0467 11.22L12.6667 9.80667C12.3698 9.5245 11.9954 9.33754 11.5915 9.26983C11.1876 9.20211 10.7726 9.25673 10.4 9.42667L9.80001 8.82667C10.5071 7.88194 10.8299 6.70445 10.7037 5.53122C10.5775 4.358 10.0115 3.27615 9.11963 2.50347C8.2278 1.73078 7.07637 1.32464 5.89712 1.36679C4.71788 1.40894 3.59838 1.89626 2.76399 2.73065C1.92961 3.56503 1.44229 4.68453 1.40014 5.86378C1.35799 7.04302 1.76413 8.19446 2.53681 9.08629C3.3095 9.97812 4.39134 10.5441 5.56457 10.6704C6.7378 10.7966 7.91529 10.4737 8.86001 9.76667L9.45335 10.36C9.26341 10.7331 9.19534 11.1564 9.25873 11.5702C9.32212 11.984 9.51377 12.3675 9.80668 12.6667L11.22 14.08C11.595 14.4545 12.1033 14.6649 12.6333 14.6649C13.1633 14.6649 13.6717 14.4545 14.0467 14.08C14.2372 13.8937 14.3885 13.6713 14.4919 13.4257C14.5952 13.1802 14.6484 12.9164 14.6484 12.65C14.6484 12.3836 14.5952 12.1198 14.4919 11.8743C14.3885 11.6287 14.2372 11.4063 14.0467 11.22V11.22ZM8.39335 8.39333C7.92684 8.85866 7.33288 9.1753 6.68651 9.30323C6.04013 9.43117 5.37034 9.36466 4.76175 9.11212C4.15315 8.85958 3.63305 8.43234 3.26716 7.88436C2.90126 7.33638 2.70597 6.69224 2.70597 6.03333C2.70597 5.37442 2.90126 4.73029 3.26716 4.18231C3.63305 3.63433 4.15315 3.20708 4.76175 2.95454C5.37034 2.702 6.04013 2.6355 6.68651 2.76343C7.33288 2.89137 7.92684 3.208 8.39335 3.67333C8.70377 3.98297 8.95005 4.35081 9.1181 4.75577C9.28614 5.16074 9.37264 5.59488 9.37264 6.03333C9.37264 6.47178 9.28614 6.90592 9.1181 7.31089C8.95005 7.71586 8.70377 8.08369 8.39335 8.39333V8.39333ZM13.1067 13.1067C13.0447 13.1692 12.971 13.2187 12.8897 13.2526C12.8085 13.2864 12.7214 13.3039 12.6333 13.3039C12.5453 13.3039 12.4582 13.2864 12.377 13.2526C12.2957 13.2187 12.222 13.1692 12.16 13.1067L10.7467 11.6933C10.6842 11.6314 10.6346 11.5576 10.6008 11.4764C10.5669 11.3951 10.5495 11.308 10.5495 11.22C10.5495 11.132 10.5669 11.0449 10.6008 10.9636C10.6346 10.8824 10.6842 10.8086 10.7467 10.7467C10.8087 10.6842 10.8824 10.6346 10.9636 10.6007C11.0449 10.5669 11.132 10.5495 11.22 10.5495C11.308 10.5495 11.3952 10.5669 11.4764 10.6007C11.5576 10.6346 11.6314 10.6842 11.6933 10.7467L13.1067 12.16C13.1692 12.222 13.2188 12.2957 13.2526 12.3769C13.2865 12.4582 13.3039 12.5453 13.3039 12.6333C13.3039 12.7213 13.2865 12.8085 13.2526 12.8897C13.2188 12.971 13.1692 13.0447 13.1067 13.1067V13.1067Z"
+                fill="#BBC3CF"
+              ></path></svg
+            ><input
+              class="w-full md:w-52 h-9 py-1 pl-9 pr-4 text-sm text-gray-500 font-medium placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 border border-gray-200 rounded-lg"
+              type="text"
+              placeholder="Search"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -85,7 +109,7 @@ export default {
             <a href="/">
               <div
                 class="h-20 flex flex-col justify-center items-center p-4"
-                :class="route.matched[0].path.slice(1) == '' ? 'bg-sky-600' : ''"
+                :class="route.matched[0].path.slice(1) == '' ? 'bg-[#2e99b0]' : ''"
               >
                 <svg
                   t="1691047579544"
@@ -106,11 +130,37 @@ export default {
                 <div class="text-white text-xs">HOME</div>
               </div>
             </a>
+            <a href="/jua-news">
+              <div
+                class="h-20 flex flex-col justify-center items-center p-4"
+                :class="
+                  route.matched[0].path.slice(1) == 'jua-news' ? 'bg-[#2e99b0]' : ''
+                "
+              >
+                <svg
+                  t="1692070142709"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="1507"
+                  width="200"
+                  height="200"
+                >
+                  <path
+                    d="M928 0l-704 0c-53.024 0-96 42.944-96 96l0 64-32 0c-53.024 0-96 42.944-96 96l0 640c0 70.688 57.312 128 128 128l768 0c70.688 0 128-57.312 128-128l0-800c0-53.056-43.008-96-96-96zM960 896c0 35.264-28.736 64-64 64l-768 0c-35.296 0-64-28.736-64-64l0-640c0-17.664 14.336-32 32-32l32 0 0 640c0 17.696 14.304 32 32 32s32-14.304 32-32l0-768c0-17.664 14.336-32 32-32l704 0c17.632 0 32 14.336 32 32l0 800zM623.936 416.16c-8.8 0-16-7.168-16-16s7.2-16 16-16l256 0c8.864 0 16 7.168 16 16s-7.136 16-16 16l-256 0zM623.936 320.16c-8.8 0-16-7.168-16-16s7.2-16 16-16l256 0c8.864 0 16 7.168 16 16s-7.136 16-16 16l-256 0zM623.936 224.16c-8.8 0-16-7.168-16-16s7.2-16 16-16l256 0c8.864 0 16 7.168 16 16s-7.136 16-16 16l-256 0zM528 864.128c8.832 0 16 7.2 16 16 0 8.864-7.2 16-16 16l-256 0c-8.832 0-16-7.136-16-16 0-8.8 7.168-16 16-16l256 0zM528 768.128c8.832 0 16 7.2 16 16 0 8.864-7.2 16-16 16l-256 0c-8.832 0-16-7.136-16-16 0-8.8 7.168-16 16-16l256 0zM528 672.128c8.832 0 16 7.2 16 16 0 8.864-7.2 16-16 16l-256 0c-8.832 0-16-7.136-16-16 0-8.8 7.168-16 16-16l256 0zM880 864.128c8.8 0 16 7.2 16 16 0 8.864-7.2 16-16 16l-256 0c-8.864 0-16-7.136-16-16 0-8.8 7.136-16 16-16l256 0zM880 768.128c8.8 0 16 7.2 16 16 0 8.864-7.2 16-16 16l-256 0c-8.864 0-16-7.136-16-16 0-8.8 7.136-16 16-16l256 0zM880 672.128c8.8 0 16 7.2 16 16 0 8.864-7.2 16-16 16l-256 0c-8.864 0-16-7.136-16-16 0-8.8 7.136-16 16-16l256 0zM880 480.128c8.8 0 16 7.168 16 16s-7.2 16-16 16l-608 0c-8.832 0-16-7.168-16-16s7.168-16 16-16l608 0zM880 576.128c8.8 0 16 7.2 16 16 0 8.864-7.2 16-16 16l-608 0c-8.832 0-16-7.136-16-16 0-8.8 7.168-16 16-16l608 0zM288 416l224 0c17.696 0 32-14.304 32-32l0-223.872c0-17.696-14.304-32-32-32l-224 0c-17.696 0-32 14.304-32 32l0 223.872c0 17.664 14.304 32 32 32zM320 192l160 0 0 160-160 0 0-160z"
+                    fill="#ffffff"
+                    p-id="1508"
+                  ></path>
+                </svg>
+                <div class="text-white text-xs">NEWS</div>
+              </div>
+            </a>
             <a href="/organization">
               <div
                 class="h-20 flex flex-col justify-center items-center p-4"
                 :class="
-                  route.matched[0].path.slice(1) == 'organization' ? 'bg-sky-600' : ''
+                  route.matched[0].path.slice(1) == 'organization' ? 'bg-[#2e99b0]' : ''
                 "
               >
                 <svg
@@ -145,7 +195,7 @@ export default {
             <a href="/event">
               <div
                 class="h-20 flex flex-col justify-center items-center p-4"
-                :class="route.matched[0].path.slice(1) == 'event' ? 'bg-sky-600' : ''"
+                :class="route.matched[0].path.slice(1) == 'event' ? 'bg-[#2e99b0]' : ''"
               >
                 <svg
                   t="1691054765870"
@@ -179,7 +229,7 @@ export default {
             <a href="/gallery">
               <div
                 class="h-20 flex flex-col justify-center items-center p-4"
-                :class="route.matched[0].path.slice(1) == 'gallery' ? 'bg-sky-600' : ''"
+                :class="route.matched[0].path.slice(1) == 'gallery' ? 'bg-[#2e99b0]' : ''"
               >
                 <svg
                   t="1691054822757"
@@ -200,32 +250,36 @@ export default {
                 <div class="text-white text-xs">GALLERY</div>
               </div>
             </a>
-            <div
-              class="h-20 flex flex-col justify-center items-center p-4"
-              :class="route.matched[0].path.slice(1) == 'regulation' ? 'bg-sky-600' : ''"
-            >
-              <svg
-                t="1691055027066"
-                class="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="3191"
-                width="200"
-                height="200"
+            <a href="/regulations">
+              <div
+                class="h-20 flex flex-col justify-center items-center p-4"
+                :class="
+                  route.matched[0].path.slice(1) == 'regulation' ? 'bg-[#2e99b0]' : ''
+                "
               >
-                <path
-                  d="M96 128a32 32 0 0 1 32-32h288a32 32 0 0 1 32 32v288a32 32 0 0 1-32 32H128a32 32 0 0 1-32-32V128z m64 32v224h224V160H160z m384-32h384v64H544V128z m0 224h384v64H544v-64z m384 256H544v64h384v-64z m-384 224h384v64H544v-64zM128 576a32 32 0 0 0-32 32v288a32 32 0 0 0 32 32h288a32 32 0 0 0 32-32v-288a32 32 0 0 0-32-32H128z m32 288v-224h224v224H160z"
-                  fill="#ffffff"
-                  p-id="3192"
-                ></path>
-              </svg>
-              <div class="text-white text-xs">REGULATION</div>
-            </div>
+                <svg
+                  t="1691055027066"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="3191"
+                  width="200"
+                  height="200"
+                >
+                  <path
+                    d="M96 128a32 32 0 0 1 32-32h288a32 32 0 0 1 32 32v288a32 32 0 0 1-32 32H128a32 32 0 0 1-32-32V128z m64 32v224h224V160H160z m384-32h384v64H544V128z m0 224h384v64H544v-64z m384 256H544v64h384v-64z m-384 224h384v64H544v-64zM128 576a32 32 0 0 0-32 32v288a32 32 0 0 0 32 32h288a32 32 0 0 0 32-32v-288a32 32 0 0 0-32-32H128z m32 288v-224h224v224H160z"
+                    fill="#ffffff"
+                    p-id="3192"
+                  ></path>
+                </svg>
+                <div class="text-white text-xs">REGULATION</div>
+              </div>
+            </a>
             <a href="/result">
               <div
                 class="h-20 flex flex-col justify-center items-center p-4"
-                :class="route.matched[0].path.slice(1) == 'result' ? 'bg-sky-600' : ''"
+                :class="route.matched[0].path.slice(1) == 'result' ? 'bg-[#2e99b0]' : ''"
               >
                 <svg
                   t="1691055072319"
@@ -249,7 +303,7 @@ export default {
             <a href="/contact">
               <div
                 class="h-20 flex flex-col justify-center items-center p-4"
-                :class="route.matched[0].path.slice(1) == 'contact' ? 'bg-sky-600' : ''"
+                :class="route.matched[0].path.slice(1) == 'contact' ? 'bg-[#2e99b0]' : ''"
               >
                 <svg
                   t="1691055105733"
@@ -274,13 +328,13 @@ export default {
         </div>
       </div>
     </section>
-    <section class="bg-white">
-      <nav class="flex justify-between p-6 px-4">
+    <section class="bg-white mb-1 shadow shadow-gray-500 hidden xl:block">
+      <nav class="flex justify-between px-10 py-4">
         <div
           class="flex items-center justify-center xl:justify-start w-full xl:ml-24 xl:gap-32"
         >
-          <div class="hidden xl:block">
-            <img src="images/logo4.png" class="w-full h-12" />
+          <div class="">
+            <img src="logo/logo.png" class="w-full h-12" />
           </div>
           <div class="flex justify-center w-1/2 md:w-1/3">
             <div class="relative">

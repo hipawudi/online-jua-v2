@@ -1,8 +1,5 @@
 <script>
-import PageHeader from "../components/PageHeader.vue";
-
 export default {
-  components: { PageHeader },
   setup(props) {},
   data() {
     return {
@@ -14,7 +11,7 @@ export default {
 
 <template>
   <div class="">
-    <page-header :classes="classes" title="Events"></page-header>
+    <page-header :classes="classes" title="News"></page-header>
     <section
       class="bg-white py-2 2xl:pl-24 lg:pl-16 pl-0"
       style="
@@ -24,11 +21,8 @@ export default {
     >
       <div class="container mx-auto xl:pl-16 px-4">
         <h3 class="mb-4 text-gray-900 font-bold tracking-tighter text-2xl">
-          Flexible pricing plan for your startup
+          Latest JUA News
         </h3>
-        <p class="mb-12 text-gray-500 font-medium text-xl">
-          Pricing that scales with your business immediately.
-        </p>
         <div class="flex flex-wrap justify-center"></div>
       </div>
     </section>

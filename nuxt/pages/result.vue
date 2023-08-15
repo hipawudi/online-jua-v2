@@ -1,17 +1,28 @@
+<script>
+export default {
+  data() {
+    return {
+      classes: [
+        {
+          text: "Result",
+          to: "/result",
+        },
+      ],
+    };
+  },
+};
+</script>
 <template>
   <div class="">
+    <page-header :classes="classes" title="RESULT"></page-header>
     <section
-      class="bg-white"
+      class="bg-white 2xl:pl-24 lg:pl-16 pl-0"
       style="
         background-image: url('flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
-      <div class="container mx-auto pl-2 xl:pl-16 2xl:pl-20">
-        <span
-          class="inline-block py-2 px-2 mb-4 rounded-lg text-xl leading-5 text-red-500 bg-red-100 font-medium uppercase rounded-9xl"
-          >Pricing</span
-        >
+      <div class="container mx-auto px-4 xl:pl-16">
         <h3 class="mb-4 text-3xl md:text-5xl text-gray-900 font-bold tracking-tighter">
           TEAM RANKING 2023
         </h3>
@@ -22,8 +33,8 @@
       </div>
     </section>
 
-    <section class="bg-gray-50 py-4">
-      <div class="container mx-auto xl:pl-16 2xl:pl-20">
+    <section class="bg-gray-50 py-4 2xl:pl-24 lg:pl-16 pl-0s">
+      <div class="container mx-auto xl:pl-16 px-4">
         <div
           class="pt-6 bg-white overflow-hidden border border-gray-100 rounded-md shadow-dashboard"
         >
