@@ -3,7 +3,7 @@ export default {
   setup(props) {},
   data() {
     return {
-      classes: [{ text: "Events", to: "/event" }],
+      classes: [{ text: "News", to: "/jus-news" }],
     };
   },
 };
