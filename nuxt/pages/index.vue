@@ -1,19 +1,22 @@
 <script setup>
 const image_number = ref("1");
 
-function nextPage() {
+function nextImage() {
   if (image_number.value >= 4) {
     image_number.value = "1";
   } else {
     image_number.value++;
   }
 }
-function lastPage() {
+function lastImage() {
   if (image_number.value <= 1) {
     image_number.value = "4";
   } else {
     image_number.value--;
   }
+}
+function changeImage(val) {
+  image_number.value = val;
 }
 </script>
 <template>
@@ -74,10 +77,26 @@ function lastPage() {
               <div
                 class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex gap-3 list-none justify-center after:content-['']"
               >
-                <button class="h-1 w-8 bg-gray-400/50"></button>
-                <button class="h-1 w-8 bg-gray-400/50"></button>
-                <button class="h-1 w-8 bg-gray-400/50"></button>
-                <button class="h-1 w-8 bg-gray-400/50"></button>
+                <button
+                  class="h-1 w-8"
+                  :class="image_number == '1' ? 'bg-white' : 'bg-gray-400/50'"
+                  @click="changeImage('1')"
+                ></button>
+                <button
+                  class="h-1 w-8"
+                  :class="image_number == '2' ? 'bg-white' : 'bg-gray-400/50'"
+                  @click="changeImage('2')"
+                ></button>
+                <button
+                  class="h-1 w-8"
+                  :class="image_number == '3' ? 'bg-white' : 'bg-gray-400/50'"
+                  @click="changeImage('3')"
+                ></button>
+                <button
+                  class="h-1 w-8"
+                  :class="image_number == '4' ? 'bg-white' : 'bg-gray-400/50'"
+                  @click="changeImage('4')"
+                ></button>
               </div>
               <div class="relative w-full overflow-hidden after:clear-both after:block">
                 <div
@@ -127,7 +146,7 @@ function lastPage() {
               </div>
               <button
                 class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center text-white opacity-60 hover:opacity-80"
-                @click="lastPage"
+                @click="lastImage"
               >
                 <span class="inline-block h-8 w-8">
                   <svg
@@ -148,7 +167,7 @@ function lastPage() {
               </button>
               <button
                 class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center text-white opacity-60 hover:opacity-80"
-                @click="nextPage"
+                @click="nextImage"
               >
                 <span class="inline-block h-8 w-8">
                   <svg
