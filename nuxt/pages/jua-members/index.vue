@@ -1,6 +1,6 @@
 <script>
 import membersData from "public/members.json";
-import PageHeader from "../components/PageHeader.vue";
+import PageHeader from "../../components/PageHeader.vue";
 
 export default {
   components: { PageHeader },
@@ -9,10 +9,7 @@ export default {
     return {
       members: membersData,
       zones: ["Central Zone", "South East Zone", "East Zone", "West Zone", "South Zone"],
-      classes: [
-        { text: "Organization", to: "/organization" },
-        { text: "JUA Members", to: "/jua-members" },
-      ],
+      classes: [{ text: "JUA Members", to: "/jua-members" }],
     };
   },
 };
@@ -20,7 +17,7 @@ export default {
 
 <template>
   <div>
-    <page-header :classes="classes" title="ORGANIZATION"></page-header>
+    <page-header :classes="classes" title="JUA Members"></page-header>
     <section
       class="py-6 bg-white 2xl:pl-24 lg:pl-16 pl-0"
       style="

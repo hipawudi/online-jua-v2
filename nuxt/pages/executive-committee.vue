@@ -9,10 +9,7 @@ export default {
     return {
       ecs: ecData,
       zones: ["Central Zone", "South East Zone", "East Zone", "West Zone", "South Zone"],
-      classes: [
-        { text: "Organization", to: "/organization" },
-        { text: "Executive Committe", to: "/executive-committee" },
-      ],
+      classes: [{ text: "Executive Committe", to: "/executive-committee" }],
     };
   },
 };
