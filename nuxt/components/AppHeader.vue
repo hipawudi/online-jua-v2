@@ -416,7 +416,7 @@ export default {
         </div>
       </div>
     </section>
-    <section class="bg-white mb-1 shadow shadow-gray-500 hidden xl:block">
+    <section class="bg-white mb-1 shadow shadow-gray-300 hidden xl:block">
       <nav class="flex justify-between px-10 py-4">
         <div
           class="flex items-center justify-center xl:justify-start w-full xl:ml-24 xl:gap-32"
