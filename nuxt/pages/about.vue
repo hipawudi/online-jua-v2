@@ -263,7 +263,7 @@ export default {
                 for the upcoming term.
               </div>
               <div class="text-right">
-                <a href="/executive-committee-metting">
+                <a href="/jua-congress">
                   <button class="bg-[#2e99b0] text-white rounded-xl px-3 py-1 text-lg">
                     Detail
                   </button>
