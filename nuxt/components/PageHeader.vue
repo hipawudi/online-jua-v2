@@ -49,7 +49,7 @@
               </li>
             </div>
           </ul>
-          <h2 class="font-semibold text-red-500 text-3xl">{{ title }}</h2>
+          <h2 class="font-semibold uppercase text-red-500 text-3xl">{{ title }}</h2>
         </div>
       </div>
     </div>
