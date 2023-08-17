@@ -12,7 +12,7 @@ export default {
           subMenu: [
             { title: "History of JUA" },
             { title: "Origin of JUDO" },
-            { title: "JUA EC" },
+            { title: "Organziation" },
             { title: "JUA Members" },
             { title: "JUA Bank A/C Details" },
             { title: "JUA Minutes" },
@@ -55,7 +55,7 @@ export default {
 <template>
   <div>
     <section
-      class="bg-white overflow-hidden pl-0 2xl:pl-0 xl:pl-20"
+      class="bg-white overflow-hidden pl-0 2xl:pl-24 xl:pl-20"
       style="
         background-image: url('flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
@@ -163,7 +163,7 @@ export default {
         <div class="border-b border-gray-100"></div>
       </div>
     </section>
-    <section class="bg-red-500 xl:pl-24 2xl:pl-0">
+    <section class="bg-red-500 xl:pl-24 2xl:pl-24">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap items-center py-12">
           <div class="w-full md:w-1/2 mb-6 md:mb-0">

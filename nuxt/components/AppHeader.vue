@@ -13,7 +13,7 @@ export default {
       menu: [
         { title: "HOME", link: "/" },
         { title: "NEWS", link: "/jua-news" },
-        { title: "JUA EC", link: "/executive-committee" },
+        { title: "Organization", link: "/organization" },
         { title: "JUA MEMBERS", link: "/jua-members" },
         { title: "PHOTO GALLERY", link: "/gallery" },
         { title: "EVENT", link: "/event" },
@@ -159,13 +159,11 @@ export default {
               </div>
             </a>
 
-            <a href="/executive-committee">
+            <a href="/organization">
               <div
                 class="h-20 flex flex-col justify-center items-center p-3"
                 :class="
-                  route.matched[0].path.slice(1) == 'executive-committee'
-                    ? 'bg-[#2e99b0]'
-                    : ''
+                  route.matched[0].path.slice(1) == 'organization' ? 'bg-[#2e99b0]' : ''
                 "
               >
                 <svg
@@ -194,7 +192,7 @@ export default {
                     />
                   </g>
                 </svg>
-                <div class="text-white text-xs">JUA EC</div>
+                <div class="text-white text-xs">ORGANIZATION</div>
               </div>
             </a>
             <a href="/jua-members">
@@ -233,10 +231,12 @@ export default {
                 <div class="text-white text-xs">JUA MEMBERS</div>
               </div>
             </a>
-            <a href="/event">
+            <a href="/calendar">
               <div
                 class="h-20 flex flex-col justify-center items-center p-3"
-                :class="route.matched[0].path.slice(1) == 'event' ? 'bg-[#2e99b0]' : ''"
+                :class="
+                  route.matched[0].path.slice(1) == 'calendar' ? 'bg-[#2e99b0]' : ''
+                "
               >
                 <svg
                   t="1691054765870"
@@ -264,7 +264,7 @@ export default {
                     fill="#ffffff"
                   ></path>
                 </svg>
-                <div class="text-white text-xs">EVENT</div>
+                <div class="text-white text-xs">CALENDAR</div>
               </div>
             </a>
             <a href="/gallery">
