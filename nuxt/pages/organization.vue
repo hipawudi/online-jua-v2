@@ -1,10 +1,10 @@
 <script>
-import ecData from "public/jua_statues.json";
+import ecData from "public/executive_committee.json";
 
 export default {
   data() {
     return {
-      ecs: ecData,
+      data: ecData,
       zones: ["Central Zone", "South East Zone", "East Zone", "West Zone", "South Zone"],
       classes: [{ text: "Organization", to: "/organization" }],
       types: [
@@ -19,7 +19,16 @@ export default {
         "JUA Academy",
         "Media & Marketing",
       ],
+      type_index: 0,
     };
+  },
+  computed: {
+    ecs() {
+      return this.data.filter(
+        (x) =>
+          x.type_1 == this.types[this.type_index] || x.type == this.types[this.type_index]
+      );
+    },
   },
 };
 // const toLeft = () => {
@@ -50,7 +59,7 @@ export default {
           </select>
         </div>
         <div class="flex">
-          <div class="flex flex-wrap">
+          <div class="flex flex-wrap md:w-3/4">
             <div
               class="w-full xl:w-1/2 2xl:w-1/3 mb-10 p-2"
               v-for="(ec, idx) in ecs"
@@ -151,15 +160,16 @@ export default {
           <div
             class="hidden md:flex flex-col shrink-0 bg-gray-200 shadow-lg p-2 h-[440px] text-sm rounded-md"
           >
-            <div class="font-bold text-xl px-2 py-2">Organization</div>
-            <div
-              class="p-2 mx-4 border-b border-red-500"
-              :class="idx == 0 ? 'text-red-500 border-red-500 font-bold' : 'border-white'"
+            <div class="font-bold text-xl px-2 py-2 mx-1">Organization</div>
+            <button
+              class="p-2 mx-2 border-b border-red-500 text-left"
+              :class="idx == type_index ? 'text-red-500 border-red-500' : 'border-white'"
               v-for="(t, idx) in types"
               :key="idx"
+              @click="type_index = idx"
             >
               {{ t }}
-            </div>
+            </button>
           </div>
         </div>
       </div>

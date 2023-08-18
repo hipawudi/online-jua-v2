@@ -44,7 +44,7 @@ export default {
       >
         <div class="flex items-center">
           <div class="w-auto px-3">
-            <a class="block max-w-max" href="#"> <img src="logo/logo.png" alt="" /></a>
+            <a class="block max-w-max" href="#"> <img src="/logo/logo.png" alt="" /></a>
           </div>
           <div class="w-auto px-3">
             <button
@@ -422,7 +422,7 @@ export default {
           class="flex items-center justify-center xl:justify-start w-full xl:ml-24 xl:gap-32"
         >
           <div class="">
-            <img src="logo/logo.png" class="w-full h-12" />
+            <img src="/logo/logo.png" class="w-full h-12" />
           </div>
           <div class="flex justify-center w-1/2 md:w-1/3">
             <div class="relative">

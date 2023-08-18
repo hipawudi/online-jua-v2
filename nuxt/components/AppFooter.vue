@@ -68,26 +68,26 @@ export default {
           </h3>
           <div class="flex flex-wrap justify-center -mx-4">
             <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
-              <img class="mx-auto" src="images/s2-min.jpg" alt="" />
+              <img class="mx-auto" src="/images/s2-min.jpg" alt="" />
               <div class="font-bold text-center">International Judo Federation</div>
             </div>
             <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
-              <img class="mx-auto" src="images/s1-min.jpg" alt="" />
+              <img class="mx-auto" src="/images/s1-min.jpg" alt="" />
               <div class="font-bold text-center">International Olympic Committee</div>
             </div>
 
             <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 lg:mb-0">
-              <img class="mx-auto" src="images/s2-min.jpg" alt="" />
+              <img class="mx-auto" src="/images/s2-min.jpg" alt="" />
               <div class="font-bold text-center">IJF World Ranking</div>
             </div>
 
             <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-8 md:mb-0">
-              <img class="mx-auto" src="images/s3-min.jpg" alt="" />
+              <img class="mx-auto" src="/images/s3-min.jpg" alt="" />
               <div class="font-bold text-center">IJF Back Number</div>
             </div>
 
             <div class="w-1/2 md:w-1/3 lg:w-1/5 px-4">
-              <img class="mx-auto" src="images/s7-min.jpg" alt="" />
+              <img class="mx-auto" src="/images/s7-min.jpg" alt="" />
               <div class="font-bold text-center">JUA Calendar</div>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default {
         <div class="flex flex-wrap lg:items-center pt-24 pb-12 -mx-4">
           <div class="w-full md:w-1/4 lg:w-auto px-4">
             <a class="block mb-5 md:mb-0 max-w-max" href="/">
-              <img class="h-8" src="images/logo4.png" alt=""
+              <img class="h-8" src="/images/logo4.png" alt=""
             /></a>
           </div>
           <div class="w-full md:w-3/4 lg:flex-1 px-4">

@@ -34,6 +34,7 @@ export default {
           to: "/calendar",
         },
       ],
+      range_index: 0,
     };
   },
 };
@@ -106,14 +107,15 @@ export default {
           <div class="flex flex-col grow">
             <div class="font-bold mb-1">Range</div>
             <div class="md:flex hidden">
-              <div
+              <button
                 class="border py-1 text-center grow"
-                :class="idx == 0 ? 'bg-red-500 text-white ' : ''"
+                :class="idx == range_index ? 'bg-red-500 text-white ' : ''"
                 v-for="(r, idx) in ranges"
                 :key="idx"
+                @click="range_index = idx"
               >
                 {{ r }}
-              </div>
+              </button>
             </div>
             <div class="md:hidden flex">
               <select

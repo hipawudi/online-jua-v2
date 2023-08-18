@@ -218,7 +218,7 @@ function changeImage(val) {
               href="#"
             >
               <div class="ml-auto md:w-1/3">
-                <img src="images/Congress22019.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Congress22019.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
@@ -240,7 +240,7 @@ function changeImage(val) {
               href="#"
             >
               <div class="ml-auto md:w-1/3">
-                <img src="images/juameeting62019.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/juameeting62019.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
@@ -262,7 +262,7 @@ function changeImage(val) {
               href="#"
             >
               <div class="ml-auto md:w-1/3">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
@@ -284,7 +284,7 @@ function changeImage(val) {
               href="#"
             >
               <div class="ml-auto md:w-1/3">
-                <img src="images/Macau-10.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-10.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
@@ -413,7 +413,7 @@ function changeImage(val) {
                   ></path>
                 </svg>
               </button>
-              <img src="images/asian-games-2018-5.jpg" /><video
+              <img src="/images/asian-games-2018-5.jpg" /><video
                 class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 min-h-full min-w-full max-w-none"
                 poster="images/asian-games-2018-5.jpg"
                 muted=""
@@ -476,7 +476,7 @@ function changeImage(val) {
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div class="flex flex-col p-2">
                 <div class="text-sm">26 NOV 2022</div>
@@ -493,7 +493,7 @@ function changeImage(val) {
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div class="flex flex-col p-2">
                 <div class="text-sm">26 NOV 2022</div>
@@ -510,7 +510,7 @@ function changeImage(val) {
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div class="flex flex-col p-2">
                 <div class="text-sm">26 NOV 2022</div>
@@ -527,7 +527,7 @@ function changeImage(val) {
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div class="flex flex-col p-2">
                 <div class="text-sm">26 NOV 2022</div>
@@ -551,7 +551,7 @@ function changeImage(val) {
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div class="flex flex-col p-2">
                 <div class="text-sm">26 NOV 2022</div>
@@ -568,7 +568,7 @@ function changeImage(val) {
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div class="flex flex-col p-2">
                 <div class="text-sm">26 NOV 2022</div>
@@ -585,7 +585,7 @@ function changeImage(val) {
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div class="flex flex-col p-2">
                 <div class="text-sm">26 NOV 2022</div>
@@ -602,7 +602,7 @@ function changeImage(val) {
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
               </div>
               <div class="flex flex-col p-2">
                 <div class="text-sm">26 NOV 2022</div>

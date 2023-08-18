@@ -7,10 +7,27 @@ export default {
   setup(props) {},
   data() {
     return {
-      members: membersData,
-      zones: ["Central Zone", "South East Zone", "East Zone", "West Zone", "South Zone"],
+      data: membersData,
+      zones: [
+        "All Zone",
+        "Central Zone",
+        "South East Zone",
+        "East Zone",
+        "West Zone",
+        "South Zone",
+      ],
       classes: [{ text: "JUA Members", to: "/jua-members" }],
+      zone_index: 0,
     };
+  },
+  computed: {
+    members() {
+      if (this.zone_index == 0) {
+        return this.data;
+      } else {
+        return this.data.filter((x) => x.zone == this.zones[this.zone_index]);
+      }
+    },
   },
 };
 </script>
@@ -26,38 +43,53 @@ export default {
       "
     >
       <div class="container mx-auto xl:pl-16 px-4">
-        <div class="mb-12" v-for="(z, idx) in zones" :key="idx">
-          <h3
-            class="mb-4 text-3xl md:text-5xl leading-tight text-coolGray-900 font-bold tracking-tighter"
+        <div class="block md:hidden text-center mb-8">
+          <select
+            v-model="zone_index"
+            class="px-2 w-64 h-10 border rounded-md shadow-md after:bg-red-500"
           >
-            {{ z }}
-          </h3>
-          <div class="flex flex-wrap">
+            <option v-for="(z, idx) in zones" :key="idx" :value="idx">{{ z }}</option>
+          </select>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex flex-wrap md:w-3/4">
             <div
-              class="w-full md:w-1/2 xl:w-1/3 2xl:w-1/4 mb-10"
-              v-for="(m, idx) in members.filter((x) => x.zone == z)"
+              class="w-full md:w-1/2 xl:w-1/3 mb-10 px-4"
+              v-for="(m, idx) in members"
               :key="idx"
             >
-              <div class="max-w-xs mx-auto md:ml-0">
-                <div class="flex justify-between items-center">
-                  <div class="w-24 h-32 mb-6" v-if="m.president_image == ''"></div>
-                  <img
-                    v-else
-                    class="w-24 h-32 mb-6 object-cover"
-                    :src="m.president_image"
-                    alt=""
-                  />
-                  <img :src="m.name_image" class="w-40 h-24 mb-6" />
+              <NuxtLink :to="'/jua-members/' + (idx + 1)">
+                <div class="mx-auto md:ml-0 flex gap-3">
+                  <div class="flex justify-between items-center shrink-0">
+                    <img :src="m.name_image" class="w-32 h-20 mb-6 shadow-lg" />
+                  </div>
+                  <div class="flex flex-col">
+                    <div>
+                      <h3 class="mb-1 text-sm text-coolGray-800 font-semibold">
+                        {{ m.name }}
+                      </h3>
+                    </div>
+                    <div class="inline-block mb-4 text-sm font-medium text-red-500">
+                      {{ m.title }}
+                    </div>
+                  </div>
                 </div>
-                <h3 class="mb-1 text-lg text-coolGray-800 font-semibold">
-                  {{ m.name }}
-                </h3>
-                <span class="inline-block mb-4 text-lg font-medium text-red-500">{{
-                  m.title
-                }}</span>
-                <p class="mb-4 text-coolGray-500 font-medium">{{}}</p>
-              </div>
+              </NuxtLink>
             </div>
+          </div>
+          <div
+            class="hidden md:flex flex-col shrink-0 bg-gray-200 shadow-lg p-2 h-[340px] text-sm rounded-md"
+          >
+            <div class="font-bold text-xl px-2 py-2 mx-1">JUA Members</div>
+            <button
+              class="p-2 mx-4 border-b border-red-500 text-left text-lg"
+              :class="idx == zone_index ? 'text-red-500 border-red-500' : 'border-white'"
+              v-for="(z, idx) in zones"
+              :key="idx"
+              @click="zone_index = idx"
+            >
+              {{ z }}
+            </button>
           </div>
         </div>
       </div>

@@ -4,167 +4,210 @@
         "email": " alanzi@jua-president.com",
         "phone": "   965-99858754 / 99848135",
         "address": " JUA President's Office, Kuwait Olympic Committee Bldg., Nugra, Post Box 795, Safat, 13008, Kuwait",
-        "ec_member_image": "/ec_member/member_image1.jpg"
+        "ec_member_image": "/ec_member/member_image1.jpg",
+        "type_1": "Sports Commission",
+        "type": "Executive Committee"
     },
     {
         "title": "General Secretary : Mr. Mukesh KUMAR ",
         "email": " mkgsjua@gmail.com",
         "phone": "   +91-9818353870",
         "address": " C2/154, West Enclave, Pitam Pura, New Delhi - 110034, India ",
-        "ec_member_image": "/ec_member/member_image8.jpg"
+        "ec_member_image": "/ec_member/member_image8.jpg",
+        "type_1": "Sports Commission",
+        "type": "Executive Committee"
     },
     {
         "title": "General Treasurer : Ms. Amal Abu Shallak ",
         "email": " uaewj@uaewj.com",
         "phone": "   9712-4430355",
         "address": " P.O. Box 3573, Abu Dhabi, United Arab Emirates",
-        "ec_member_image": "/ec_member/member_image7.jpg"
+        "ec_member_image": "/ec_member/member_image7.jpg",
+        "type_1": "Sports Commission",
+        "type": "Executive Committee"
     },
     {
         "title": "Vice President South East : Mr. Hassabodin, Rojanachiva ",
         "email": " judo.thailand@yahoo.com",
         "phone": "   +66 2369 1514 ",
         "address": " 286 Sports Authority of Thailand  \nE2 Rajamangala…m, Hua Mark, Bangkapi, Bangkok, 10240 Thailand  \n",
-        "ec_member_image": "/ec_member/member_image2.jpg"
+        "ec_member_image": "/ec_member/member_image2.jpg",
+        "type_1": "Referee Commission",
+        "type": "Executive Committee"
     },
     {
         "title": "Vice - President West Zone : Mr. SAMEER Sadeq Al-Mousawi ",
         "email": " samirjudo_2006@yahoo.com",
         "phone": "   964-1-7901305894",
         "address": " P.O. Box 441, Iraqi National Olympic Committee, Baghdad, Iraq",
-        "ec_member_image": "/ec_member/member_image6.jpg"
+        "ec_member_image": "/ec_member/member_image6.jpg",
+        "type": "Executive Committee",
+        "type_1": "Referee Commission"
     },
     {
         "title": "Vice - President  Central Zone : Mr. Kolbaev Zholdoshbek \n  ",
         "email": " judo-fkgz@mail.ru ",
         "phone": "   996 755 900 000",
         "address": " Bishkek city,52,Kalyk Akiev street. Kyrgyzstan",
-        "ec_member_image": "/ec_member/Kolbaev.jpg"
+        "ec_member_image": "/ec_member/Kolbaev.jpg",
+        "type_1": "Education & Coaching Commission",
+        "type": "Executive Committee"
     },
     {
         "title": "Vice - President  South Zone : Mr. Junaid Alam  ",
         "email": " ",
         "phone": "   \t(92-91) 527 5627",
         "address": " 1168-A Ghalib Street Peshawa,\t25000 Peshawar,\tPakistan Cantonment",
-        "ec_member_image": "/ec_member/junaid.jpg"
+        "ec_member_image": "/ec_member/junaid.jpg",
+        "type": "Executive Committee",
+        "type_1": "Education & Coaching Commission"
     },
     {
         "title": "Vice - President East Zone : Mr. LU Wei - Chen ",
         "email": " tpejudo.ctja@msa.hinet.net    ",
         "phone": "   886 2 8772 7788",
         "address": " 510 No.20,Chu-Lun ST, Taipei, Taiwan, Republic of China",
-        "ec_member_image": "/ec_member/member_image3.jpg"
+        "ec_member_image": "/ec_member/member_image3.jpg",
+        "type_1": "Kata Commission",
+        "type": "Executive Committee"
     },
     {
         "title": "Vice - President \n Asian Games : Mr. Liu Chengliang ",
         "email": " lcl@sport.gov.cn",
         "phone": "   (8610) 67056288",
         "address": " 1, Dongdadi Street, Beijing 100061, China",
-        "ec_member_image": "/ec_member/chengliang.jpg"
+        "ec_member_image": "/ec_member/chengliang.jpg",
+        "type": "Executive Committee",
+        "type_1": "Kata Commission"
     },
     {
         "title": "VP Marketing : Mr. Kamilov Azizjon ",
         "email": " uzbjudofed@gmail.com",
         "phone": "   +998 71 232 62 31",
         "address": " A.Kadiriy 7A Shaykhontokhur dstr., 100128 Tashkent",
-        "ec_member_image": "/ec_member/kamilov.jpg"
+        "ec_member_image": "/ec_member/kamilov.jpg",
+        "type_1": "Medical Commission",
+        "type": "Executive Committee"
     },
     {
         "title": "Education Director : Mr. CHO Yong-Chul ",
         "email": "  judo@sports.or.kr ",
         "phone": "    +82 2 422 0581",
         "address": "  1F OIympic Convention Center, 424 Olympic-ro, Songpa-gu, Seoul, Korea",
-        "ec_member_image": "/ec_member/member_image16.jpg"
+        "ec_member_image": "/ec_member/member_image16.jpg",
+        "type": "Executive Committee",
+        "type_1": "Medical Commission"
     },
     {
         "title": "Education Director : Mr. Deepak Bajracharya ",
         "email": " deepak12bajracharya@gmail.com",
         "phone": "   977 1 2300343 / 977 9851020343",
         "address": " P.O. Box - 676, Kathmandu, Nepal",
-        "ec_member_image": "/ec_member/member_image26.gif"
+        "ec_member_image": "/ec_member/member_image26.gif",
+        "type_1": "Development Commission",
+        "type": "Executive Committee"
     },
     {
         "title": "Head Sports Director : Mr. CHE, Kuong Hon ",
         "email": " chekuonghon@gmail.com, info@gaapaf.net",
         "phone": "   (853) 66857527",
         "address": " Estrada D. Maria II, Edificio Kin Chit, R/C, Loja B, Macau",
-        "ec_member_image": "/ec_member/member_image10.jpg"
+        "ec_member_image": "/ec_member/member_image10.jpg",
+        "type": "Executive Committee",
+        "type_1": "Development Commission"
     },
     {
         "title": "Sports Director : Mr. David F. CARTER ",
         "email": " dcarter4171@yahoo.com",
         "phone": "   +639055206671",
         "address": " Philippine Judo Federation Office, Back of PNB Ha…ch, M. Adriatico St., City of Manila, Philippines",
-        "ec_member_image": "/ec_member/member_image14.jpg"
+        "ec_member_image": "/ec_member/member_image14.jpg",
+        "type_1": "Event Management",
+        "type": "Executive Committee"
     },
     {
         "title": "Executive Member : Mr. Armen Bagdasarov ",
         "email": " bagdasarov.judo@gmail.com",
         "phone": "   998-97-1563800",
         "address": " House No. 4, 9 - Maya Street, Mirzo Ulugbek Distr…t, Tashkent City, Repubilc of Uzbekistan - 700141",
-        "ec_member_image": "/ec_member/member_image17.jpg"
+        "ec_member_image": "/ec_member/member_image17.jpg",
+        "type": "Executive Committee",
+        "type_1": "Event Management"
     },
     {
         "title": "Executive Member and Protocol : Mr. Noman Shaher ",
         "email": " yemenjf@yahoo.com. ",
         "phone": "   00967733528192",
         "address": " Yemen-Aden city Sport Complex  Yemen",
-        "ec_member_image": "/ec_member/member_image19.jpg"
+        "ec_member_image": "/ec_member/member_image19.jpg",
+        "type_1": "JUA Academy",
+        "type": "Executive Committee"
     },
     {
         "title": "Executive member Sports for Peace : Mr. Saud A. Al-Bassam ",
         "email": " info@sajf.org.sa",
         "phone": "   +966114829870",
         "address": " Prince Faisal Bin Fahad Olympic Complex, 8535 AlWadi-Ar Rafiah 12752-2281 Riyadh 12752 11442 KSA",
-        "ec_member_image": "/ec_member/abdulaziz.jpg"
+        "ec_member_image": "/ec_member/abdulaziz.jpg",
+        "type": "Executive Committee",
+        "type_1": "JUA Academy"
     },
     {
         "title": "Head Referee Director : Mr. Akinobu Osako ",
         "email": " a.osako@judo.or.jp",
         "phone": "   0081-3-38185009",
         "address": " 1-16-30 Kasuga, Bunkyo-ku, 112-0003 Tokyo",
-        "ec_member_image": "/ec_member/akinobu.jpg"
+        "ec_member_image": "/ec_member/akinobu.jpg",
+        "type_1": "Media & Marketing",
+        "type": "Executive Committee"
     },
     {
         "title": "Referee Director : Mr. Askhat Zhitkeyev ",
         "email": " ashatzhitkeev@mail.ru",
         "phone": "   +7 701 111 15 23",
         "address": " Kabanbay Batyra 11/5, 8th floor, Office 802, Block B, Astana, Kazakhstan",
-        "ec_member_image": "/ec_member/askhat.jpg"
+        "ec_member_image": "/ec_member/askhat.jpg",
+        "type": "Executive Committee",
+        "type_1": "Media & Marketing"
     },
     {
         "title": "Referee Director : Mr. Nabeel Abdrabalnabi ",
         "email": " Nabeelxxl@hotmail.com",
         "phone": "   +966 11 4829870",
         "address": " Prince Faisal Bin Fahad Olympic Complex, 8535 AlWadi-Ar Rafiah, Makkah, KSA",
-        "ec_member_image": "/ec_member/Abdrabalnabi.jpg"
+        "ec_member_image": "/ec_member/Abdrabalnabi.jpg",
+        "type": "Executive Committee"
     },
     {
         "title": "Executive Member : Mr. Francois SAADE  ",
         "email": " judolebanon@hotmail.com",
         "phone": "   +961 3 206111",
         "address": " Ad. ADMA zone Jaune \nLEBANON",
-        "ec_member_image": "/ec_member/SAADE Francois.jpg"
+        "ec_member_image": "/ec_member/SAADE Francois.jpg",
+        "type": "Executive Committee"
     },
     {
         "title": "Executive Member : Mr. Eid Al-Muaikhi ",
         "email": " qtjk@olympic.qa",
         "phone": "   00974 / 44943545 ",
         "address": "  Al-Cornish Road , Biddaa Tower, Floor No.6-Doha-Qatar Po.Box:9874",
-        "ec_member_image": "/ec_member/Eid -Qatar.jpg"
+        "ec_member_image": "/ec_member/Eid -Qatar.jpg",
+        "type": "Executive Committee"
     },
     {
         "title": "Executive Member : Mr. Zeyad Wanes Okleh Alzubi ",
         "email": " jjf@jjfjo.com",
         "phone": "   +962-6 5625666",
         "address": " Amman . sport city . gate 4, 11953 Amman",
-        "ec_member_image": "/ec_member/zeyad.jpg"
+        "ec_member_image": "/ec_member/zeyad.jpg",
+        "type": "Executive Committee"
     },
     {
         "title": "Advisor to President : Mr. Naser Al-Shemmiri ",
         "email": " judokuwait1@gmail.com",
         "phone": "   + 965 25527276",
         "address": " Sabah Al-Salem area- Safat P.O.Box 23168 44001 Mubarak Al-Kabeer Kuwait",
-        "ec_member_image": "/ec_member/naser.jpg"
+        "ec_member_image": "/ec_member/naser.jpg",
+        "type": "Executive Committee"
     }
 ]
