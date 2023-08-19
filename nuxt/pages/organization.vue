@@ -54,10 +54,14 @@ export default {
     >
       <div class="container mx-auto xl:pl-16 px-4">
         <div class="block md:hidden text-center mb-4">
-          <select class="px-2 w-64 h-10 border rounded-md shadow-md after:bg-red-500">
-            <option v-for="(t, idx) in types" :key="idx" :value="t">{{ t }}</option>
+          <select
+            v-model="type_index"
+            class="px-2 w-64 h-10 border rounded-md shadow-md after:bg-red-500"
+          >
+            <option v-for="(t, idx) in types" :key="idx" :value="idx">{{ t }}</option>
           </select>
         </div>
+
         <div class="flex">
           <div class="flex flex-wrap md:w-3/4">
             <div
