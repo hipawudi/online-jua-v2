@@ -18,7 +18,7 @@ export default {
         { title: "PHOTO GALLERY", link: "/gallery" },
         { title: "EVENT", link: "/event" },
         { title: "REGULATION", link: "/regulation" },
-        { title: "RESULT", link: "/result" },
+        { title: "RANKING", link: "/ranking" },
         { title: "ABOUT", link: "/about" },
         { title: "CONTACT US", link: "/contact" },
       ],
@@ -317,10 +317,10 @@ export default {
                 <div class="text-white text-xs">REGULATION</div>
               </div>
             </a>
-            <a href="/result">
+            <a href="/ranking">
               <div
                 class="h-20 flex flex-col justify-center items-center p-3"
-                :class="route.matched[0].path.slice(1) == 'result' ? 'bg-[#2e99b0]' : ''"
+                :class="route.matched[0].path.slice(1) == 'ranking' ? 'bg-[#2e99b0]' : ''"
               >
                 <svg
                   t="1691055072319"
@@ -338,7 +338,7 @@ export default {
                     fill="#ffffff"
                   ></path>
                 </svg>
-                <div class="text-white text-xs">RESULT</div>
+                <div class="text-white text-xs">RANKING</div>
               </div>
             </a>
             <a href="/about">

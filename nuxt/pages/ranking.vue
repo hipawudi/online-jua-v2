@@ -4,8 +4,8 @@ export default {
     return {
       classes: [
         {
-          text: "Result",
-          to: "/result",
+          text: "Ranking",
+          to: "/ranking",
         },
       ],
     };
@@ -14,7 +14,7 @@ export default {
 </script>
 <template>
   <div class="">
-    <page-header :classes="classes" title="RESULT"></page-header>
+    <page-header :classes="classes" title="RANKING"></page-header>
     <section
       class="bg-white 2xl:pl-24 lg:pl-16 pl-0"
       style="
