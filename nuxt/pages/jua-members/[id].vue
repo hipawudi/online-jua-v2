@@ -1,32 +1,65 @@
 <script>
 import membersData from "public/members.json";
 export default {
-  setup(props) {
-    const route = useRoute();
-    const data = membersData;
-    const member = membersData.filter((x, idx) => idx == route.params.id - 1);
-    return { route, data, member };
-  },
   data() {
     return {
+      members: membersData,
       classes: [{ text: "JUA Members", to: "/jua-members" }],
       zone_index: 0,
     };
+  },
+  computed: {
+    member() {
+      return this.members[this.$route.params.id - 1];
+    },
+  },
+  mounted() {
+    const routeClass = { text: this.member.title, to: "" };
+    this.classes.push(routeClass);
   },
 };
 </script>
 
 <template>
   <div>
-    <page-header :classes="classes" :title="member.title"></page-header>
-    <section
-      class="py-6 bg-white 2xl:pl-24 lg:pl-16 pl-0"
-      style="
-        background-image: url('flex-ui-assets/elements/pattern-white.svg');
-        background-position: center;
-      "
-    >
-      <div v-if="member" class="container mx-auto xl:pl-16 px-4"></div>
+    <page-header :title="member.title" :classes="classes"></page-header>
+    <section class="py-6 bg-white 2xl:pl-24 lg:pl-16 pl-0">
+      <div class="container mx-auto xl:pl-16 px-4">
+        <div class="mb-4">
+          <img :src="member.name_image" class="w-40" />
+        </div>
+        <div class="flex gap-6">
+          <div class="flex flex-col text-gray-500 text-lg">
+            <div>Title</div>
+            <div class="">Address</div>
+            <div class="">Phone</div>
+            <div class="">Web</div>
+            <div class="">Email</div>
+          </div>
+          <div class="flex flex-col text-lg font-bold">
+            <div class="">{{ member.title }}</div>
+            <div class="">{{ member.address }}</div>
+            <div class="">{{ member.phone }}</div>
+            <div>{{ member.web }}</div>
+            <div>{{ member.email }}</div>
+          </div>
+          <div class="grow text-right">
+            <div class="flex justify-end gap-6">
+              <div class="flex flex-col">
+                <div class="text-lg text-gray-500">President</div>
+                <div class="text-lg font-bold">{{ member.president }}</div>
+              </div>
+              <div class="w-24 h-32">
+                <img
+                  v-if="member.president_image != ''"
+                  :src="member.president_image"
+                  class="w-24 h-32"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>

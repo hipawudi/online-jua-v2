@@ -57,7 +57,7 @@ export default {
     <section
       class="bg-white overflow-hidden pl-0 2xl:pl-24 xl:pl-20"
       style="
-        background-image: url('flex-ui-assets/elements/pattern-white.svg');
+        background-image: url('/flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >

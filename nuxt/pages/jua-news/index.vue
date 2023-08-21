@@ -15,7 +15,7 @@ export default {
     <section
       class="bg-white py-2 2xl:pl-24 lg:pl-16 pl-0"
       style="
-        background-image: url('flex-ui-assets/elements/pattern-white.svg');
+        background-image: url('/flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >

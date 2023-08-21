@@ -195,7 +195,7 @@ function changeImage(val) {
     <section
       class="py-24 2xl:pl-24 xl:pl-20 pl-0 bg-white"
       style="
-        background-image: url('flex-ui-assets/elements/pattern-white.svg');
+        background-image: url('/flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
@@ -465,7 +465,7 @@ function changeImage(val) {
     <section
       class="bg-gray-50 2xl:pl-24 xl:pl-16 pl-0 py-4"
       style="
-        background-image: url('flex-ui-assets/elements/pattern-white.svg');
+        background-image: url('/flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
@@ -621,7 +621,7 @@ function changeImage(val) {
     <section
       class="2xl:pl-24 xl:pl-16 pl-0 py-12 bg-white"
       style="
-        background-image: url('flex-ui-assets/elements/pattern-white.svg');
+        background-image: url('/flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
@@ -666,7 +666,7 @@ function changeImage(val) {
     <section
       class="bg-white 2xl:pl-24 xl:pl-16 pl-0"
       style="
-        background-image: url('flex-ui-assets/elements/pattern-white.svg');
+        background-image: url('/flex-ui-assets/elements/pattern-white.svg');
         background-position: center;
       "
     >
