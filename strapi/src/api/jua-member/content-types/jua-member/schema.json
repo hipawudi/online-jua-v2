@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jua_members",
+  "info": {
+    "singularName": "jua-member",
+    "pluralName": "jua-members",
+    "displayName": "jua_member"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "web": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "president": {
+      "type": "string"
+    },
+    "zone": {
+      "type": "enumeration",
+      "enum": [
+        "Central Zone",
+        "South East Zone",
+        "East Zone",
+        "West Zone",
+        "South Zone"
+      ]
+    },
+    "president_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "member_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

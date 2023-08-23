@@ -1,47 +1,29 @@
-<script>
-import ecData from "public/executive_committee.json";
+<script setup>
+const route = useRoute();
+const dayjs = useDayjs();
+const { find } = useStrapi();
+const media = useStrapiMedia();
 
-export default {
-  data() {
-    return {
-      data: ecData,
-      zones: ["Central Zone", "South East Zone", "East Zone", "West Zone", "South Zone"],
-      classes: [{ text: "Organization", to: "/organization" }],
-      types: [
-        "Executive Committee",
-        "Sports Commission",
-        "Referee Commission",
-        "Education & Coaching Commission",
-        "Kata Commission",
-        "Medical Commission",
-        "Development Commission",
-        "Event Management",
-        "JUA Academy",
-        "Media & Marketing",
-      ],
-      type_index: 0,
-    };
-  },
-  computed: {
-    ecs() {
-      return this.data.filter(
-        (x) =>
-          x.type_1 == this.types[this.type_index] || x.type == this.types[this.type_index]
-      );
-    },
-  },
-};
-// const toLeft = () => {
-//   console.log(document.querySelector(".executive-type").scrollLeft);
-//   document.querySelector(".executive-type").scrollLeft -= 100;
-// };
-// const toRight = () => {
-//   console.log(document.addEventListener);
-//   console.log(document.querySelector(".executive-type"));
-//   console.log(document.querySelector("left-button"));
-// };
+const classes = [{ text: "Organization", to: "/organization" }];
+const organizations = useList("organizations", {
+  populate: "*",
+  sort: ["title:asc"],
+});
+const type_index = ref(0);
+const types = [
+  "Executive Committee",
+  "Sports Commission",
+  "Referee Commission",
+  "Education & Coaching Commission",
+  "Kata Commission",
+  "Medical Commission",
+  "Development Commission",
+  "Event Management",
+  "JUA Academy",
+  "Media & Marketing",
+];
+await organizations.load();
 </script>
-
 <template>
   <div>
     <page-header :classes="classes" title="ORGANIZATION"></page-header>
@@ -61,26 +43,34 @@ export default {
             <option v-for="(t, idx) in types" :key="idx" :value="idx">{{ t }}</option>
           </select>
         </div>
-
         <div class="flex">
           <div class="flex flex-wrap md:w-3/4">
             <div
               class="w-full xl:w-1/2 2xl:w-1/3 mb-10 p-2"
-              v-for="(ec, idx) in ecs"
+              v-for="(o, idx) in organizations.data.filter(function (x) {
+                if (type_index != 0) {
+                  return x.attributes.type == types[type_index];
+                } else {
+                  return x.attributes.is_ec == 1;
+                }
+              })"
               :key="idx"
             >
               <div class="max-w-lg mx-auto md:ml-0">
                 <div class="flex justify-between items-center">
-                  <div class="w-24 h-32 mb-6" v-if="ec.president_image == ''"></div>
+                  <div
+                    class="w-24 h-32 mb-6"
+                    v-if="o.attributes.member_image.data == null"
+                  ></div>
                   <img
                     v-else
                     class="w-24 h-32 mb-6 object-cover"
-                    :src="ec.ec_member_image"
+                    :src="media + o.attributes.member_image.data.attributes.url"
                     alt=""
                   />
                 </div>
                 <span class="inline-block mb-4 text-lg font-medium text-red-500">{{
-                  ec.title
+                  o.attributes.title
                 }}</span>
                 <div class="flex">
                   <div class="mr-2">
@@ -105,7 +95,9 @@ export default {
                       </svg>
                     </div>
                   </div>
-                  <p class="mb-2 text-coolGray-500 font-medium">{{ ec.email }}</p>
+                  <p class="mb-2 text-coolGray-500 font-medium">
+                    {{ o.attributes.email }}
+                  </p>
                 </div>
                 <div class="flex">
                   <div class="mr-2">
@@ -130,7 +122,7 @@ export default {
                       </svg>
                     </div>
                   </div>
-                  <p class="text-coolGray-500 font-medium">{{ ec.phone }}</p>
+                  <p class="text-coolGray-500 font-medium">{{ o.attributes.phone }}</p>
                 </div>
                 <div class="flex">
                   <div class="mr-2">
@@ -155,7 +147,7 @@ export default {
                     </div>
                   </div>
                   <div>
-                    {{ ec.address }}
+                    {{ o.attributes.address }}
                   </div>
                 </div>
               </div>

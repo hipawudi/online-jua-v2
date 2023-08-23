@@ -1,37 +1,25 @@
-<script>
-import membersData from "public/members.json";
-import PageHeader from "../../components/PageHeader.vue";
+<script setup>
+const route = useRoute();
+const dayjs = useDayjs();
+const { find } = useStrapi();
+const media = useStrapiMedia();
+const classes = [{ text: "JUA Members", to: "/jua-members" }];
+const zones = [
+  "All Zone",
+  "Central Zone",
+  "South East Zone",
+  "East Zone",
+  "West Zone",
+  "South Zone",
+];
+const zone_index = ref(0);
+const jua_members = useList("jua-members", {
+  populate: "*",
+  sort: ["name:asc"],
+});
 
-export default {
-  components: { PageHeader },
-  setup(props) {},
-  data() {
-    return {
-      data: membersData,
-      zones: [
-        "All Zone",
-        "Central Zone",
-        "South East Zone",
-        "East Zone",
-        "West Zone",
-        "South Zone",
-      ],
-      classes: [{ text: "JUA Members", to: "/jua-members" }],
-      zone_index: 0,
-    };
-  },
-  computed: {
-    members() {
-      if (this.zone_index == 0) {
-        return this.data;
-      } else {
-        return this.data.filter((x) => x.zone == this.zones[this.zone_index]);
-      }
-    },
-  },
-};
+await jua_members.load();
 </script>
-
 <template>
   <div>
     <page-header :classes="classes" title="JUA Members"></page-header>
@@ -55,22 +43,31 @@ export default {
           <div class="flex flex-wrap md:w-3/4">
             <div
               class="w-full md:w-1/2 xl:w-1/3 mb-10 px-4"
-              v-for="(m, idx) in members"
+              v-for="(m, idx) in jua_members.data.filter(function (x) {
+                if (zone_index != 0) {
+                  return x.attributes.zone == zones[zone_index];
+                } else {
+                  return x;
+                }
+              })"
               :key="idx"
             >
-              <NuxtLink :to="'/jua-members/' + (idx + 1)">
+              <NuxtLink :to="'/jua-members/' + m.id">
                 <div class="mx-auto md:ml-0 flex gap-3">
                   <div class="flex justify-between items-center shrink-0">
-                    <img :src="m.name_image" class="w-32 h-20 mb-6 shadow-lg" />
+                    <img
+                      :src="media + m.attributes.member_image.data.attributes.url"
+                      class="w-32 h-20 mb-6 shadow-lg"
+                    />
                   </div>
                   <div class="flex flex-col">
                     <div>
                       <h3 class="mb-1 text-sm text-coolGray-800 font-semibold">
-                        {{ m.name }}
+                        {{ m.attributes.name }}
                       </h3>
                     </div>
                     <div class="inline-block mb-4 text-sm font-medium text-red-500">
-                      {{ m.title }}
+                      {{ m.attributes.title }}
                     </div>
                   </div>
                 </div>
