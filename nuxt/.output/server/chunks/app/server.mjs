@@ -1,4 +1,4 @@
-import { hasInjectionContext, getCurrentInstance, inject, version, ref, watchEffect, watch, useSSRContext, createApp, reactive, unref, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, shallowRef, computed, isReadonly, defineAsyncComponent, isRef, isShallow, isReactive, toRaw, withCtx, mergeProps, nextTick, defineComponent, useSlots, h, resolveComponent, onUpdated, Suspense, Transition, getCurrentScope, onScopeDispose, onUnmounted } from 'vue';
+import { hasInjectionContext, inject, version, getCurrentInstance, ref, watchEffect, watch, useSSRContext, createApp, reactive, unref, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, shallowRef, computed, isReadonly, defineAsyncComponent, isRef, isShallow, isReactive, toRaw, withCtx, mergeProps, nextTick, defineComponent, useSlots, h, resolveComponent, onUpdated, Suspense, Transition, getCurrentScope, onScopeDispose, onUnmounted } from 'vue';
 import { $fetch as $fetch$1 } from 'ofetch';
 import { createHooks } from 'hookable';
 import { getContext, executeAsync } from 'unctx';
@@ -321,12 +321,52 @@ const createError = (err) => {
 };
 const _routes = [
   {
+    name: "about",
+    path: "/about",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/about-76f6f9f2.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "calendar",
+    path: "/calendar",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/calendar-560ef4d0.mjs').then((m) => m.default || m)
+  },
+  {
     name: "contact",
     path: "/contact",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contact-5b235bf8.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contact-b5feb795.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "event",
+    path: "/event",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/event-efe86cdc.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "executive-committee-metting",
+    path: "/executive-committee-metting",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/executive-committee-metting-0012aff2.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "gallery",
+    path: "/gallery",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/gallery-a76111a0.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -334,23 +374,87 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-a583e0ad.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-183840d4.mjs').then((m) => m.default || m)
   },
   {
-    name: "news",
-    path: "/news",
+    name: "jua-congress",
+    path: "/jua-congress",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-dc642d8c.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/jua-congress-41506c34.mjs').then((m) => m.default || m)
   },
   {
-    name: "posts-id",
-    path: "/posts/:id()",
+    name: "jua-members-id",
+    path: "/jua-members/:id()",
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/_id_-5dfdc3f7.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/_id_-47df7fd3.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "jua-members",
+    path: "/jua-members",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/index-6c8920d0.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "jua-news",
+    path: "/jua-news",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/index-a15812da.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "jua-procedure",
+    path: "/jua-procedure",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/jua-procedure-16858058.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "jua-statues",
+    path: "/jua-statues",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/index-65980480.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "jua-technical-code",
+    path: "/jua-technical-code",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/jua-technical-code-4ff30ae1.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "organization",
+    path: "/organization",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/organization-0e662966.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "ranking",
+    path: "/ranking",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/ranking-be5c641c.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "regulations",
+    path: "/regulations",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import('./_nuxt/regulations-17fed21f.mjs').then((m) => m.default || m)
   }
 ];
 const appHead = { "meta": [{ "name": "viewport", "content": "width=device-width, initial-scale=1" }, { "charset": "utf-8" }], "link": [], "style": [], "script": [], "noscript": [] };
@@ -2735,7 +2839,7 @@ const _wrapIf = (component2, props, slots) => {
   } };
 };
 const layouts = {
-  default: /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/default-660b56a7.mjs').then((m) => m.default || m))
+  default: /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/default-8e3982ea.mjs').then((m) => m.default || m))
 };
 const LayoutMetaSymbol = Symbol("layout-meta");
 const __nuxt_component_0 = /* @__PURE__ */ defineComponent({
@@ -2969,7 +3073,7 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-404-7eb6cf8b.mjs').then((r) => r.default || r));
+    const _Error404 = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-404-64991861.mjs').then((r) => r.default || r));
     const _Error = /* @__PURE__ */ defineAsyncComponent(() => import('./_nuxt/error-500-bd494d47.mjs').then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -3055,5 +3159,5 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { _export_sfc as _, useRoute as a, useNuxtApp as b, createError as c, useStrapiClient as d, entry$1 as default, useStrapiVersion as e, useRouter as f, useRuntimeConfig as g, navigateTo as n, useHead as u };
+export { _export_sfc as _, useRoute as a, useRouter as b, createError as c, useStrapiClient as d, entry$1 as default, useStrapiVersion as e, useRuntimeConfig as f, navigateTo as n, useHead as u };
 //# sourceMappingURL=server.mjs.map

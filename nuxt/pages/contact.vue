@@ -230,7 +230,7 @@ export default {
             </div>
           </div>
           <div class="w-full lg:w-1/2 px-4">
-            <img src="flex-ui-assets/images/contact/contact-map-right.png" alt="" />
+            <img src="/flex-ui-assets/images/contact/contact-map-right.png" alt="" />
           </div>
         </div>
       </div>

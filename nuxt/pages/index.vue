@@ -24,7 +24,7 @@ function changeImage(val) {
     <section
       class="py-24 bg-white overflow-hidden 2xl:pl-24 xl:px-8"
       style="
-        background-image: url('flex-ui-assets/elements/pattern-light1.svg');
+        background-image: url('/flex-ui-assets/elements/pattern-light1.svg');
         background-position: center;
       "
     >
@@ -39,25 +39,25 @@ function changeImage(val) {
               </h2>
               <ul class="mb-8">
                 <li class="flex items-center mb-4">
-                  <img class="mr-3 w-6" src="images/red-number-1.png" alt="" /><span
+                  <img class="mr-3 w-6" src="/images/red-number-1.png" alt="" /><span
                     class="text-lg font-heading text-gray-500 object-cover"
                     >Yasuhiro Yamashita Re-Elected as NOC President</span
                   >
                 </li>
                 <li class="flex items-center mb-4">
-                  <img class="mr-3 w-6" src="images/red-number-2-svg.png" alt="" /><span
+                  <img class="mr-3 w-6" src="/images/red-number-2-svg.png" alt="" /><span
                     class="text-lg font-heading text-gray-500 object-cover"
                     >Tashkent Asian Cadet Cup and Tashkent Asian Junior Cup</span
                   >
                 </li>
                 <li class="flex items-center mb-4">
-                  <img class="mr-3 w-6" src="images/red-number-3.png" alt="" /><span
+                  <img class="mr-3 w-6" src="/images/red-number-3.png" alt="" /><span
                     class="text-lg font-heading text-gray-500 object-cover"
                     >Macau and Hong Kong Asian Cups Cadets and Junior</span
                   >
                 </li>
                 <li class="flex items-center">
-                  <img class="mr-3 w-6" src="images/red-number-4-svg.png" alt="" /><span
+                  <img class="mr-3 w-6" src="/images/red-number-4-svg.png" alt="" /><span
                     class="text-lg font-heading text-gray-500 object-cover"
                     >Macau and Hong Kong Asian Cups Cadets and Junior</span
                   >
@@ -388,7 +388,7 @@ function changeImage(val) {
     <section
       class="2xl:pl-24 xl:pl-16 pl-0 py-16 bg-white"
       style="
-        background-image: url('flex-ui-assets/elements/pattern-light1.svg');
+        background-image: url('/flex-ui-assets/elements/pattern-light1.svg');
         background-position: center;
       "
     >
@@ -415,7 +415,7 @@ function changeImage(val) {
               </button>
               <img src="/images/asian-games-2018-5.jpg" /><video
                 class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 min-h-full min-w-full max-w-none"
-                poster="images/asian-games-2018-5.jpg"
+                poster="/images/asian-games-2018-5.jpg"
                 muted=""
               >
                 <source
@@ -433,11 +433,11 @@ function changeImage(val) {
             <div class="relative pt-12 pb-6 sm:p-6 mb-8">
               <img
                 class="absolute top-0 left-0"
-                src="flex-ui-assets/elements/testimonials/quote-top-red.svg"
+                src="/flex-ui-assets/elements/testimonials/quote-top-red.svg"
                 alt=""
               /><img
                 class="absolute bottom-0 right-0"
-                src="flex-ui-assets/elements/testimonials/quote-down-red.svg"
+                src="/flex-ui-assets/elements/testimonials/quote-down-red.svg"
                 alt=""
               />
               <div class="relative">
