@@ -49,6 +49,11 @@
         "Member Events",
         "Asian Judo Championships"
       ]
+    },
+    "jua_member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::jua-member.jua-member"
     }
   }
 }
