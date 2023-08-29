@@ -51,6 +51,13 @@
     },
     "is_ec": {
       "type": "boolean"
+    },
+    "ec_sequence": {
+      "type": "integer",
+      "unique": false
+    },
+    "type_sequence": {
+      "type": "integer"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "jua-member",
     "pluralName": "jua-members",
-    "displayName": "jua_member"
+    "displayName": "jua_member",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -43,24 +44,26 @@
       ]
     },
     "president_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "member_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "calendars": {
       "type": "relation",
