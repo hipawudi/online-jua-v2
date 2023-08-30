@@ -69,7 +69,7 @@ function popover(idx) {
               <div class="w-full" v-if="type_index != 0 && idx == 0">
                 <div class="w-full xl:w-1/2 2xl:w-1/3 p-2">
                   <div class="mx-auto md:ml-0 flex gap-3">
-                    <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center shrink-0">
                       <div
                         class="w-24 h-32 mb-6"
                         v-if="o.attributes.member_image.data == null"
@@ -81,7 +81,7 @@ function popover(idx) {
                         alt=""
                       />
                     </div>
-                    <div class="grow">
+                    <div class="">
                       <div class="inline-block text-lg font-medium text-red-500">
                         {{ o.attributes.title }}
                       </div>
@@ -168,7 +168,7 @@ function popover(idx) {
               </div>
               <div class="w-full sm:w-1/2 lg:w-1/2 2xl:w-1/3 mb-10 p-2" v-else>
                 <div class="mx-auto md:ml-0 flex gap-3">
-                  <div class="flex justify-between items-center">
+                  <div class="flex justify-between items-center shrink-0">
                     <div
                       class="w-24 h-32 mb-2"
                       v-if="o.attributes.member_image.data == null"
