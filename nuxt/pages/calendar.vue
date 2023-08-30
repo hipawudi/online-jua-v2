@@ -2,8 +2,8 @@
 export default {
   data() {
     return {
-      continent: [
-        "All continents",
+      zones: [
+        "All zones",
         "Central Zone",
         "South East Zone",
         "East Zone",
@@ -11,7 +11,7 @@ export default {
         "South Zone",
       ],
       type: ["All types", "Competitions", "Others"],
-      category: ["All categories", "JUA", "Seniors", "Juniors", "Cadets", "Others"],
+      category: ["All zones", "JUA", "Seniors", "Juniors", "Cadets", "Others"],
       year: ["2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016"],
       ranges: [
         "Whole year",
@@ -53,13 +53,13 @@ export default {
       <div class="container mx-auto xl:pl-16 px-4">
         <div class="flex flex-col md:flex-row mb-4 gap-3">
           <div class="flex flex-col gap-2 grow">
-            <div class="font-bold">Continent</div>
+            <div class="font-bold">Zone</div>
             <div class="mb-4">
               <select
                 class="w-full px-2 h-10 border rounded-md shadow-md after:bg-red-500"
               >
-                <option v-for="(c, idx) in continent" :key="idx" :value="c">
-                  {{ c }}
+                <option v-for="(z, idx) in zones" :key="idx" :value="z">
+                  {{ z }}
                 </option>
               </select>
             </div>

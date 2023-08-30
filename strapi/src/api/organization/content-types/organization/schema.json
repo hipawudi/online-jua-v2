@@ -58,6 +58,9 @@
     },
     "type_sequence": {
       "type": "integer"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

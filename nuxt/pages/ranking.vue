@@ -1,18 +1,25 @@
-<script>
-export default {
-  data() {
-    return {
-      types: ["Athlete", "Referee"],
-      type_index: 0,
-      classes: [
-        {
-          text: "Ranking",
-          to: "/ranking",
-        },
-      ],
-    };
+<script setup>
+const types = ["Athlete", "Referee"];
+const type_index = ref(0);
+const classes = [
+  {
+    text: "Ranking",
+    to: "/ranking",
   },
-};
+];
+const weights = ["-71kg", "-63kg", "-60kg"];
+const gender = ["M", "F"];
+const category = ["Internationalc", "Intercontinental"];
+const nations = ["Afganistan", "Bahrain", "Bangladesh"];
+const jua_members = useList("jua-members", {
+  populate: "*",
+  pagination: {
+    pageSize: 100,
+  },
+  sort: ["name:asc"],
+});
+
+await jua_members.load();
 </script>
 <template>
   <div class="">
@@ -32,7 +39,7 @@ export default {
 
     <section class="bg-gray-50 py-4 2xl:pl-24 lg:pl-16 pl-0s">
       <div class="container mx-auto xl:pl-16 px-4">
-        <div class="mb-4 flex gap-3">
+        <div class="mb-4 flex gap-3 items-center">
           <button
             v-for="(t, idx) in types"
             :key="idx"
@@ -42,6 +49,58 @@ export default {
           >
             {{ t }}
           </button>
+        </div>
+        <div class="flex gap-6" v-if="type_index == 0">
+          <div class="flex flex-col gap-2 grow">
+            <div class="font-bold">Weight</div>
+            <div class="text-center mb-4 grow">
+              <select
+                class="w-full px-2 h-10 border rounded-md shadow-md after:bg-red-500"
+              >
+                <option v-for="(w, idx) in weights" :key="idx" :value="w">
+                  {{ w }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 grow" v-if="type_index == 0">
+            <div class="font-bold">Gender</div>
+            <div class="text-center mb-4 grow">
+              <select
+                class="w-full px-2 h-10 border rounded-md shadow-md after:bg-red-500"
+              >
+                <option v-for="(g, idx) in gender" :key="idx" :value="g">
+                  {{ g }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 grow" v-if="type_index == 0">
+            <div class="font-bold">Nation</div>
+            <div class="text-center mb-4 grow">
+              <select
+                class="w-full px-2 h-10 border rounded-md shadow-md after:bg-red-500"
+              >
+                <option v-for="(m, idx) in jua_members.data" :key="idx" :value="m.id">
+                  {{ m.attributes.name }}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-6" v-if="type_index == 1">
+          <div class="flex flex-col gap-2 grow">
+            <div class="font-bold">Category</div>
+            <div class="text-center mb-4 grow">
+              <select
+                class="w-full px-2 h-10 border rounded-md shadow-md after:bg-red-500"
+              >
+                <option v-for="(c, idx) in category" :key="idx" :value="c">
+                  {{ c }}
+                </option>
+              </select>
+            </div>
+          </div>
         </div>
         <div
           class="pt-6 bg-white overflow-hidden border border-gray-100 rounded-md shadow-dashboard"
@@ -63,6 +122,11 @@ export default {
                   <th
                     class="whitespace-nowrap px-4 font-semibold text-xs text-gray-500 uppercase text-center rounded-r-md"
                   >
+                    Nation
+                  </th>
+                  <th
+                    class="whitespace-nowrap px-4 font-semibold text-xs text-gray-500 uppercase text-center rounded-r-md"
+                  >
                     points
                   </th>
                 </tr>
@@ -72,6 +136,11 @@ export default {
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
                     Kyle
+                  </th>
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    Tajikistan
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
@@ -86,7 +155,11 @@ export default {
                   >
                     Nils
                   </th>
-
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    Japan
+                  </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
                   >
@@ -99,6 +172,11 @@ export default {
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
                     Peter
+                  </th>
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    Myanmar
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
@@ -114,6 +192,11 @@ export default {
                     John
                   </th>
                   <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    Macau, China
+                  </th>
+                  <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
                   >
                     4
@@ -127,6 +210,11 @@ export default {
                     Saeid
                   </th>
                   <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    People's Republic Of China
+                  </th>
+                  <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
                   >
                     3
@@ -138,6 +226,29 @@ export default {
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
                     Bogdan
+                  </th>
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    Hong Kong, China
+                  </th>
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
+                  >
+                    2
+                  </th>
+                </tr>
+                <tr class="h-20 border-b border-gray-100">
+                  <th class="whitespace-nowrap px-4 bg-white text-left">07</th>
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    Terry
+                  </th>
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    India
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
@@ -158,22 +269,12 @@ export default {
                   <th
                     class="whitespace-nowrap px-4 font-semibold text-xs text-gray-500 uppercase text-center"
                   >
-                    Athlete
+                    Referee
                   </th>
                   <th
-                    class="whitespace-nowrap px-4 font-semibold text-xs text-gray-500 uppercase text-center"
+                    class="whitespace-nowrap px-4 font-semibold text-xs text-gray-500 uppercase text-center rounded-r-md"
                   >
-                    gold
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 font-semibold text-xs text-gray-500 uppercase text-center"
-                  >
-                    silver
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 font-semibold text-xs text-gray-500 uppercase text-center"
-                  >
-                    bronze
+                    Nation
                   </th>
                   <th
                     class="whitespace-nowrap px-4 font-semibold text-xs text-gray-500 uppercase text-center rounded-r-md"
@@ -186,22 +287,12 @@ export default {
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    Tato
+                    Saki
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    6
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
-                  >
-                    7
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
-                  >
-                    12
+                    Japan
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
@@ -214,22 +305,12 @@ export default {
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    Luka
+                    Inbar
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    3
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
-                  >
-                    5
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
-                  >
-                    7
+                    Afganistan
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
@@ -242,22 +323,12 @@ export default {
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    Hidayat
+                    Ken
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    3
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
-                  >
-                    1
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
-                  >
-                    2
+                    Kuwait
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
@@ -270,22 +341,12 @@ export default {
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    Matthias
+                    John
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    1
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
-                  >
-                    0
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
-                  >
-                    1
+                    Laos
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
@@ -298,22 +359,12 @@ export default {
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    Denis
+                    Balabay
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    1
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
-                  >
-                    0
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
-                  >
-                    0
+                    Pakistan
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
@@ -326,22 +377,30 @@ export default {
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    Matthias
+                    Wei
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
                   >
-                    0
-                  </th>
-                  <th
-                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
-                  >
-                    1
+                    Myanmar
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"
                   >
-                    0
+                    2
+                  </th>
+                </tr>
+                <tr class="h-20 border-b border-gray-100">
+                  <th class="whitespace-nowrap px-4 bg-white text-left">07</th>
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    Shady
+                  </th>
+                  <th
+                    class="whitespace-nowrap px-4 bg-white text-sm font-medium text-gray-800 text-center"
+                  >
+                    Nepal
                   </th>
                   <th
                     class="whitespace-nowrap px-4 bg-white text-sm font-medium text-center"

@@ -15,14 +15,21 @@ const zones = [
 const zone_index = ref(0);
 const jua_members = useList("jua-members", {
   populate: "*",
+  pagination: {
+    pageSize: 100,
+  },
   sort: ["name:asc"],
 });
 
 await jua_members.load();
+console.log(jua_members);
 </script>
 <template>
   <div>
-    <page-header :classes="classes" title="JUA Members"></page-header>
+    <page-header
+      :classes="classes"
+      :title="'JUA Members' + '(' + jua_members.meta.pagination.total + ')'"
+    ></page-header>
     <section
       class="py-6 bg-white 2xl:pl-24 lg:pl-16 pl-0"
       style="
