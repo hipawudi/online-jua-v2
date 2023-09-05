@@ -1,12 +1,12 @@
-<script>
-export default {
-  setup(props) {},
-  data() {
-    return {
-      classes: [{ text: "News", to: "/jus-news" }],
-    };
-  },
-};
+<script setup>
+const classes = [{ text: "News", to: "/jus-news" }];
+const media = useStrapiMedia();
+const dayjs = require("dayjs");
+const news = useList("news", {
+  populate: "*",
+});
+
+await news.load();
 </script>
 
 <template>
@@ -30,342 +30,28 @@ export default {
     <section class="bg-gray-50 py-4 2xl:pl-24 lg:pl-16 pl-0">
       <div class="container mx-auto xl:pl-16 px-4">
         <div class="flex flex-wrap">
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
+          <div
+            class="w-full md:w-1/2 xl:w-1/4 p-3"
+            v-for="(n, idx) in news.data"
+            :key="idx"
+          >
             <div
               class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
             >
               <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img
+                  :src="media + n.attributes.banner.data.attributes.url"
+                  alt=""
+                  class="rounded shadow-md h-60 object-cover"
+                />
               </div>
               <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
+                <div class="text-sm">
+                  {{ dayjs(n.attributes.publish_date).format("YYYY-MM-DD HH:mm:ss") }}
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
+                <div class="font-bold text-lg">{{ n.attributes.title }}</div>
+                <div class="line-clamp-3">
+                  {{ n.attributes.description }}
                 </div>
               </div>
             </div>

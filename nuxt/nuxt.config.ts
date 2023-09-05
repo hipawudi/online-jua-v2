@@ -5,8 +5,9 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     '@nuxtjs/strapi',
     '@nuxtjs/tailwindcss',
-    "@vueuse/motion/nuxt"
+    '@vueuse/motion/nuxt',
   ],
+
   devtools: { enabled: true },
   hooks: {
     listen(server, { host, port }) {
