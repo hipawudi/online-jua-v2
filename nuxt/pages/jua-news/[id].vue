@@ -18,6 +18,7 @@ const classes = [
     <section class="py-6 bg-white 2xl:pl-24 lg:pl-16 pl-0">
       <div class="container mx-auto xl:pl-16 px-4">
         <div
+          class="whitespace-pre-wrap"
           v-html="renderer.render(data.attributes.content)"
         />
       </div>
