@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "medical_commissions",
+  "info": {
+    "singularName": "medical-commission",
+    "pluralName": "medical-commissions",
+    "displayName": "Medical Commission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member": {
+      "type": "component",
+      "repeatable": true,
+      "component": "commission.commission"
+    }
+  }
+}

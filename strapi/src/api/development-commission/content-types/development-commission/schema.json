@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "development_commissions",
+  "info": {
+    "singularName": "development-commission",
+    "pluralName": "development-commissions",
+    "displayName": "Development Commission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "sequence": {
+      "type": "integer"
+    },
+    "member_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

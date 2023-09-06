@@ -5,34 +5,48 @@ const { find } = useStrapi();
 const media = useStrapiMedia();
 
 const classes = [{ text: "Organization", to: "/organization" }];
-const organizations = useList("organizations", {
-  populate: "*",
-  sort: ["ec_sequence:asc"],
-});
+const members = ref(
+  useList("sports-commissions", {
+    populate: "*",
+    sort: ["sequence:asc"],
+    pagination: {
+      pageSize: 100,
+    },
+  })
+);
 const type_index = ref(0);
 const popover_index = ref(null);
 const types = [
-  "Executive Committee",
-  "Sports Commission",
-  "Referee Commission",
-  "Education & Coaching Commission",
-  "Kata Commission",
-  "Medical Commission",
-  "Development Commission",
-  "Event Management",
-  "JUA Academy",
-  "Media & Marketing",
+  { label: "Executive Committee", api: "organizations" },
+  { label: "Sports Commission", api: "sports-commissions" },
+  { label: "Referee Commission", api: "referee-commissions" },
+  { label: "Education & Coaching Commission", api: "education-and-coaching-commissions" },
+  { label: "Kata Commission", api: "kata-commissions" },
+  { label: "Medical Commission", api: "medical-commissions" },
+  { label: "Development Commission", api: "development-commissions" },
+  { label: "Event Management", api: "event-managements" },
+  { label: "JUA Academy", api: "jua-academies" },
+  { label: "Media & Marketing", api: "media-and-marketings" },
 ];
 
-await organizations.load();
+await members.value.load();
 function popover(idx) {
-  console.log(idx);
   if (popover_index.value == idx) {
     popover_index.value = null;
   } else {
     popover_index.value = idx;
   }
-  console.log(popover_index.value);
+}
+function changeType(idx, t) {
+  type_index.value = idx;
+  members.value = useList(t.api, {
+    populate: "*",
+    sort: ["sequence:asc"],
+    pagination: {
+      pageSize: 100,
+    },
+  });
+  members.value.load();
 }
 </script>
 <template>
@@ -56,37 +70,29 @@ function popover(idx) {
         </div>
         <div class="flex">
           <div class="flex flex-wrap lg:w-3/4">
-            <template
-              v-for="(o, idx) in organizations.data.filter(function (x, index) {
-                if (type_index != 0) {
-                  return x.attributes.type == types[type_index];
-                } else {
-                  return x.attributes.is_ec == 1;
-                }
-              })"
-              :key="idx"
-            >
+            {{ members }}
+            <!-- <template v-for="(m, idx) in members.data" :key="idx">
               <div class="w-full" v-if="type_index != 0 && idx == 0">
                 <div class="w-full xl:w-1/2 2xl:w-1/3 p-2">
                   <div class="mx-auto md:ml-0 flex gap-3">
                     <div class="flex justify-between items-center shrink-0">
                       <div
                         class="w-24 h-32 mb-6"
-                        v-if="o.attributes.member_image.data == null"
+                        v-if="m.attributes.member_image.data == null"
                       ></div>
                       <img
                         v-else
                         class="w-24 h-32 mb-6 object-cover"
-                        :src="media + o.attributes.member_image.data.attributes.url"
+                        :src="media + m.attributes.member_image.data.attributes.url"
                         alt=""
                       />
                     </div>
                     <div class="">
                       <div class="inline-block text-lg font-medium text-red-500">
-                        {{ o.attributes.title }}
+                        {{ m.attributes.title }}
                       </div>
                       <div class="mb-2">
-                        {{ o.attributes.name }}
+                        {{ m.attributes.name }}
                       </div>
                       <a @click="popover(idx)" class="cursor-pointer">
                         <div class="relative flex gap-1">
@@ -95,9 +101,9 @@ function popover(idx) {
                             :class="popover_index == idx ? 'block' : 'hidden'"
                           >
                             <div class="flex flex-col text-sm">
-                              <div class="">Email: {{ o.attributes.email }}</div>
-                              <div class="">Phone: {{ o.attributes.phone }}</div>
-                              <div class="">Address: {{ o.attributes.address }}</div>
+                              <div class="">Email: {{ m.attributes.email }}</div>
+                              <div class="">Phone: {{ m.attributes.phone }}</div>
+                              <div class="">Address: {{ m.attributes.address }}</div>
                               <div class="text-right"></div>
                             </div>
                           </div>
@@ -171,21 +177,21 @@ function popover(idx) {
                   <div class="flex justify-between items-center shrink-0">
                     <div
                       class="w-24 h-32 mb-2"
-                      v-if="o.attributes.member_image.data == null"
+                      v-if="m.attributes.member_image.data == null"
                     ></div>
                     <img
                       v-else
                       class="w-24 h-32 mb-2 object-cover"
-                      :src="media + o.attributes.member_image.data.attributes.url"
+                      :src="media + m.attributes.member_image.data.attributes.url"
                       alt=""
                     />
                   </div>
                   <div class="grow">
                     <div class="inline-block text-lg font-medium text-red-500">
-                      {{ o.attributes.title }}
+                      {{ m.attributes.title }}
                     </div>
                     <div class="mb-1">
-                      {{ o.attributes.name }}
+                      {{ m.attributes.name }}
                     </div>
                     <a @click="popover(idx)" class="cursor-pointer">
                       <div class="relative flex gap-1">
@@ -194,9 +200,9 @@ function popover(idx) {
                           :class="popover_index == idx ? 'block' : 'hidden'"
                         >
                           <div class="flex flex-col text-sm">
-                            <div class="">Email: {{ o.attributes.email }}</div>
-                            <div class="">Phone: {{ o.attributes.phone }}</div>
-                            <div class="">Address: {{ o.attributes.address }}</div>
+                            <div class="">Email: {{ m.attributes.email }}</div>
+                            <div class="">Phone: {{ m.attributes.phone }}</div>
+                            <div class="">Address: {{ m.attributes.address }}</div>
                             <div class="text-right"></div>
                           </div>
                         </div>
@@ -264,7 +270,7 @@ function popover(idx) {
                   </div>
                 </div>
               </div>
-            </template>
+            </template> -->
           </div>
           <div
             class="hidden lg:flex flex-col shrink-0 bg-gray-200 shadow-lg p-2 h-[440px] text-sm rounded-md"
@@ -275,9 +281,9 @@ function popover(idx) {
               :class="idx == type_index ? 'text-red-500 border-red-500' : 'border-white'"
               v-for="(t, idx) in types"
               :key="idx"
-              @click="type_index = idx"
+              @click="changeType(idx, t)"
             >
-              {{ t }}
+              {{ t.label }}
             </button>
           </div>
         </div>

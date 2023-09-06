@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "referee_commissions",
+  "info": {
+    "singularName": "referee-commission",
+    "pluralName": "referee-commissions",
+    "displayName": "Referee Commission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member": {
+      "type": "component",
+      "repeatable": true,
+      "component": "commission.commission"
+    }
+  }
+}

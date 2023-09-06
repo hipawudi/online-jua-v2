@@ -4,7 +4,7 @@
   "info": {
     "singularName": "organization",
     "pluralName": "organizations",
-    "displayName": "organization",
+    "displayName": "Executive Committee",
     "description": ""
   },
   "options": {
@@ -49,15 +49,9 @@
         "Media & Marketing"
       ]
     },
-    "is_ec": {
-      "type": "boolean"
-    },
-    "ec_sequence": {
+    "sequence": {
       "type": "integer",
       "unique": false
-    },
-    "type_sequence": {
-      "type": "integer"
     },
     "name": {
       "type": "string"

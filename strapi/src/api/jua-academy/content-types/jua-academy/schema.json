@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jua_academies",
+  "info": {
+    "singularName": "jua-academy",
+    "pluralName": "jua-academies",
+    "displayName": "JUA Academy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member": {
+      "type": "component",
+      "repeatable": true,
+      "component": "commission.commission"
+    }
+  }
+}

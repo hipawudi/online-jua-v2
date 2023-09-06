@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "media_and_marketings",
+  "info": {
+    "singularName": "media-and-marketing",
+    "pluralName": "media-and-marketings",
+    "displayName": "Media & Marketing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member": {
+      "type": "component",
+      "repeatable": true,
+      "component": "commission.commission"
+    }
+  }
+}

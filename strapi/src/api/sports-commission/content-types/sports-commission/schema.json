@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sports_commissions",
+  "info": {
+    "singularName": "sports-commission",
+    "pluralName": "sports-commissions",
+    "displayName": "Sports Commission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member": {
+      "type": "component",
+      "repeatable": true,
+      "component": "commission.commission"
+    }
+  }
+}

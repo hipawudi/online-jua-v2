@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "education_and_coaching_commissions",
+  "info": {
+    "singularName": "education-and-coaching-commission",
+    "pluralName": "education-and-coaching-commissions",
+    "displayName": "Education & Coaching Commission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "member_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "sequence": {
+      "type": "integer"
+    }
+  }
+}
