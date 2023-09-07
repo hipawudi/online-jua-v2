@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "referee_commissions",
+  "collectionName": "discipline_commissions",
   "info": {
-    "singularName": "referee-commission",
-    "pluralName": "referee-commissions",
-    "displayName": "Referee Commission",
-    "description": ""
+    "singularName": "discipline-commission",
+    "pluralName": "discipline-commissions",
+    "displayName": "Discipline Commission"
   },
   "options": {
     "draftAndPublish": true

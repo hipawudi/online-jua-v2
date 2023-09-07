@@ -1,7 +1,7 @@
 <script setup>
 const classes = [{ text: "News", to: "/jus-news" }];
 const media = useStrapiMedia();
-const dayjs = require("dayjs");
+const dayjs = useDayjs();
 const news = useList("news", {
   populate: "*",
 });

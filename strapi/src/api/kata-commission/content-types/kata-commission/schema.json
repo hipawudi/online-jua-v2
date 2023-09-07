@@ -4,17 +4,41 @@
   "info": {
     "singularName": "kata-commission",
     "pluralName": "kata-commissions",
-    "displayName": "Kata Commission"
+    "displayName": "Kata Commission",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "member": {
-      "type": "component",
-      "repeatable": true,
-      "component": "commission.commission"
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "member_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "sequence": {
+      "type": "integer"
     }
   }
 }

@@ -6,7 +6,7 @@ const media = useStrapiMedia();
 
 const classes = [{ text: "Organization", to: "/organization" }];
 const members = ref(
-  useList("sports-commissions", {
+  useList("organizations", {
     populate: "*",
     sort: ["sequence:asc"],
     pagination: {
@@ -24,6 +24,7 @@ const types = [
   { label: "Kata Commission", api: "kata-commissions" },
   { label: "Medical Commission", api: "medical-commissions" },
   { label: "Development Commission", api: "development-commissions" },
+  { label: "Discipline Commission", api: "discipline-commissions" },
   { label: "Event Management", api: "event-managements" },
   { label: "JUA Academy", api: "jua-academies" },
   { label: "Media & Marketing", api: "media-and-marketings" },
@@ -38,6 +39,7 @@ function popover(idx) {
   }
 }
 function changeType(idx, t) {
+  console.log(idx);
   type_index.value = idx;
   members.value = useList(t.api, {
     populate: "*",
@@ -63,16 +65,18 @@ function changeType(idx, t) {
         <div class="block lg:hidden text-center mb-4">
           <select
             v-model="type_index"
+            @change="changeType(type_index, types[type_index])"
             class="px-2 w-64 h-10 border rounded-md shadow-md after:bg-red-500"
           >
-            <option v-for="(t, idx) in types" :key="idx" :value="idx">{{ t }}</option>
+            <option v-for="(t, idx) in types" :key="idx" :value="idx">
+              {{ t.label }}
+            </option>
           </select>
         </div>
         <div class="flex">
           <div class="flex flex-wrap lg:w-3/4">
-            {{ members }}
-            <!-- <template v-for="(m, idx) in members.data" :key="idx">
-              <div class="w-full" v-if="type_index != 0 && idx == 0">
+            <template v-for="(m, idx) in members.data">
+              <div class="w-full" v-if="type_index != 0 && idx == 0" :key="idx">
                 <div class="w-full xl:w-1/2 2xl:w-1/3 p-2">
                   <div class="mx-auto md:ml-0 flex gap-3">
                     <div class="flex justify-between items-center shrink-0">
@@ -270,10 +274,10 @@ function changeType(idx, t) {
                   </div>
                 </div>
               </div>
-            </template> -->
+            </template>
           </div>
           <div
-            class="hidden lg:flex flex-col shrink-0 bg-gray-200 shadow-lg p-2 h-[440px] text-sm rounded-md"
+            class="hidden lg:flex flex-col shrink-0 bg-gray-200 shadow-lg p-2 h-[480px] text-sm rounded-md"
           >
             <div class="font-bold text-xl px-2 py-2 mx-1">Organization</div>
             <button

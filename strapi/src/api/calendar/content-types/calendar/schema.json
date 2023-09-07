@@ -4,7 +4,8 @@
   "info": {
     "singularName": "calendar",
     "pluralName": "calendars",
-    "displayName": "calendar"
+    "displayName": "calendar",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,19 +24,9 @@
     "athletes_count": {
       "type": "integer"
     },
-    "nation": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::jua-member.jua-member",
-      "inversedBy": "calendars"
-    },
-    "location": {
-      "type": "string"
-    },
-    "continent": {
+    "zone": {
       "type": "enumeration",
       "enum": [
-        "All continents",
         "Central Zone",
         "South East Zone",
         "East Zone",
@@ -46,7 +37,6 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "All types",
         "Competitions",
         "Others"
       ]
@@ -54,8 +44,8 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "All categories",
         "JUA",
+        "IJF",
         "Seniors",
         "Juniors",
         "Cadets",
@@ -64,6 +54,18 @@
     },
     "date": {
       "type": "date"
+    },
+    "nations": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jua-member.jua-member",
+      "inversedBy": "calendars"
+    },
+    "city": {
+      "type": "string"
     }
   }
 }

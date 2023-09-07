@@ -4,17 +4,41 @@
   "info": {
     "singularName": "media-and-marketing",
     "pluralName": "media-and-marketings",
-    "displayName": "Media & Marketing"
+    "displayName": "Media & Marketing",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "member": {
-      "type": "component",
-      "repeatable": true,
-      "component": "commission.commission"
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "member_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "sequence": {
+      "type": "integer"
     }
   }
 }
