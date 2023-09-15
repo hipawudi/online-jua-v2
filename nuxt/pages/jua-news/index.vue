@@ -35,26 +35,28 @@ await news.load();
             v-for="(n, idx) in news.data"
             :key="idx"
           >
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img
-                  :src="media + n.attributes.banner.data.attributes.url"
-                  alt=""
-                  class="rounded shadow-md h-60 object-cover"
-                />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">
-                  {{ dayjs(n.attributes.publish_date).format("YYYY-MM-DD HH:mm:ss") }}
+            <NuxtLink :to="'/jua-news/' + n.id">
+              <div
+                class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
+              >
+                <div class="flex flex-col justify-center items-center">
+                  <img
+                    :src="media + n.attributes.banner.data.attributes.url"
+                    alt=""
+                    class="rounded shadow-md h-60 object-cover"
+                  />
                 </div>
-                <div class="font-bold text-lg">{{ n.attributes.title }}</div>
-                <div class="line-clamp-3">
-                  {{ n.attributes.description }}
+                <div class="flex flex-col p-2">
+                  <div class="text-sm">
+                    {{ dayjs(n.attributes.publish_date).format("YYYY-MM-DD HH:mm:ss") }}
+                  </div>
+                  <div class="font-bold text-lg">{{ n.attributes.title }}</div>
+                  <div class="line-clamp-3">
+                    {{ n.attributes.description }}
+                  </div>
                 </div>
               </div>
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </div>

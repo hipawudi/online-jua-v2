@@ -3,15 +3,22 @@ const image_number = ref("1");
 const media = useStrapiMedia();
 const news = useList("news", {
   populate: "*",
-  sort: ["ec_sequence:asc"],
   pagination: {
     start: 0,
     limit: 4,
   },
 });
-
+const videos = useList("videos", {
+  populate: "*",
+  sort: ["sequence:asc"],
+  pagination: {
+    start: 0,
+    limit: 3,
+  },
+});
 await news.load();
-
+await videos.load();
+const video_index = ref(1);
 function nextImage() {
   if (image_number.value >= 4) {
     image_number.value = "1";
@@ -362,40 +369,21 @@ function changeImage(val) {
       <div class="container mx-auto xl:px-16">
         <div class="flex flex-wrap">
           <div class="w-full lg:w-1/2 px-4 mb-10 lg:mb-0">
-            <div class="relative h-full overflow-hidden max-w-max mx-auto rounded-md">
-              <button
-                class="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-500 hover:bg-red-600"
-              >
-                <svg
-                  class="ml-1"
-                  width="17"
-                  height="20"
-                  viewbox="0 0 17 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15.5 9.13001L1.50001 1.05001C1.34799 0.962237 1.17554 0.916031 1.00001 0.916031C0.824471 0.916031 0.652027 0.962237 0.500008 1.05001C0.347404 1.13811 0.220789 1.26497 0.132986 1.41775C0.0451825 1.57053 -0.000691684 1.7438 7.88292e-06 1.92001V18.08C-0.000691684 18.2562 0.0451825 18.4295 0.132986 18.5823C0.220789 18.735 0.347404 18.8619 0.500008 18.95C0.652027 19.0378 0.824471 19.084 1.00001 19.084C1.17554 19.084 1.34799 19.0378 1.50001 18.95L15.5 10.87C15.6539 10.7828 15.7819 10.6563 15.871 10.5035C15.96 10.3506 16.007 10.1769 16.007 10C16.007 9.82311 15.96 9.64938 15.871 9.49654C15.7819 9.3437 15.6539 9.21722 15.5 9.13001ZM2.00001 16.35V3.65001L13 10L2.00001 16.35Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </button>
-              <img src="/images/asian-games-2018-5.jpg" /><video
-                class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 min-h-full min-w-full max-w-none"
-                poster="/images/asian-games-2018-5.jpg"
-                muted=""
-              >
-                <source
-                  src="https://static.shuffle.dev/files/video-placeholder.mp4"
-                  type="video/mp4"
-                />
-              </video>
+            <div class="relative h-full overflow-hidden w-full mx-auto rounded-md">
+              <iframe
+                class="w-full h-full"
+                :src="videos.data[video_index - 1].attributes.link"
+                title="Day-2_Final Block_MAT2_JUA LIVE STREAMING"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
           <div class="w-full lg:w-1/2 px-4">
             <span
               class="inline-block py-px px-2 sm:ml-6 md:mb-16 text-xs leading-5 font-medium uppercase rounded-9xl bg-red-100 text-red-500"
-              >Quotes</span
+              >Videos</span
             >
             <div class="relative pt-12 pb-6 sm:p-6 mb-8">
               <img
@@ -409,176 +397,23 @@ function changeImage(val) {
               />
               <div class="relative">
                 <h2 class="text-2xl md:text-4xl font-semibold tracking-tighter">
-                  PICK A SPORT AND JOIN THE FUN TODAY
+                  {{ videos.data[video_index - 1].attributes.title }}
                 </h2>
               </div>
             </div>
             <div class="sm:px-6 mb-14">
               <h3 class="mb-2 text-xl md:text-2xl font-semibold">
-                Feel the thrill of seeing a global sporting event in one of the world's
-                most incredible cities. Headlining the calendar is the Dubai World Cup
+                {{ videos.data[video_index - 1].attributes.description }}
               </h3>
             </div>
             <div class="sm:px-6">
-              <button class="inline-block h-3 w-3 mr-3 rounded-full bg-gray-100"></button>
-              <button class="inline-block h-3 w-3 mr-3 rounded-full bg-red-500"></button>
-              <button class="inline-block h-3 w-3 rounded-full bg-gray-100"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="bg-gray-50 2xl:pl-24 xl:pl-16 pl-0 py-4"
-      style="
-        background-image: url('/flex-ui-assets/elements/pattern-white.svg');
-        background-position: center;
-      "
-    >
-      <div class="container mx-auto xl:px-16">
-        <div class="flex flex-wrap">
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-gray-50 2xl:pl-24 xl:pl-16 pl-0">
-      <div class="container mx-auto xl:px-16">
-        <div class="flex flex-wrap">
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 xl:w-1/4 p-3">
-            <div
-              class="bg-white border border-gray-100 shadow-dashboard rounded-md space-y-2"
-            >
-              <div class="flex flex-col justify-center items-center">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
-              </div>
-              <div class="flex flex-col p-2">
-                <div class="text-sm">26 NOV 2022</div>
-                <div class="font-bold text-lg">JUDO</div>
-                <div class="">
-                  The Sports Games also celebrated and showcased sport, thanks to the
-                  city’s stunning setting
-                </div>
-              </div>
+              <button
+                v-for="num in videos.meta.pagination.total"
+                :key="num"
+                :class="video_index == num ? 'bg-red-500' : 'bg-gray-200'"
+                class="inline-block h-3 w-3 mr-3 rounded-full bg-gray-100"
+                @click="video_index = num"
+              ></button>
             </div>
           </div>
         </div>

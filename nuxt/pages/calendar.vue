@@ -19,16 +19,30 @@ const category = [
   "Cadets",
   "Others",
 ];
-const filters = ref({});
+
 const year_index = ref(0);
 const select = ref({
   zone: 0,
   type: 0,
   category: 0,
   year: 0,
-  range: 0,
+  month: 0,
 });
-const year = ["2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016"];
+const currentYear = new Date().getFullYear();
+
+const startYear = currentYear;
+const endYear = 2016;
+
+const year = Array.from(
+  { length: startYear - endYear + 1 },
+  (_, index) => startYear - index
+);
+const filters = ref({
+  date: {
+    $gte: year[select.value.year] + "-01-01",
+    $lte: year[select.value.year] + "-12-31",
+  },
+});
 const ranges = [
   "Whole year",
   "Jan",
@@ -57,7 +71,7 @@ const calendars = ref(
     pagination: {
       pageSize: 100,
     },
-    filters: filters,
+    filters: filters.value,
   })
 );
 await calendars.value.load();
@@ -68,6 +82,43 @@ function changeFilters(name, idx, value) {
     delete filters.value[name];
   }
   console.log(filters.value);
+  calendars.value = useList("calendars", {
+    populate: "*,location.member_image",
+    pagination: {
+      pageSize: 100,
+    },
+    filters: filters.value,
+  });
+  calendars.value.load();
+}
+function changeDateRange(value, idx, type) {
+  if (type == "year") {
+    filters.value.date.$gte = value + filters.value.date.$gte.substring(4);
+    filters.value.date.$lte = value + filters.value.date.$lte.substring(4);
+  } else if (type == "month") {
+    select.value.range = idx;
+    if (idx == 0) {
+      const firstDay = dayjs(new Date(year[select.value.year], 1, 1)).format(
+        "YYYY-MM-DD"
+      );
+      const nextMonthFirstDay = new Date(year[select.value.year], 12, 1);
+      const lastDay = dayjs(new Date(nextMonthFirstDay.getTime() - 1)).format(
+        "YYYY-MM-DD"
+      );
+      filters.value.date.$gte = firstDay;
+      filters.value.date.$lte = lastDay;
+    } else {
+      const firstDay = dayjs(new Date(year[select.value.year], idx, 1)).format(
+        "YYYY-MM-DD"
+      );
+      const nextMonthFirstDay = new Date(year[select.value.year], idx + 1, 1);
+      const lastDay = dayjs(new Date(nextMonthFirstDay.getTime() - 1)).format(
+        "YYYY-MM-DD"
+      );
+      filters.value.date.$gte = firstDay;
+      filters.value.date.$lte = lastDay;
+    }
+  }
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
@@ -142,6 +193,7 @@ function changeFilters(name, idx, value) {
             <div class="mb-4">
               <select
                 v-model="select.year"
+                @click="changeDateRange(year[select.year], select.year, 'year')"
                 class="w-full px-2 md:w-56 h-10 border rounded-md shadow-md after:bg-red-500"
               >
                 <option v-for="(y, idx) in year" :key="idx" :value="idx">
@@ -158,13 +210,15 @@ function changeFilters(name, idx, value) {
                 :class="idx == select.range ? 'bg-red-500 text-white ' : ''"
                 v-for="(r, idx) in ranges"
                 :key="idx"
-                @click="select.range = idx"
+                @click="changeDateRange(r, idx, 'month')"
               >
                 {{ r }}
               </button>
             </div>
             <div class="md:hidden flex">
               <select
+                v-model="select.month"
+                @change="changeDateRange(select.month, select.month, 'month')"
                 class="w-full px-2 md:w-56 h-10 border rounded-md shadow-md after:bg-red-500"
               >
                 <option v-for="(r, idx) in ranges" :key="idx" :value="idx">
@@ -183,7 +237,7 @@ function changeFilters(name, idx, value) {
             :key="idx"
           >
             <div class="md:text-center flex justify-center items-center">
-              <div>{{ dayjs(c.attributes.publish_date).format("YYYY-MM-DD") }}</div>
+              <div>{{ dayjs(c.attributes.date).format("YYYY-MM-DD") }}</div>
             </div>
             <div class="">
               <div class="font-bold">
