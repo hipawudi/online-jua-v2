@@ -70,7 +70,7 @@ const calendars = ref(
   useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 10,
+      pageSize: 2,
       page: route.query.page,
     },
     filters: filters.value,
@@ -87,10 +87,15 @@ function changeFilters(name, idx, value) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 10,
+      pageSize: 2,
       page: route.query.page,
     },
     filters: filters.value,
+  });
+  navigateTo({
+    query: {
+      page: 1,
+    },
   });
   calendars.value.load();
 }
@@ -99,7 +104,7 @@ function changeDateRange(value, idx, type) {
     filters.value.date.$gte = value + filters.value.date.$gte.substring(4);
     filters.value.date.$lte = value + filters.value.date.$lte.substring(4);
   } else if (type == "month") {
-    select.value.range = idx;
+    select.value.month = idx;
     if (idx == 0) {
       const firstDay = dayjs(new Date(year[select.value.year], 1, 1)).format(
         "YYYY-MM-DD"
@@ -125,10 +130,15 @@ function changeDateRange(value, idx, type) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 10,
+      pageSize: 2,
       page: route.query.page,
     },
     filters: filters.value,
+  });
+  navigateTo({
+    query: {
+      page: 1,
+    },
   });
   calendars.value.load();
 }
@@ -136,7 +146,7 @@ function change(page) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 10,
+      pageSize: 2,
       page: page,
     },
     filters: filters.value,
@@ -208,7 +218,7 @@ function change(page) {
             <div class="mb-4">
               <select
                 v-model="select.year"
-                @click="changeDateRange(year[select.year], select.year, 'year')"
+                @change="changeDateRange(year[select.year], select.year, 'year')"
                 class="w-full px-2 md:w-56 h-10 border rounded-md shadow-md after:bg-red-500"
               >
                 <option v-for="(y, idx) in year" :key="idx" :value="idx">
@@ -222,7 +232,7 @@ function change(page) {
             <div class="md:flex hidden">
               <button
                 class="border py-1 text-center grow"
-                :class="idx == select.range ? 'bg-red-500 text-white ' : ''"
+                :class="idx == select.month ? 'bg-red-500 text-white ' : ''"
                 v-for="(r, idx) in ranges"
                 :key="idx"
                 @click="changeDateRange(r, idx, 'month')"
