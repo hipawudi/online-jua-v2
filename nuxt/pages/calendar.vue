@@ -70,7 +70,7 @@ const calendars = ref(
   useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 2,
+      pageSize: 10,
       page: route.query.page,
     },
     filters: filters.value,
@@ -87,7 +87,7 @@ function changeFilters(name, idx, value) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 2,
+      pageSize: 10,
       page: route.query.page,
     },
     filters: filters.value,
@@ -130,7 +130,7 @@ function changeDateRange(value, idx, type) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 2,
+      pageSize: 10,
       page: route.query.page,
     },
     filters: filters.value,
@@ -146,7 +146,7 @@ function change(page) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 2,
+      pageSize: 10,
       page: page,
     },
     filters: filters.value,
