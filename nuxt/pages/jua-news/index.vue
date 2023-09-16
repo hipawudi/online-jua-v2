@@ -2,11 +2,26 @@
 const classes = [{ text: "News", to: "/jus-news" }];
 const media = useStrapiMedia();
 const dayjs = useDayjs();
-const news = useList("news", {
-  populate: "*",
-});
+const route = useRoute();
+const news = ref(
+  useList("news", {
+    populate: "*",
+    pagination: {
+      page: route.query.page,
+    },
+  })
+);
 
-await news.load();
+await news.value.load();
+function change(page) {
+  news.value = useList("news", {
+    populate: "*",
+    pagination: {
+      page: page,
+    },
+  });
+  news.value.load();
+}
 </script>
 
 <template>
@@ -59,6 +74,11 @@ await news.load();
             </NuxtLink>
           </div>
         </div>
+        <pagination
+          class="mt-12"
+          :pagination="news.meta.pagination"
+          @change-page="change"
+        />
       </div>
     </section>
   </div>

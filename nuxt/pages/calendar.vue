@@ -1,6 +1,7 @@
 <script setup>
 const media = useStrapiMedia();
 const dayjs = useDayjs();
+const route = useRoute();
 const zones = [
   "All zones",
   "Central Zone",
@@ -69,7 +70,8 @@ const calendars = ref(
   useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 100,
+      pageSize: 10,
+      page: route.query.page,
     },
     filters: filters.value,
   })
@@ -85,7 +87,8 @@ function changeFilters(name, idx, value) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 100,
+      pageSize: 10,
+      page: route.query.page,
     },
     filters: filters.value,
   });
@@ -122,7 +125,19 @@ function changeDateRange(value, idx, type) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
     pagination: {
-      pageSize: 100,
+      pageSize: 10,
+      page: route.query.page,
+    },
+    filters: filters.value,
+  });
+  calendars.value.load();
+}
+function change(page) {
+  calendars.value = useList("calendars", {
+    populate: "*,location.member_image",
+    pagination: {
+      pageSize: 10,
+      page: page,
     },
     filters: filters.value,
   });
@@ -239,7 +254,7 @@ function changeDateRange(value, idx, type) {
             <div class="md:text-center flex justify-center items-center">
               <div>{{ dayjs(c.attributes.date).format("YYYY-MM-DD") }}</div>
             </div>
-            <div class="">
+            <div class="md:w-[45%]">
               <div class="font-bold">
                 {{ c.attributes.title }}
               </div>
@@ -263,6 +278,11 @@ function changeDateRange(value, idx, type) {
             </div>
           </div>
         </div>
+        <pagination
+          class="mt-12"
+          :pagination="calendars.meta.pagination"
+          @change-page="change"
+        />
       </div>
     </section>
   </div>

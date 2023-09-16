@@ -3,19 +3,9 @@
     <ul class="inline-flex space-x-2">
       <li>
         <button
-          class="
-            flex
-            items-center
-            justify-center
-            w-10
-            h-10
-            transition-colors
-            duration-150
-            rounded-full
-            focus:shadow-outline
-          "
+          class="flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline"
           :disabled="!hasPrevious"
-          :class="!hasPrevious ? 'text-neutral-500' : 'hover:bg-purple-100 text-purple-800'" 
+          :class="!hasPrevious ? 'text-neutral-500' : 'hover:bg-red-100 text-red-500'"
           @click="toPreviousPage"
         >
           <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -28,39 +18,24 @@
         </button>
       </li>
       <li v-for="page in pagination.pageCount" :key="page">
-        <NuxtLink :to="`?page=${page}`" class="">
-        <button
-          class="
-            w-10
-            h-10
-            transition-colors
-            duration-150
-            rounded-full
-            focus:shadow-outline
-          "
-          :class="page === pagination.page ?
-           'text-white bg-purple-800 border border-r-0 border-purple-800 hover:bg-purple-700':
-           'text-purple-800 hover:bg-purple-100'"
-        >
-        {{ page }}
-        </button>
+        <NuxtLink :to="`?page=${page}`" class="" @click="toPage(page)">
+          <button
+            class="w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline"
+            :class="
+              page === pagination.page
+                ? 'text-white bg-red-500 border border-r-0 border-red-500 hover:bg-red-500'
+                : 'text-red-500 hover:bg-red-100'
+            "
+          >
+            {{ page }}
+          </button>
         </NuxtLink>
       </li>
       <li>
         <button
-          class="
-            flex
-            items-center
-            justify-center
-            w-10
-            h-10
-            transition-colors
-            duration-150
-            rounded-full
-            focus:shadow-outline
-          "
+          class="flex items-center justify-center w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline"
           :disabled="!hasNext"
-          :class="!hasNext ? 'text-neutral-500' : 'hover:bg-purple-100 text-purple-800'" 
+          :class="!hasNext ? 'text-neutral-500' : 'hover:bg-red-100 text-red-500'"
           @click="toNextPage"
         >
           <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -77,45 +52,53 @@
 </template>
 
 <script setup>
-const router = useRouter()
+import { defineEmits } from "vue";
+const emit = defineEmits(["changePage"]);
+const router = useRouter();
 
 const props = defineProps({
-    pagination: {
-        type: Object,
-        required: true
-    }
-})
+  pagination: {
+    type: Object,
+    required: true,
+  },
+});
 
 const hasPrevious = computed(() => {
-    return props.pagination.page > 1
-})
+  return props.pagination.page > 1;
+});
 
 const hasNext = computed(() => {
-    return props.pagination.page < props.pagination.pageCount
-})
+  return props.pagination.page < props.pagination.pageCount;
+});
 
 const showPagination = computed(() => {
-    return props.pagination.pageCount > 1
-})
+  return props.pagination.pageCount > 1;
+});
 
 const toNextPage = () => {
-    if (hasNext.value) {
-      navigateTo({
-        query: {
-          page: props.pagination.page + 1
-        }
-      })
-    }
-}
+  if (hasNext.value) {
+    navigateTo({
+      query: {
+        page: props.pagination.page + 1,
+      },
+    });
+    emit("changePage", props.pagination.page + 1);
+  }
+};
 
 const toPreviousPage = () => {
-    if (hasPrevious.value) {
-      navigateTo({
-        query: {
-          page: props.pagination.page - 1
-        }
-      })
-    }
-}
+  if (hasPrevious.value) {
+    navigateTo({
+      query: {
+        page: props.pagination.page - 1,
+      },
+    });
+    emit("changePage", props.pagination.page - 1);
+  }
+};
 
+const toPage = (page) => {
+  console.log(page);
+  emit("changePage", page);
+};
 </script>

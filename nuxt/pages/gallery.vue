@@ -1,16 +1,32 @@
-<script>
-export default {
-  data() {
-    return {
-      classes: [
-        {
-          text: "Gallery",
-          to: "/gallery",
-        },
-      ],
-    };
+<script setup>
+const classes = [
+  {
+    text: "Gallery",
+    to: "/gallery",
   },
-};
+];
+const route = useRoute();
+const media = useStrapiMedia();
+const images = ref(
+  useList("event-images", {
+    populate: "*",
+    pagination: {
+      pageSize: 7,
+      page: route.query.page,
+    },
+  })
+);
+await images.value.load();
+function change(page) {
+  images.value = useList("event-images", {
+    populate: "*",
+    pagination: {
+      pageSize: 7,
+      page: page,
+    },
+  });
+  images.value.load();
+}
 </script>
 
 <template>
@@ -24,56 +40,61 @@ export default {
           </p>
         </div>
         <div class="flex flex-wrap">
-          <div class="w-full lg:w-1/2 p-3">
+          <div class="w-full lg:w-1/2 p-3" v-if="images.data[0]">
             <img
               class="w-full h-72 rounded-lg object-cover"
-              src="/images/photogallery/asian_games_2018_1.jpg"
+              :src="media + images.data[0].attributes.content.data.attributes.url"
               alt=""
             />
           </div>
-          <div class="w-full lg:w-1/2 p-3">
+          <div class="w-full lg:w-1/2 p-3" v-if="images.data[1]">
             <img
               class="w-full h-72 rounded-lg object-cover"
-              src="/images/photogallery/asian_games_2018_2.jpg"
+              :src="media + images.data[1].attributes.content.data.attributes.url"
               alt=""
             />
           </div>
-          <div class="w-full lg:w-1/3 p-3">
+          <div class="w-full lg:w-1/3 p-3" v-if="images.data[2]">
             <img
               class="w-full h-72 rounded-lg object-cover"
-              src="/images/photogallery/asian_games_2018_3.jpg"
+              :src="media + images.data[2].attributes.content.data.attributes.url"
               alt=""
             />
           </div>
-          <div class="w-full lg:w-1/3 p-3">
+          <div class="w-full lg:w-1/3 p-3" v-if="images.data[3]">
             <img
               class="w-full h-72 rounded-lg object-cover"
-              src="/images/photogallery/asian_games_2018_4.jpg"
+              :src="media + images.data[3].attributes.content.data.attributes.url"
               alt=""
             />
           </div>
-          <div class="w-full lg:w-1/3 p-3">
+          <div class="w-full lg:w-1/3 p-3" v-if="images.data[4]">
             <img
               class="w-full h-72 rounded-lg object-cover object-top"
-              src="/images/photogallery/asian_games_2018_5.jpg"
+              :src="media + images.data[4].attributes.content.data.attributes.url"
               alt=""
             />
           </div>
-          <div class="w-full lg:w-1/2 p-3">
+          <div class="w-full lg:w-1/2 p-3" v-if="images.data[5]">
             <img
               class="w-full h-72 rounded-lg object-cover"
-              src="/images/photogallery/asian_games_2018_6.jpg"
+              :src="media + images.data[5].attributes.content.data.attributes.url"
               alt=""
             />
           </div>
-          <div class="w-full lg:w-1/2 p-3">
+          <div class="w-full lg:w-1/2 p-3" v-if="images.data[6]">
             <img
               class="w-full h-72 rounded-lg object-cover"
-              src="/images/photogallery/asian_games_2018_7.jpg"
+              :src="media + images.data[6].attributes.content.data.attributes.url"
               alt=""
             />
           </div>
         </div>
+        <pagination
+          class="mt-12"
+          :pagination="images.meta.pagination"
+          @change-page="change"
+        />
       </div>
     </section>
   </div>

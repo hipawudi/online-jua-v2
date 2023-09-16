@@ -35,20 +35,6 @@
         "audios"
       ]
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Sports Commission",
-        "Referee Commission",
-        "Education & Coaching Commission",
-        "Kata Commission",
-        "Medical Commission",
-        "Development Commission",
-        "Event Management",
-        "JUA Academy",
-        "Media & Marketing"
-      ]
-    },
     "sequence": {
       "type": "integer",
       "unique": false

@@ -368,7 +368,7 @@ function changeImage(val) {
     >
       <div class="container mx-auto xl:px-16">
         <div class="flex flex-wrap">
-          <div class="w-full lg:w-1/2 px-4 mb-10 lg:mb-0">
+          <div class="w-full lg:w-1/2 px-4 mb-10 lg:mb-0 h-80 md:h-96">
             <div class="relative h-full overflow-hidden w-full mx-auto rounded-md">
               <iframe
                 class="w-full h-full"

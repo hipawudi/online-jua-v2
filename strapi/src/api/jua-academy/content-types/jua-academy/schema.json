@@ -4,17 +4,41 @@
   "info": {
     "singularName": "jua-academy",
     "pluralName": "jua-academies",
-    "displayName": "JUA Academy"
+    "displayName": "JUA Academy",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "member": {
-      "type": "component",
-      "repeatable": true,
-      "component": "commission.commission"
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "member_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "sequence": {
+      "type": "integer"
     }
   }
 }
