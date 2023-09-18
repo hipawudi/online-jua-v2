@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "subtitle": {
-      "type": "string"
-    },
     "description": {
       "type": "string"
     },
@@ -66,6 +63,20 @@
     },
     "city": {
       "type": "string"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }

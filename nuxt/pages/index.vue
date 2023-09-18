@@ -16,8 +16,17 @@ const videos = useList("videos", {
     limit: 3,
   },
 });
+const calendars = useList("calendars", {
+  populate: "*",
+  sort: ["date:desc"],
+  pagination: {
+    start: 0,
+    limit: 6,
+  },
+});
 await news.load();
 await videos.load();
+await calendars.load();
 const video_index = ref(1);
 function nextImage() {
   if (image_number.value >= 4) {
@@ -178,181 +187,226 @@ function changeImage(val) {
           <h2
             class="mb-4 text-4xl md:text-5xl leading-tight text-gray-900 font-bold tracking-tighter"
           >
-            UPCOMING <span class="text-red-500">JUA EVENTS</span>
+            UPCOMING <span class="text-red-500">NEW EVENTS</span>
           </h2>
           <p class="mb-24 text-lg md:text-xl text-gray-500 font-medium">
-            Feel the thrill of seeing a global sporting event in one of the world's most
-            incredible cities. Headlining the calendar is the Dubai World Cup
+            Upcoming new judo events bring together top athletes worldwide for thrilling
+            competitions.
           </p>
         </div>
         <div class="flex flex-col md:flex-row mx-auto gap-6">
           <div class="md:w-2/3">
             <a
+              v-if="calendars.data[0]"
               class="flex flex-col md:flex-row w-full mb-8 text-gray-300 hover:text-gray-400 bg-gray-50 text-left border border-transparent hover:border-gray-200 rounded-md transition duration-200"
-              href="#"
+              :href="'/calendar/' + calendars.data[0].id"
             >
               <div class="ml-auto md:w-1/3">
-                <img src="/images/Congress22019.jpg" alt="" class="rounded shadow-md" />
+                <img
+                  :src="media + calendars.data[0].attributes.cover.data.attributes.url"
+                  alt=""
+                  class="rounded shadow-md"
+                />
               </div>
               <div
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
               >
                 <div class="flex">
-                  <div class="bg-red-500 text-white px-2">Jun 05 - Aug 27</div>
+                  <div class="bg-red-500 text-white px-2">
+                    {{ calendars.data[0].attributes.date }}
+                  </div>
                 </div>
                 <h3 class="text-xl text-gray-900 font-bold">
-                  How long does it take to ship my order?
+                  {{ calendars.data[0].attributes.title }}
                 </h3>
-                <p class="text-gray-500 font-medium">
-                  Orders are usually shipped within 1-2 business days after placing the
-                  order.
+                <p class="text-gray-500 font-medium line-clamp-2">
+                  {{ calendars.data[0].attributes.description }}
                 </p>
               </div>
             </a>
             <a
+              v-if="calendars.data[1]"
               class="flex flex-col md:flex-row w-full mb-8 text-gray-300 hover:text-gray-400 bg-gray-50 text-left border border-transparent hover:border-gray-200 rounded-md transition duration-200"
-              href="#"
+              :href="'/calendar/' + calendars.data[1].id"
             >
               <div class="ml-auto md:w-1/3">
-                <img src="/images/juameeting62019.jpg" alt="" class="rounded shadow-md" />
+                <img
+                  :src="media + calendars.data[1].attributes.cover.data.attributes.url"
+                  alt=""
+                  class="rounded shadow-md"
+                />
               </div>
               <div
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
               >
                 <div class="flex">
-                  <div class="bg-red-500 text-white">Jun 05 - Aug 27</div>
+                  <div class="bg-red-500 text-white px-2">
+                    {{ calendars.data[1].attributes.date }}
+                  </div>
                 </div>
                 <h3 class="text-xl text-gray-900 font-bold">
-                  How long does it take to ship my order?
+                  {{ calendars.data[1].attributes.title }}
                 </h3>
-                <p class="text-gray-500 font-medium">
-                  Orders are usually shipped within 1-2 business days after placing the
-                  order.
+                <p class="text-gray-500 font-medium line-clamp-2">
+                  {{ calendars.data[1].attributes.description }}
                 </p>
               </div>
             </a>
             <a
+              v-if="calendars.data[2]"
               class="flex flex-col md:flex-row w-full mb-8 text-gray-300 hover:text-gray-400 bg-gray-50 text-left border border-transparent hover:border-gray-200 rounded-md transition duration-200"
-              href="#"
+              :href="'/calendar/' + calendars.data[2].id"
             >
               <div class="ml-auto md:w-1/3">
-                <img src="/images/Macau-9.jpg" alt="" class="rounded shadow-md" />
+                <img
+                  :src="media + calendars.data[2].attributes.cover.data.attributes.url"
+                  alt=""
+                  class="rounded shadow-md"
+                />
               </div>
               <div
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
               >
                 <div class="flex">
-                  <div class="bg-red-500 text-white">Jun 05 - Aug 27</div>
+                  <div class="bg-red-500 text-white px-2">
+                    {{ calendars.data[2].attributes.date }}
+                  </div>
                 </div>
                 <h3 class="text-xl text-gray-900 font-bold">
-                  How long does it take to ship my order?
+                  {{ calendars.data[2].attributes.title }}
                 </h3>
-                <p class="text-gray-500 font-medium">
-                  Orders are usually shipped within 1-2 business days after placing the
-                  order.
+                <p class="text-gray-500 font-medium line-clamp-2">
+                  {{ calendars.data[2].attributes.description }}
                 </p>
               </div>
             </a>
             <a
+              v-if="calendars.data[3]"
               class="flex flex-col md:flex-row w-full mb-8 text-gray-300 hover:text-gray-400 bg-gray-50 text-left border border-transparent hover:border-gray-200 rounded-md transition duration-200"
-              href="#"
+              :href="'/calendar/' + calendars.data[3].id"
             >
               <div class="ml-auto md:w-1/3">
-                <img src="/images/Macau-10.jpg" alt="" class="rounded shadow-md" />
+                <img
+                  :src="media + calendars.data[3].attributes.cover.data.attributes.url"
+                  alt=""
+                  class="rounded shadow-md"
+                />
               </div>
               <div
                 class="flex flex-col w-full md:w-2/3 md:pl-8 md:pr-8 py-2 gap-3 justify-center"
               >
                 <div class="flex">
-                  <div class="bg-red-500 text-white">Jun 05 - Aug 27</div>
+                  <div class="bg-red-500 text-white px-2">
+                    {{ calendars.data[3].attributes.date }}
+                  </div>
                 </div>
                 <h3 class="text-xl text-gray-900 font-bold">
-                  How long does it take to ship my order?
+                  {{ calendars.data[3].attributes.title }}
                 </h3>
-                <p class="text-gray-500 font-medium">
-                  Orders are usually shipped within 1-2 business days after placing the
-                  order.
+                <p class="text-gray-500 font-medium line-clamp-2">
+                  {{ calendars.data[3].attributes.description }}
                 </p>
               </div>
             </a>
           </div>
           <div class="md:w-1/3">
             <div class="flex flex-col gap-3">
-              <a href="#">
+              <div
+                v-if="calendars.data[4]"
+                class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center h-80"
+                :style="{
+                  backgroundImage:
+                    'url(' +
+                    media +
+                    calendars.data[4].attributes.cover.data.attributes.url +
+                    ')',
+                }"
+              >
                 <div
-                  class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center h-80"
-                  style="background-image: url('images/Macau-9.jpg')"
+                  class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+                  style="background-color: rgba(0, 0, 0, 0.2)"
                 >
-                  <div
-                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
-                    style="background-color: rgba(0, 0, 0, 0.2)"
-                  >
-                    <div class="flex flex-col h-full p-12 justify-center gap-3">
-                      <div class="text-xl text-white font-bold text-left">
-                        Tashkent Asian Cadet Cup and Tashkent Asian Junior Cup
-                      </div>
-                      <div class="text-white font-medium text-left">
-                        IJF Ranking Tournaments.
-                      </div>
+                  <div class="flex flex-col h-full p-12 justify-center gap-3">
+                    <div class="text-xl text-white font-bold text-left">
+                      {{ calendars.data[4].attributes.title }}
+                    </div>
+                    <div class="text-white font-medium text-left line-clamp-2">
+                      {{ calendars.data[4].attributes.description }}
+                    </div>
+                    <NuxtLink :to="'/calendar/' + calendars.data[4].id">
                       <button
-                        class="bg-red-500 inline-block p-2 w-full md:w-auto text-sm text-red-50 font-medium text-center focus:ring-2 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm hover:bg-red-600 focus:ring-red-500 leading-7"
+                        class="bg-red-500 inline-block p-2 w-full text-sm text-red-50 font-medium text-center focus:ring-2 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm hover:bg-red-600 focus:ring-red-500 leading-7"
                       >
                         View more
                       </button>
-                    </div>
+                    </NuxtLink>
                   </div>
                 </div>
-              </a>
-              <a href="#">
+              </div>
+              <div
+                v-if="calendars.data[5]"
+                class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center h-80"
+                :style="{
+                  backgroundImage:
+                    'url(' +
+                    media +
+                    calendars.data[5].attributes.cover.data.attributes.url +
+                    ')',
+                }"
+              >
                 <div
-                  class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center h-80"
-                  style="background-image: url('images/Macau-9.jpg')"
+                  class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+                  style="background-color: rgba(0, 0, 0, 0.2)"
                 >
-                  <div
-                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
-                    style="background-color: rgba(0, 0, 0, 0.2)"
-                  >
-                    <div class="flex flex-col h-full p-12 justify-center gap-3">
-                      <div class="text-xl text-white font-bold text-left">
-                        Tashkent Asian Cadet Cup and Tashkent Asian Junior Cup
-                      </div>
-                      <div class="text-white font-medium text-left">
-                        IJF Ranking Tournaments.
-                      </div>
+                  <div class="flex flex-col h-full p-12 justify-center gap-3">
+                    <div class="text-xl text-white font-bold text-left">
+                      {{ calendars.data[5].attributes.title }}
+                    </div>
+                    <div class="text-white font-medium text-left line-clamp-2">
+                      {{ calendars.data[5].attributes.description }}
+                    </div>
+                    <NuxtLink :to="'/calendar/' + calendars.data[5].id">
                       <button
-                        class="bg-red-500 inline-block p-2 w-full md:w-auto text-sm text-red-50 font-medium text-center focus:ring-2 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm hover:bg-red-600 focus:ring-red-500 leading-7"
+                        class="bg-red-500 inline-block p-2 w-full text-sm text-red-50 font-medium text-center focus:ring-2 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm hover:bg-red-600 focus:ring-red-500 leading-7"
                       >
                         View more
                       </button>
-                    </div>
+                    </NuxtLink>
                   </div>
                 </div>
-              </a>
-              <a href="#">
+              </div>
+              <div
+                v-if="calendars.data[6]"
+                class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center h-80"
+                :style="{
+                  backgroundImage:
+                    'url(' +
+                    media +
+                    calendars.data[6].attributes.cover.data.attributes.url +
+                    ')',
+                }"
+              >
                 <div
-                  class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center h-80"
-                  style="background-image: url('images/Macau-9.jpg')"
+                  class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+                  style="background-color: rgba(0, 0, 0, 0.2)"
                 >
-                  <div
-                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
-                    style="background-color: rgba(0, 0, 0, 0.2)"
-                  >
-                    <div class="flex flex-col h-full p-12 justify-center gap-3">
-                      <div class="text-xl text-white font-bold text-left">
-                        Tashkent Asian Cadet Cup and Tashkent Asian Junior Cup
-                      </div>
-                      <div class="text-white font-medium text-left">
-                        IJF Ranking Tournaments.
-                      </div>
+                  <div class="flex flex-col h-full p-12 justify-center gap-3">
+                    <div class="text-xl text-white font-bold text-left">
+                      {{ calendars.data[6].attributes.title }}
+                    </div>
+                    <div class="text-white font-medium text-left line-clamp-2">
+                      {{ calendars.data[6].attributes.description }}
+                    </div>
+                    <NuxtLink :to="'/calendar/' + calendars.data[6].id">
                       <button
-                        class="bg-red-500 inline-block p-2 w-full md:w-auto text-sm text-red-50 font-medium text-center focus:ring-2 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm hover:bg-red-600 focus:ring-red-500 leading-7"
+                        class="bg-red-500 inline-block p-2 w-full text-sm text-red-50 font-medium text-center focus:ring-2 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm hover:bg-red-600 focus:ring-red-500 leading-7"
                       >
                         View more
                       </button>
-                    </div>
+                    </NuxtLink>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>

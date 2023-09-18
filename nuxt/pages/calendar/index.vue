@@ -157,7 +157,7 @@ function change(page) {
 
 <template>
   <div>
-    <page-header :classes="classes" title="Calendar"></page-header>
+    <page-header :classes="classes" title="Calendars"></page-header>
     <section
       class="py-6 bg-white 2xl:pl-24 lg:pl-16 pl-0"
       style="
@@ -274,7 +274,7 @@ function change(page) {
               </div>
             </div>
 
-            <div class="flex items-center space-x-2">
+            <div class="flex items-center space-x-2 md:w-[25%]">
               <img
                 :src="
                   media +
@@ -283,8 +283,12 @@ function change(page) {
                 class="h-6 w-10"
               />
               <div class="font-bold">
-                {{ c.attributes.location.data.attributes.name }}, {{ c.attributes.city }}
+                {{ c.attributes.location.data.attributes.name
+                }}<span v-if="c.attributes.city">, {{ c.attributes.city }}</span>
               </div>
+            </div>
+            <div class="flex justify-center items-center text-blue-500 hover:text-red-500">
+              <NuxtLink :to="'/calendar/' + c.id">more</NuxtLink>
             </div>
           </div>
         </div>
