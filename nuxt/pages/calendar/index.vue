@@ -69,6 +69,7 @@ const range_index = ref(0);
 const calendars = ref(
   useList("calendars", {
     populate: "*,location.member_image",
+    sort: ["date:desc"],
     pagination: {
       pageSize: 10,
       page: route.query.page,
@@ -86,6 +87,7 @@ function changeFilters(name, idx, value) {
   console.log(filters.value);
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
+    sort: ["date:desc"],
     pagination: {
       pageSize: 10,
       page: route.query.page,
@@ -129,6 +131,7 @@ function changeDateRange(value, idx, type) {
   }
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
+    sort: ["date:desc"],
     pagination: {
       pageSize: 10,
       page: route.query.page,
@@ -145,6 +148,7 @@ function changeDateRange(value, idx, type) {
 function change(page) {
   calendars.value = useList("calendars", {
     populate: "*,location.member_image",
+    sort: ["date:desc"],
     pagination: {
       pageSize: 10,
       page: page,
