@@ -12,7 +12,7 @@ if (route.params.id != runtimeConfig.public.manual_key) {
 }
 const manuals = useList("manuals", {
   populate: "*",
-  sort: ["sequence:desc"],
+  sort: ["sequence:asc"],
 });
 await manuals.load();
 </script>
